@@ -1,0 +1,21 @@
+{
+  "id": "2026-W46-laguna-seca-002-tiktok",
+  "network": "tiktok",
+  "format": "hotlap",
+  "batch": "2026-W46",
+  "media": {
+    "file": "2026-W46-laguna-seca-002.mp4",
+    "sha256": "0dbd648f81e6a51b9cbdf1d32a8f57fd5e7b001a2fa7789276846c235990ea7a",
+    "kind": "video"
+  },
+  "caption": "Laguna Seca, Monterey, California: 2.24 miles, rebuilt from OpenStreetMap and satellite elevation data. #simracing",
+  "title": "Laguna Seca onboard at GT3 pace",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-09T00:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W46-laguna-seca-018-tiktok",
+  "network": "tiktok",
+  "format": "hotlap",
+  "batch": "2026-W46",
+  "media": {
+    "file": "2026-W46-laguna-seca-018.mp4",
+    "sha256": "f8586fe519eb28b21815d3fd59d695e3d1c12729b33c5d3e9b07ea55651bbbfb",
+    "kind": "video"
+  },
+  "caption": "The Corkscrew at Laguna Seca drops about 59 feet. This is one stretch of the lap, at simulated GT3 pace. #lagunaseca #simracing",
+  "title": "Laguna Seca, the road to the Corkscrew",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-09T00:00:00Z"
+}
