@@ -1,0 +1,77 @@
+{
+  "week": "2026-W46",
+  "posts": [
+    {
+      "id": "2026-W46-laguna-seca-002",
+      "format": "hotlap",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Laguna Seca, Monterey, California: 2.24 miles, rebuilt from OpenStreetMap and satellite elevation data. #simracing",
+      "title": "Laguna Seca onboard at GT3 pace",
+      "earliest": "2026-11-09T00:00:00Z",
+      "script": "Onboard, full screen, laguna-seca from 2s into the lap, the livery of the Couch to Track rig.",
+      "prompts": {
+        "track": "laguna-seca",
+        "skip": 2,
+        "seconds": 18,
+        "rig": "couch-to-track",
+        "hook": "Laguna Seca, California"
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W46-suzuka-002",
+      "format": "hotlap",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Suzuka is a figure eight: the track crosses over itself. 3.6 miles, rebuilt from map data. #suzuka #simracing",
+      "title": "Suzuka onboard at GT3 pace",
+      "earliest": "2026-11-09T00:00:00Z",
+      "script": "Onboard, full screen, suzuka from 2s into the lap, the livery of the Garage Hero rig.",
+      "prompts": {
+        "track": "suzuka",
+        "skip": 2,
+        "seconds": 18,
+        "rig": "garage-hero",
+        "hook": "Suzuka, Japan"
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W46-laguna-seca-018",
+      "format": "hotlap",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "The Corkscrew at Laguna Seca drops about 59 feet. This is one stretch of the lap, at simulated GT3 pace. #lagunaseca #simracing",
+      "title": "Laguna Seca, the road to the Corkscrew",
+      "earliest": "2026-11-09T00:00:00Z",
+      "script": "Onboard, full screen, laguna-seca from 18s into the lap, the livery of the Gravel Gold rig.",
+      "prompts": {
+        "track": "laguna-seca",
+        "skip": 18,
+        "seconds": 18,
+        "rig": "gravel-gold",
+        "hook": "Monterey's hills, onboard"
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    }
+  ]
+}

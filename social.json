@@ -1,0 +1,67 @@
+{
+  "company": "RoomRacer",
+  "company_repo": "everfields/roomracer",
+  "timezone": "America/New_York",
+  "quiet": [
+    "01:00",
+    "08:00"
+  ],
+  "public_base_url": "https://everfields.github.io/roomracer-social",
+  "networks": {
+    "tiktok": {
+      "enabled": true,
+      "route": "buffer",
+      "slots": [
+        "12:07",
+        "15:07",
+        "18:07",
+        "20:07",
+        "22:07"
+      ],
+      "handle": ""
+    },
+    "instagram": {
+      "enabled": true,
+      "route": "direct",
+      "slots": [
+        "12:37",
+        "19:07"
+      ]
+    },
+    "youtube": {
+      "enabled": true,
+      "route": "direct",
+      "slots": [
+        "13:07",
+        "20:37"
+      ]
+    },
+    "x": {
+      "enabled": false,
+      "route": "buffer",
+      "slots": [
+        "10:07",
+        "17:07"
+      ]
+    }
+  },
+  "warmup": {
+    "days": 14,
+    "start": 1
+  },
+  "jitter_minutes": 40,
+  "brake": {
+    "hours": 72,
+    "reach_floor": 100,
+    "reach_ratio": 0.5
+  },
+  "runway": {
+    "alarm_days": 5,
+    "target_days": 10
+  },
+  "heartbeat_alarm_hours": 36,
+  "alarms": {
+    "mode": "issues",
+    "repo": "everfields/roomracer"
+  }
+}
