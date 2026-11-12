@@ -62,6 +62,7 @@
   "heartbeat_alarm_hours": 36,
   "alarms": {
     "mode": "issues",
-    "repo": "everfields/roomracer"
+    "repo": "everfields/roomracer",
+    "label": "cos:alarm"
   }
 }

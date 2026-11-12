@@ -41,7 +41,16 @@ def weekly() -> None:
     week = f"{y}-W{w:02d}"
     with (LOGS / f"roomracer-weekly-{datetime.now():%Y%m%d-%H%M}.log").open("w", encoding="utf-8") as log:
         run(["git", "pull", "--rebase", "origin", "main"], log)
-        run([PY, "plan.py", "--week", week, "--posts", "7", "--roomracer", "C:/dev/roomracer"], log)
+        # the Company OS `social` loop writes the batch (company/social/batches/); plan.py only fills a week it left empty
+        spec = subprocess.run(["gh", "api", f"repos/everfields/roomracer/contents/company/social/batches/{week}.json", "-H",
+                               "Accept: application/vnd.github.raw+json"], capture_output=True, text=True, encoding="utf-8",
+                              creationflags=NO_WINDOW)
+        if spec.returncode == 0 and spec.stdout.strip().startswith("{"):
+            (REPO / "batches").mkdir(exist_ok=True)
+            (REPO / "batches" / f"{week}.json").write_text(spec.stdout, encoding="utf-8")
+            log.write(f"batch {week} from the social loop\n")
+        else:
+            run([PY, "plan.py", "--week", week, "--posts", "7", "--roomracer", "C:/dev/roomracer"], log)
         run(["git", "add", "batches"], log)
         if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO, creationflags=NO_WINDOW).returncode != 0:
             run(["git", "commit", "-m", f"plan {week}"], log)

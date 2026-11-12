@@ -1,9 +1,9 @@
 # RoomRacer: social
 
-**Dry run only** until Carlos and Alberto approve the direction and the accounts exist: `SOCIAL_CRON=dry-run`, and no network is live. RoomRacer has no Company OS, so three things differ from the standard install:
-- `plan.py` writes each week's batch from RoomRacer's own data, in place of the Company OS `social` loop;
-- alarms open issues labelled `social:alarm` in `everfields/roomracer` (`"alarms": {"mode": "issues"}` in `social.json`), or here until the token for that repo exists;
-- the PC is the outside clock: a Windows task sends `social-tick` every 15 minutes while it is on.
+**Dry run only** until Carlos and Alberto approve the direction and the accounts exist: `SOCIAL_CRON=dry-run`, and no network is live. RoomRacer runs the Company OS since 2026-11-12. What differs from the standard install:
+- The batches: the Company OS `social` loop writes them in `everfields/roomracer` (`company/social/batches/`). `plan.py` writes one from RoomRacer's own data only for a week the loop left empty.
+- The alarms: they open `cos:alarm` issues in `everfields/roomracer`, carrying the engine's marker, which the incident loop owns. This is `"alarms": {"mode": "issues", "label": "cos:alarm"}` in `social.json`, and it needs only Issues write. Until that token exists, they open here.
+- The outside clock: the PC sends `social-tick` every 15 minutes while it is on.
 
 The format is `formats/hotlap/`: RoomRacer's own Hot Lap, filmed from roomracer.com on the PC's GPU, with every image not served by roomracer.com refused while filming.
 

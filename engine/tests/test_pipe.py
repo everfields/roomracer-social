@@ -682,6 +682,14 @@ class TestAlarmIssues(TmpCase):
         self.assertIn("/repos/o/social/issues", issues[0]["repo"])
         self.assertEqual(stub.requests[-1].json["labels"], ["social:alarm"])
 
+    def test_a_company_os_label_and_marker(self):
+        a, stub, issues = self.make({"COS_EVENT_TOKEN": "t", "GITHUB_REPOSITORY": "o/s"})
+        a.label = "cos:alarm"
+        a.raise_("brake-tiktok", "tiktok: the brake tripped", "body")
+        self.assertEqual(stub.requests[-1].json["labels"], ["cos:alarm"])
+        self.assertIn("<!-- cos-alarm:social:brake-tiktok -->", issues[0]["body"])
+        self.assertTrue(stub.requests[-1].json["title"].startswith("[alarm] "))
+
     def test_from_config_reads_the_mode(self):
         raw = json.loads(json.dumps(BASE))
         raw["alarms"] = {"mode": "issues", "repo": "o/company"}

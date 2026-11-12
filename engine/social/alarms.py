@@ -3,10 +3,12 @@
 - `dispatch` (the default): a `cos-event` repository_dispatch to the company repo, which the incident loop owns.
   `social-alarm` opens a `cos:alarm` issue keyed `social:<key>` (the engine dedupes by key), and `social-clear` closes
   it. `metric-social-breakout` wakes the loops that listen to `metric*`. Needs COS_EVENT_TOKEN.
-- `issues`, for a company without the Company OS (`"alarms": {"mode": "issues", "repo": "owner/name"}` in
-  social.json): one issue per alarm labelled `social:alarm`, opened and closed here. It goes to `repo` with
-  COS_EVENT_TOKEN (Issues write on that repo), else to the social repo itself with the job's GITHUB_TOKEN, so an alarm
-  is never lost while a token is missing. A breakout opens a `social:event` issue.
+- `issues` (`"alarms": {"mode": "issues", "repo": "owner/name", "label": "cos:alarm"}` in social.json): one issue
+  per alarm, opened and closed here, with only Issues write needed. It goes to `repo` with COS_EVENT_TOKEN, else to the
+  social repo itself with the job's GITHUB_TOKEN, so an alarm is never lost while a token is missing. It carries the
+  Company OS's own marker (`cos-alarm:social:<key>`), so with the label `cos:alarm` the company's incident loop owns it
+  exactly like an engine alarm; the default label `social:alarm` suits a company without the Company OS. A breakout
+  opens a `social:event` issue.
 Only a live publisher sends: a dry run records what it would send. A still-open alarm is re-sent at most once a day.
 """
 
@@ -24,7 +26,8 @@ API = "https://api.github.com"
 
 class Alarms:
     def __init__(self, state: GuardState, env: Mapping[str, str], *, live: bool, company_repo: str,
-                 transport: Transport | None = None, now: datetime, mode: str = "dispatch", issues_repo: str = ""):
+                 transport: Transport | None = None, now: datetime, mode: str = "dispatch", issues_repo: str = "",
+                 label: str = "social:alarm"):
         self.state = state
         self.env = env
         self.live = live
@@ -33,6 +36,7 @@ class Alarms:
         self.now = now
         self.mode = mode if mode in ("dispatch", "issues") else "dispatch"
         self.issues_repo = issues_repo
+        self.label = label or "social:alarm"
         self.sent: list[dict] = []  # what went out (or would have, in a dry run)
         self.raised: set[str] = set()
         self.errors: list[str] = []  # an alarm that could not be sent never stops the run that raised it
@@ -42,7 +46,8 @@ class Alarms:
                     transport: Transport | None = None) -> "Alarms":
         a = (cfg.raw.get("alarms") or {}) if hasattr(cfg, "raw") else {}
         return cls(state, env, live=live, company_repo=cfg.company_repo, transport=transport, now=now,
-                   mode=str(a.get("mode", "dispatch")), issues_repo=str(a.get("repo", "")))
+                   mode=str(a.get("mode", "dispatch")), issues_repo=str(a.get("repo", "")),
+                   label=str(a.get("label", "social:alarm")))
 
     def _headers(self, token: str) -> dict:
         return {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
@@ -81,8 +86,9 @@ class Alarms:
             return self._fail(payload, "no repo or token for alarm issues (COS_EVENT_TOKEN or the job's GITHUB_TOKEN)")
         h = self._headers(token)
         kind = payload["type"]
-        label = "social:alarm" if kind in ("social-alarm", "social-clear") else "social:event"
-        marker = f"<!-- social-alarm:{payload.get('key') or kind} -->"
+        label = self.label if kind in ("social-alarm", "social-clear") else "social:event"
+        key = payload.get("key") or kind
+        marker = f"<!-- social-alarm:{key} -->"
         if kind == "social-clear":
             found = self._find(repo, h, label, marker)
             if found is None:
@@ -97,7 +103,8 @@ class Alarms:
             f"{payload.get('network', '')} {payload.get('format', '')}".strip()
         body = payload.get("body") or "\n".join(f"- {k}: {v}" for k, v in payload.items() if k not in ("type", "social_repo"))
         text = (f"{body}\n\nSeverity: **{payload.get('severity', 'normal')}**. From the social repo "
-                f"{payload.get('social_repo', '')}, {iso(self.now)}. It closes itself when the condition clears.\n\n{marker}")
+                f"{payload.get('social_repo', '')}, {iso(self.now)}. It closes itself when the condition clears.\n\n{marker}\n"
+                f"<!-- cos-alarm:social:{key} -->")
         r = self.transport.send(Request("POST", f"{API}/repos/{repo}/issues", headers=h,
                                         json={"title": title[:200], "body": text, "labels": [label]}))
         return r.status == 201 or self._fail(payload, f"opening an issue in {repo} answered {r.status}")
