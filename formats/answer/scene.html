@@ -32,6 +32,7 @@ h2 { font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -.015e
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
 .row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 26px 20px; border-bottom: 1px solid var(--line); }
 .row:last-child { border-bottom: 0; }
+.row > div { min-width: 0; } .row .nm { overflow-wrap: break-word; hyphens: auto; } .row.photo .nm { font-size: 26px; }
 .row .ph { width: 128px; height: 128px; border-radius: 8px; background: #f4f4f2; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .row .ph img { max-width: 90%; max-height: 90%; object-fit: contain; }
 .row .lab { font-size: 19px; color: var(--muted); font-weight: 650; margin-bottom: 4px; }
@@ -88,7 +89,7 @@ const BUILD = {
     return el(`<div class="scene ${hero ? '' : 'center'}">${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ''}<h1>${esc(s.title)}</h1>${s.sub ? `<div class="sub r" data-at="${s.subAt ?? 0.6}">${esc(s.sub)}</div>` : ''}${hero ? `<div class="hero r" data-at="${s.subAt ?? 0.6}">${hero}</div>` : ''}</div>`);
   },
   list(s) {
-    const rows = s.items.map((it, i) => `<div class="row r" data-at="${it.at}" style="${img(it.img) ? '' : 'grid-template-columns: 1fr auto'}">${img(it.img) ? `<div class="ph">${img(it.img)}</div>` : ''}<div><div class="lab">${esc(it.label)}</div><div class="nm">${esc(it.name)}</div></div>
+    const rows = s.items.map((it, i) => `<div class="row r ${img(it.img) ? 'photo' : ''}" data-at="${it.at}" style="${img(it.img) ? '' : 'grid-template-columns: 1fr auto'}">${img(it.img) ? `<div class="ph">${img(it.img)}</div>` : ''}<div><div class="lab">${esc(it.label)}</div><div class="nm">${esc(it.name)}</div></div>
       <div class="pr ${it.price ? '' : 'zero'}">${it.price ? money(it.price) : esc(it.free || 'You have it')}</div></div>`).join('');
     const sum = s.items.reduce((a, it) => a + (it.price || 0), 0);
     return el(`<div class="scene"><h2>${esc(s.title)}</h2><div class="card">${rows}</div>
