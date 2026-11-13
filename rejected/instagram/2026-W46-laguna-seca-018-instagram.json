@@ -1,6 +1,6 @@
 {
-  "id": "2026-W46-laguna-seca-018-tiktok",
-  "network": "tiktok",
+  "id": "2026-W46-laguna-seca-018-instagram",
+  "network": "instagram",
   "format": "hotlap",
   "batch": "2026-W46",
   "media": {
@@ -40,5 +40,8 @@
       "8080005ac0000290",
       "8080002a00080294"
     ]
-  }
+  },
+  "rejected": "2026-11-13",
+  "rejected_by": "Carlos",
+  "why": "hotlap format rejected: a wow effect with no relation to the store or its products"
 }

@@ -1,6 +1,6 @@
 {
-  "id": "2026-W46-laguna-seca-002-tiktok",
-  "network": "tiktok",
+  "id": "2026-W46-laguna-seca-002-youtube",
+  "network": "youtube",
   "format": "hotlap",
   "batch": "2026-W46",
   "media": {
@@ -40,5 +40,8 @@
       "8090c808f40c0fd6",
       "8898f5acb8080fda"
     ]
-  }
+  },
+  "rejected": "2026-11-13",
+  "rejected_by": "Carlos",
+  "why": "hotlap format rejected: a wow effect with no relation to the store or its products"
 }

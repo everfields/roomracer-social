@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=540,height=960">
+<style>
+@font-face { font-family: "Inter"; src: url("INTER_URL") format("truetype"); font-weight: 100 900; }
+:root {
+  --bg: #111214; --panel: #17181b; --panel2: #1d1f23; --line: #2e3136; --text: #ecebe6; --muted: #8b8f96;
+  --purple: #9d5cff; --green: #1fbf62; --yellow: #f2c200; --red: #ff4b3a; --kerb-red: #d7261e; --kerb-white: #efede6;
+  --accent: #e8412c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 540px; height: 960px; overflow: hidden; background: var(--bg); color: var(--text);
+  font-family: "Inter", system-ui, sans-serif; font-feature-settings: "tnum" 1, "ss01" 1; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: absolute; inset: 0; opacity: .07; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.9 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); }
+.kerb { position: absolute; left: 0; right: 0; top: 0; height: 12px;
+  background: repeating-linear-gradient(135deg, var(--kerb-red) 0 12px, var(--kerb-white) 12px 24px); }
+.brand { position: absolute; left: 30px; top: 30px; font-size: 15px; font-weight: 800; letter-spacing: .02em; color: var(--text); }
+.brand i { font-style: normal; color: var(--accent); }
+.brand span { color: var(--muted); font-weight: 600; margin-left: 8px; }
+.scene { position: absolute; left: 30px; right: 30px; top: 92px; height: 640px; opacity: 0; will-change: opacity, transform; }
+.kicker { display: inline-block; font-size: 15px; font-weight: 700; padding: 6px 11px; border-radius: 5px; background: var(--purple); color: #fff; margin-bottom: 22px; }
+h1 { font-size: 46px; line-height: 1.08; font-weight: 800; letter-spacing: -.02em; }
+h2 { font-size: 30px; line-height: 1.12; font-weight: 800; letter-spacing: -.01em; margin-bottom: 18px; }
+.sub { margin-top: 20px; font-size: 26px; line-height: 1.25; color: var(--muted); font-weight: 600; }
+.r { opacity: 0; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: 0; }
+.row .lab { font-size: 15px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.row .nm { font-size: 21px; font-weight: 700; line-height: 1.2; }
+.row .pr { font-size: 28px; font-weight: 800; }
+.row .pr.zero { color: var(--green); font-size: 22px; }
+.total { margin-top: 16px; display: flex; justify-content: space-between; align-items: baseline; padding: 16px 18px; border-radius: 8px;
+  background: linear-gradient(90deg, rgba(157,92,255,.22), rgba(157,92,255,.06)); border: 1px solid rgba(157,92,255,.6); }
+.total b { font-size: 20px; } .total .num { font-size: 44px; font-weight: 900; color: #fff; }
+.note { margin-top: 12px; font-size: 15px; color: var(--muted); }
+.fact { display: grid; grid-template-columns: 14px 1fr; gap: 14px; padding: 16px 18px; border-bottom: 1px solid var(--line); align-items: start; }
+.fact:last-child { border-bottom: 0; }
+.dot { width: 14px; height: 14px; border-radius: 50%; margin-top: 6px; background: var(--muted); }
+.fact .k { font-size: 15px; color: var(--muted); font-weight: 600; } .fact .v { font-size: 23px; font-weight: 700; line-height: 1.22; margin-top: 3px; }
+.tone-green { background: var(--green); } .tone-yellow { background: var(--yellow); } .tone-purple { background: var(--purple); } .tone-red { background: var(--red); }
+.c-green { color: var(--green); } .c-yellow { color: var(--yellow); } .c-purple { color: #b98bff; } .c-red { color: var(--red); }
+.cmp { padding: 16px 18px; margin-bottom: 12px; display: grid; grid-template-columns: 138px 1fr; gap: 12px; align-items: center; }
+.cmp .p { font-size: 33px; font-weight: 900; letter-spacing: -.02em; }
+.cmp .n { font-size: 15px; color: var(--muted); font-weight: 700; }
+.cmp .l { font-size: 19px; font-weight: 700; line-height: 1.22; margin-top: 2px; }
+.cmp .s { font-size: 17px; font-weight: 700; margin-top: 6px; }
+.insight { margin-top: 6px; padding: 16px 18px; border-left: 4px solid var(--yellow); background: rgba(242,194,0,.08); font-size: 22px; font-weight: 700; line-height: 1.25; }
+.plan { display: block; margin: 0 auto; }
+.plan .room { fill: #15161a; stroke: var(--text); stroke-width: 3; }
+.plan .fixed { fill: #24262b; stroke: #4a4e55; stroke-width: 1.5; }
+.plan .rig { stroke-width: 2; }
+.plan text { font-family: "Inter"; font-weight: 700; }
+.cap { margin-top: 18px; font-size: 24px; font-weight: 800; line-height: 1.2; min-height: 64px; }
+.cap small { display: block; font-size: 17px; color: var(--muted); font-weight: 600; margin-top: 4px; }
+.cta { margin-top: 28px; display: inline-flex; align-items: center; gap: 12px; font-size: 28px; font-weight: 800; padding: 16px 22px; border-radius: 8px; background: var(--accent); color: #fff; }
+.site { margin-top: 18px; font-size: 22px; font-weight: 700; color: var(--muted); }
+.fine { position: absolute; left: 30px; right: 110px; top: 742px; font-size: 13px; line-height: 1.35; color: var(--muted); opacity: 0; }
+</style>
+</head>
+<body>
+<div class="kerb"></div>
+<div class="brand">Room<i>Racer</i><span id="tag"></span></div>
+<div id="root"></div>
+<div class="fine" id="fine"></div>
+<script>
+const IN = 0.35, OUT = 0.25;
+let SPEC = null, scenes = [];
+const ease = (x) => { x = Math.min(1, Math.max(0, x)); return 1 - Math.pow(1 - x, 3); };
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const money = (n) => '$' + Math.round(n).toLocaleString('en-US');
+const ftin = (inches) => { const f = Math.floor(inches / 12), i = Math.round(inches % 12); return i ? `${f}′${i}″` : `${f}′`; };
+
+function el(html) { const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstChild; }
+
+const BUILD = {
+  hook(s) {
+    return el(`<div class="scene">${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ''}<h1>${esc(s.title)}</h1>${s.sub ? `<div class="sub r" data-at="${s.subAt ?? 0.6}">${esc(s.sub)}</div>` : ''}</div>`);
+  },
+  list(s) {
+    const rows = s.items.map((it, i) => `<div class="row r" data-at="${it.at}"><div><div class="lab">${esc(it.label)}</div><div class="nm">${esc(it.name)}</div></div>
+      <div class="pr ${it.price ? '' : 'zero'}">${it.price ? money(it.price) : esc(it.free || 'You have it')}</div></div>`).join('');
+    const sum = s.items.reduce((a, it) => a + (it.price || 0), 0);
+    return el(`<div class="scene"><h2>${esc(s.title)}</h2><div class="card">${rows}</div>
+      <div class="total r" data-at="${s.outroAt ?? s.items.at(-1).at + 0.6}"><b>${esc(s.totalLabel || 'Total')}</b><span class="num" data-count="${sum}" data-at="${s.outroAt ?? 0}">$0</span></div>
+      ${s.note ? `<div class="note r" data-at="${s.outroAt ?? 0}">${esc(s.note)}</div>` : ''}</div>`);
+  },
+  facts(s) {
+    const rows = s.items.map((it) => `<div class="fact r" data-at="${it.at}"><div class="dot tone-${it.tone || 'muted'}"></div><div><div class="k">${esc(it.k)}</div><div class="v">${esc(it.v)}</div></div></div>`).join('');
+    return el(`<div class="scene"><h2>${esc(s.title)}</h2><div class="card">${rows}</div></div>`);
+  },
+  compare(s) {
+    const cards = s.items.map((it) => `<div class="card cmp r" data-at="${it.at}"><div class="p">${esc(it.price)}</div>
+      <div><div class="n">${esc(it.name)}</div><div class="l">${esc(it.line)}</div><div class="s c-${it.tone || 'muted'}">${esc(it.sound)}</div></div></div>`).join('');
+    return el(`<div class="scene"><h2>${esc(s.title)}</h2>${cards}${s.note ? `<div class="insight r" data-at="${s.outroAt}">${esc(s.note)}</div>` : ''}</div>`);
+  },
+  plan(s) {
+    const W = 440, room = s.room, k = (W - 20) / Math.max(room.w, room.d), H = room.d * k + 20;
+    const R = (r, cls, extra = '') => `<rect class="${cls}" x="${10 + r.x * k}" y="${10 + r.y * k}" width="${r.w * k}" height="${r.d * k}" rx="3" ${extra}/>`;
+    const T = (r, size = 13, fill = '#ecebe6') => r.label ? `<text x="${10 + (r.x + r.w / 2) * k}" y="${10 + (r.y + r.d / 2) * k + size / 3}" font-size="${size}" fill="${fill}" text-anchor="middle">${esc(r.label)}</text>` : '';
+    const fixed = (room.fixed || []).map((r) => R(r, 'fixed') + T(r, 13, '#8b8f96')).join('');
+    const colors = { green: '#1fbf62', yellow: '#f2c200', purple: '#9d5cff', red: '#ff4b3a' };
+    const steps = s.items.map((st, i) => {
+      const c = colors[st.tone] || '#e8412c';
+      const g = st.rects.map((r) => R(r, 'rig', `fill="${c}33" stroke="${c}" ${r.dashed ? 'stroke-dasharray="6 5"' : ''}`) + T(r, 12)).join('');
+      return `<g class="step" data-i="${i}" opacity="0">${g}</g>`;
+    }).join('');
+    const caps = s.items.map((st, i) => `<div class="cap step" data-i="${i}" style="position:absolute;opacity:0">${esc(st.caption)}${st.detail ? `<small>${esc(st.detail)}</small>` : ''}</div>`).join('');
+    return el(`<div class="scene"><h2>${esc(s.title)}</h2>
+      <svg class="plan" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><rect class="room" x="10" y="10" width="${room.w * k}" height="${room.d * k}"/>${fixed}${steps}
+      <text x="${W / 2}" y="${H - 16}" font-size="13" fill="#8b8f96" text-anchor="middle">${esc(room.label || `${ftin(room.w)} × ${ftin(room.d)} room`)}</text></svg>
+      <div style="position:relative">${caps}</div></div>`);
+  },
+  end(s) {
+    return el(`<div class="scene"><h1 style="font-size:40px">${esc(s.title)}</h1>${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
+      <div class="cta r" data-at="${s.ctaAt ?? 0.5}">${esc(s.cta || 'Full list: link in bio')} →</div><div class="site r" data-at="${s.ctaAt ?? 0.5}">${esc(s.site || 'roomracer.com')}</div></div>`);
+  },
+};
+
+window.load = async (spec) => {
+  SPEC = spec;
+  document.getElementById('tag').textContent = spec.tag || '';
+  document.getElementById('fine').textContent = spec.fine || '';
+  const root = document.getElementById('root');
+  root.innerHTML = '';
+  scenes = spec.scenes.map((s) => { const n = BUILD[s.type](s); root.appendChild(n); return n; });
+  await document.fonts.ready;
+  return spec.scenes.reduce((a, s) => Math.max(a, s.start + s.dur), 0);
+};
+
+window.seek = (t) => {
+  const last = SPEC.scenes.length - 1;
+  SPEC.scenes.forEach((s, i) => {
+    const n = scenes[i], lt = t - s.start;
+    const on = lt >= 0 && (lt < s.dur || i === last);
+    if (!on) { n.style.opacity = 0; return; }
+    const a = ease(lt / IN), b = i === last ? 1 : ease((s.dur - lt) / OUT);
+    n.style.opacity = Math.min(a, b);
+    n.style.transform = `translateY(${(1 - a) * 22}px)`;
+    n.querySelectorAll('.r').forEach((r) => {
+      const p = ease((lt - Number(r.dataset.at || 0)) / 0.3);
+      r.style.opacity = p;
+      r.style.transform = `translateY(${(1 - p) * 14}px)`;
+    });
+    n.querySelectorAll('[data-count]').forEach((c) => {
+      const p = ease((lt - Number(c.dataset.at || 0)) / 0.8);
+      c.textContent = money(Number(c.dataset.count) * p);
+    });
+    if (s.type === 'plan') {
+      let cur = -1;
+      s.items.forEach((st, j) => { if (lt >= st.at) cur = j; });
+      n.querySelectorAll('.step').forEach((g) => {
+        const j = Number(g.dataset.i);
+        const st = s.items[j];
+        const fadeIn = ease((lt - st.at) / 0.35);
+        const op = j === cur ? fadeIn : 0;
+        if (g.tagName.toLowerCase() === 'g') g.setAttribute('opacity', op); else g.style.opacity = op;
+      });
+    }
+  });
+  const fine = document.getElementById('fine');
+  const endStart = SPEC.scenes[last].start;
+  fine.style.opacity = SPEC.fineAlways ? 1 : ease((t - endStart) / 0.4);
+};
+</script>
+</body>
+</html>

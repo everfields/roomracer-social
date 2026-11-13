@@ -9,7 +9,8 @@
   "torch_index": "https://download.pytorch.org/whl/cu128",
   "pip": [
     "kokoro==0.9.4",
-    "soundfile"
+    "soundfile",
+    "srsly==2.5.5"
   ],
   "tools": [
     {

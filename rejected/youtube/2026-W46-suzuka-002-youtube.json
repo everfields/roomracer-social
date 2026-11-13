@@ -1,6 +1,6 @@
 {
-  "id": "2026-W46-suzuka-002-tiktok",
-  "network": "tiktok",
+  "id": "2026-W46-suzuka-002-youtube",
+  "network": "youtube",
   "format": "hotlap",
   "batch": "2026-W46",
   "media": {
@@ -40,5 +40,8 @@
       "808080d1e00e0edc",
       "8080007ac00c8ecc"
     ]
-  }
+  },
+  "rejected": "2026-11-13",
+  "rejected_by": "Carlos",
+  "why": "hotlap format rejected: a wow effect with no relation to the store or its products"
 }

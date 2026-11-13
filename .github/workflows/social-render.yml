@@ -1,0 +1,91 @@
+name: social-render
+
+# Renders the formats that need no GPU (today `answer`) on GitHub's runner: free for a public repo, nothing on the PC.
+# A batch pushed to batches/ renders and uploads on its own; a manual run can render a file and keep the videos as an
+# artifact only (samples). The voice is Kokoro on CPU; type and layout are Chrome; the cut is ffmpeg. No secret is used.
+# Managed by the launch-company skill.
+on:
+  push:
+    branches: [main]
+    paths: ["batches/**"]
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: Batch file in this repo (e.g. formats/answer/example.json)
+        required: true
+      only:
+        description: Render only this post id
+        required: false
+        default: ""
+      upload:
+        description: Queue the posts (off = artifact only, for samples)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-render
+  cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: "1"
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  render:
+    if: "!contains(github.event.head_commit.message, '[render]')"
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: which batches
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "files=${{ inputs.batch }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "files=$(git diff --name-only HEAD~1 HEAD -- 'batches/*.json' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+      - name: tools (ffmpeg, Kokoro on CPU, the Inter font from its own release)
+        if: steps.pick.outputs.files != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
+          python -m pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q $(python -c "import json; print(' '.join(json.load(open('engine/pc/models.json'))['pip']))")
+          mkdir -p "$RUNNER_TEMP/pc/tools/inter"
+          curl -sSfL https://github.com/rsms/inter/releases/download/v4.1/Inter-4.1.zip -o "$RUNNER_TEMP/inter.zip"
+          unzip -q -o "$RUNNER_TEMP/inter.zip" -d "$RUNNER_TEMP/pc/tools/inter"
+      - name: render
+        if: steps.pick.outputs.files != ''
+        env:
+          CHROME: /usr/bin/google-chrome
+        run: |
+          git config user.name "social-render"
+          git config user.email "social-render@users.noreply.github.com"
+          for f in ${{ steps.pick.outputs.files }}; do
+            fmt=$(python -c "import json,sys; b=json.load(open(sys.argv[1])); print(' '.join(sorted({p['format'] for p in b['posts']})))" "$f")
+            for x in $fmt; do
+              gpu=$(python -c "import json,sys; print(json.load(open(sys.argv[1])).get('gpu', True))" "formats/$x/format.json" 2>/dev/null || echo True)
+              [ "$gpu" = "False" ] || { echo "::notice::$f has format $x, which needs the PC's GPU: skipped here"; continue 2; }
+            done
+            args=(--repo . --folder "$RUNNER_TEMP/pc" --batch "$f" --out "$RUNNER_TEMP/out/$(basename "$f" .json)")
+            [ -n "${{ inputs.only }}" ] && args+=(--only "${{ inputs.only }}")
+            if [ "${{ github.event_name }}" != "workflow_dispatch" ] || [ "${{ inputs.upload }}" = "true" ]; then args+=(--upload); fi
+            python engine/pc/render.py "${args[@]}"
+          done
+      - uses: actions/upload-artifact@v4
+        if: steps.pick.outputs.files != ''
+        with:
+          name: videos
+          path: ${{ runner.temp }}/out/*/media/*.mp4
+          retention-days: 30
