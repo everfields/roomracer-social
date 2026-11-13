@@ -61,7 +61,7 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg
           python -m pip install -q torch --index-url https://download.pytorch.org/whl/cpu
-          python -m pip install -q $(python -c "import json; print(' '.join(json.load(open('engine/pc/models.json'))['pip']))")
+          python -m pip install -q pillow numpy $(python -c "import json; print(' '.join(json.load(open('engine/pc/models.json'))['pip']))")
           mkdir -p "$RUNNER_TEMP/pc/tools/inter"
           curl -sSfL https://github.com/rsms/inter/releases/download/v4.1/Inter-4.1.zip -o "$RUNNER_TEMP/inter.zip"
           unzip -q -o "$RUNNER_TEMP/inter.zip" -d "$RUNNER_TEMP/pc/tools/inter"
