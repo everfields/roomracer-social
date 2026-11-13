@@ -2,7 +2,7 @@
 // Draws an `answer` post frame by frame: scene.html in a headless Chrome over the DevTools protocol (Node's built-in
 // WebSocket, no library), seeked to each frame's time and screenshotted at 1080x1920. Deterministic: every frame is the
 // page at exactly t = i / fps, so nothing drops. CPU only, no network: the page loads nothing from outside.
-//   node frames.mjs --spec spec.json --font <InterVariable.ttf> --out <dir> [--fps 30]
+//   node frames.mjs --spec spec.json --font <InterVariable.ttf> --out <dir> [--fps 30] [--times 1.5,6,12]
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -67,9 +67,12 @@ async function main() {
   await send('Page.navigate', { url: pathToFileURL(page).href });
   for (let i = 0; i < 100 && !(await evaluate('typeof window.load === "function"').catch(() => false)); i++) await sleep(100);
   const seconds = await evaluate(`window.load(${JSON.stringify(spec)})`);
-  const n = Math.ceil(seconds * FPS);
+  // --times 1.5,6,12 draws only those moments (a review sheet); otherwise every frame
+  const times = args.times ? String(args.times).split(',').map(Number) : Array.from({ length: Math.ceil(seconds * FPS) }, (_, i) => i / FPS);
+  const n = times.length;
   for (let i = 0; i < n; i++) {
-    await evaluate(`window.seek(${(i / FPS).toFixed(4)})`);
+    await evaluate(`window.seek(${times[i].toFixed(4)})`);
+    if (args.times) await sleep(400);  // let any hotlinked image finish loading
     const shot = await send('Page.captureScreenshot', { format: 'jpeg', quality: 93, captureBeyondViewport: false });
     fs.writeFileSync(path.join(out, `f${String(i).padStart(5, '0')}.jpg`), Buffer.from(shot.data, 'base64'));
   }

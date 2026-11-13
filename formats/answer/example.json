@@ -4,35 +4,88 @@
     {
       "id": "sample-answer-order-388",
       "format": "answer",
-      "networks": ["tiktok", "instagram", "youtube"],
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
       "caption": "What to order for a PS5 teen's racing wheel this Christmas: $388 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #giftideas",
       "title": "PS5 racing wheel gift: exactly what to order ($388)",
-      "ai": {"generated": false, "realistic": false},
+      "ai": {
+        "generated": false,
+        "realistic": false
+      },
       "prompts": {
         "voice": "af_heart",
-        "speed": 1.05,
+        "speed": 1.12,
         "spec": {
           "tag": "PS5 gift guide",
           "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
           "scenes": [
-            {"type": "hook", "kicker": "Parents of a PS5 teen", "title": "Your teen wants a racing wheel for the PS5.", "sub": "Here's exactly what to order.",
-             "say": "Your teen wants a racing wheel for their PS5? Here's exactly what to order."},
-            {"type": "list", "title": "What to order", "totalLabel": "With your TV",
-             "items": [
-               {"label": "Wheel stand", "name": "Next Level Racing Wheel Stand Lite", "price": 139, "say": "A wheel stand, about a hundred and forty dollars."},
-               {"label": "Wheel and pedals, in one box", "name": "Thrustmaster T248 (PlayStation/PC)", "price": 249, "say": "The Thrustmaster T two forty-eight, about two fifty. The pedals come in the box."},
-               {"label": "Screen", "name": "The TV you already have", "price": 0, "free": "$0", "say": "And the TV you already have."}
-             ],
-             "outro": "That's three eighty-eight, all in."},
-            {"type": "facts", "title": "Before you order",
-             "items": [
-               {"k": "PS5", "v": "Made for PS5. Confirm on the brand's page.", "tone": "green", "say": "The wheel is made for the PS5."},
-               {"k": "Floor", "v": "About 1′10″ × 2′4″. Folds behind the sofa.", "tone": "green", "say": "It takes about two by two and a half feet, and folds away behind the sofa."},
-               {"k": "How loud", "v": "Belt-driven: a soft hum, not a click.", "tone": "green", "say": "It's belt-driven, so it hums instead of clicking."},
-               {"k": "Outlets", "v": "One more, for the wheel base.", "tone": "yellow", "say": "And it needs one more outlet."}
-             ]},
-            {"type": "end", "title": "Two more PS5 setups: $519 and $1,828.", "cta": "What to order for each: link in bio",
-             "say": "Two more setups, and what to order for each, are at the link in bio."}
+            {
+              "type": "hook",
+              "kicker": "Parents of a PS5 teen",
+              "title": "Your teen wants a racing wheel for the PS5.",
+              "sub": "Here's exactly what to order.",
+              "say": "Your teen wants a racing wheel for the PS5? Here's exactly what to order."
+            },
+            {
+              "type": "list",
+              "title": "What to order",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Wheel stand",
+                  "name": "Next Level Racing Wheel Stand Lite",
+                  "price": 139,
+                  "say": "A wheel stand: about one forty."
+                },
+                {
+                  "label": "Wheel and pedals, in one box",
+                  "name": "Thrustmaster T248 (PlayStation/PC)",
+                  "price": 249,
+                  "say": "The Thrustmaster T two forty-eight, about two fifty, pedals in the box."
+                },
+                {
+                  "label": "Screen",
+                  "name": "The TV you already have",
+                  "price": 0,
+                  "free": "$0",
+                  "say": "And the TV you already have."
+                }
+              ],
+              "outro": "That's three eighty-eight, all in."
+            },
+            {
+              "type": "facts",
+              "title": "Before you order",
+              "items": [
+                {
+                  "k": "PS5",
+                  "v": "Made for PS5. Confirm on the brand's page.",
+                  "tone": "green",
+                  "say": "The wheel is made for the PS5."
+                },
+                {
+                  "k": "Floor",
+                  "v": "About 1′10″ × 2′4″. Folds behind the sofa.",
+                  "tone": "green",
+                  "say": "It folds away behind the sofa."
+                },
+                {
+                  "k": "How loud",
+                  "v": "Belt-driven: a soft hum, not a click.",
+                  "tone": "green",
+                  "say": "And it hums instead of clicking."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Two more PS5 setups: $519 and $1,828.",
+              "cta": "What to order for each: link in bio",
+              "say": "Two more setups are at the link in bio."
+            }
           ]
         }
       }
@@ -40,35 +93,131 @@
     {
       "id": "sample-answer-fit-bedroom",
       "format": "answer",
-      "networks": ["tiktok", "instagram", "youtube"],
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
       "caption": "Will a sim racing setup fit in a teen's bedroom? Three PS5 setups on a 10x10 ft room, drawn to scale. We earn from qualifying purchases. #simracing #ps5 #giftideas",
       "title": "Will a racing setup fit in a bedroom? Drawn to scale",
-      "ai": {"generated": false, "realistic": false},
+      "ai": {
+        "generated": false,
+        "realistic": false
+      },
       "prompts": {
         "voice": "af_heart",
-        "speed": 1.05,
+        "speed": 1.12,
         "spec": {
           "tag": "PS5 gift guide",
           "fine": "Floor space from each part's published size. Prices are our estimates of typical US prices (Nov 2026). Synthetic voice. We earn from qualifying purchases.",
           "scenes": [
-            {"type": "hook", "kicker": "Parents of a PS5 teen", "title": "Will a racing setup fit in a teen's bedroom?", "sub": "A 10 × 10 ft room, drawn to scale.",
-             "say": "Will a racing setup fit in your teen's bedroom? Here's a ten by ten room, drawn to scale."},
-            {"type": "plan", "title": "Floor space, to scale",
-             "room": {"w": 120, "d": 120, "label": "10′ × 10′ bedroom",
-                      "fixed": [{"x": 0, "y": 0, "w": 39, "d": 75, "label": "Twin bed"}, {"x": 0, "y": 98, "w": 36, "d": 20, "label": "Dresser"}]},
-             "items": [
-               {"caption": "$388 · wheel stand, 1′10″ × 2′4″", "detail": "Plus a chair you have. Folds away.", "tone": "green",
-                "rects": [{"x": 74, "y": 44, "w": 22, "d": 28, "label": "Stand"}, {"x": 70, "y": 76, "w": 30, "d": 26, "label": "Your chair", "dashed": true}],
-                "say": "The three eighty-eight setup is just a wheel stand. Under two by two and a half feet, and it folds away."},
-               {"caption": "$907 · seat 2′ × 4′7″, plus a monitor stand", "detail": "Its own screen. The seat folds flat.", "tone": "yellow",
-                "rects": [{"x": 69, "y": 10, "w": 31, "d": 28, "label": "Monitor"}, {"x": 72.5, "y": 42, "w": 24, "d": 55, "label": "Seat"}],
-                "say": "The nine-oh-seven setup brings its own seat and screen. About two and a half by seven feet."},
-               {"caption": "$3,056 · cockpit 1′11″ × 4′5″, plus a TV stand", "detail": "The serious one, screen included.", "tone": "purple",
-                "rects": [{"x": 67, "y": 10, "w": 35, "d": 28, "label": "TV stand"}, {"x": 73, "y": 42, "w": 23, "d": 53, "label": "Cockpit"}],
-                "say": "And the full cockpit with a TV stand. About three by seven feet."}
-             ]},
-            {"type": "end", "title": "Floor, noise and outlets for each setup.", "cta": "What to order: link in bio",
-             "say": "Floor space, noise and outlets for every setup are at the link in bio."}
+            {
+              "type": "hook",
+              "kicker": "Parents of a PS5 teen",
+              "title": "Will a racing setup fit in a teen's bedroom?",
+              "sub": "A 10 × 10 ft room, drawn to scale.",
+              "say": "Will a racing setup fit in your teen's bedroom? Here's a ten by ten room, drawn to scale."
+            },
+            {
+              "type": "plan",
+              "title": "Floor space, to scale",
+              "room": {
+                "w": 120,
+                "d": 120,
+                "label": "10′ × 10′ bedroom",
+                "fixed": [
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "w": 39,
+                    "d": 75,
+                    "label": "Twin bed"
+                  },
+                  {
+                    "x": 0,
+                    "y": 98,
+                    "w": 36,
+                    "d": 20,
+                    "label": "Dresser"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "$388 · wheel stand, 1′10″ × 2′4″",
+                  "detail": "Plus a chair you have. Folds away.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 74,
+                      "y": 44,
+                      "w": 22,
+                      "d": 28,
+                      "label": "Stand"
+                    },
+                    {
+                      "x": 70,
+                      "y": 76,
+                      "w": 30,
+                      "d": 26,
+                      "label": "Your chair",
+                      "dashed": true
+                    }
+                  ],
+                  "say": "The three eighty-eight setup is just a wheel stand. Under two by two and a half feet, and it folds away."
+                },
+                {
+                  "caption": "$907 · seat 2′ × 4′7″, plus a monitor stand",
+                  "detail": "Its own screen. The seat folds flat.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 69,
+                      "y": 10,
+                      "w": 31,
+                      "d": 28,
+                      "label": "Monitor"
+                    },
+                    {
+                      "x": 72.5,
+                      "y": 42,
+                      "w": 24,
+                      "d": 55,
+                      "label": "Seat"
+                    }
+                  ],
+                  "say": "The nine-oh-seven setup brings its own seat and screen. About two and a half by seven feet."
+                },
+                {
+                  "caption": "$3,056 · cockpit 1′11″ × 4′5″, plus a TV stand",
+                  "detail": "The serious one, screen included.",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 67,
+                      "y": 10,
+                      "w": 35,
+                      "d": 28,
+                      "label": "TV stand"
+                    },
+                    {
+                      "x": 73,
+                      "y": 42,
+                      "w": 23,
+                      "d": 53,
+                      "label": "Cockpit"
+                    }
+                  ],
+                  "say": "And the full cockpit with a TV stand. About three by seven feet."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Floor, noise and outlets for each setup.",
+              "cta": "What to order: link in bio",
+              "say": "Floor space, noise and outlets for every setup are at the link in bio."
+            }
           ]
         }
       }
@@ -76,32 +225,68 @@
     {
       "id": "sample-answer-what-more-buys",
       "format": "answer",
-      "networks": ["tiktok", "instagram", "youtube"],
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
       "caption": "Three racing wheel setups for a PS5 teen: $388, $519, $1,828. The cheapest is quieter than the middle one. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #giftideas",
       "title": "$388 vs $519 vs $1,828: what more money buys (PS5 racing wheel)",
-      "ai": {"generated": false, "realistic": false},
+      "ai": {
+        "generated": false,
+        "realistic": false
+      },
       "prompts": {
         "voice": "af_heart",
-        "speed": 1.05,
+        "speed": 1.12,
         "spec": {
           "tag": "PS5 gift guide",
           "fine": "Prices are our estimates of typical US prices (Nov 2026), with the TV you already have. Synthetic voice. We earn from qualifying purchases.",
           "scenes": [
-            {"type": "hook", "kicker": "Parents of a PS5 teen", "title": "Three racing setups for a PS5. What does more money buy?",
-             "say": "Three racing setups for a PS5 teen. What does more money actually buy?"},
-            {"type": "compare", "title": "With the TV you already have",
-             "items": [
-               {"price": "$388", "name": "Couch to Track", "line": "Belt-driven wheel on a folding stand", "sound": "Sound: a soft hum", "tone": "green",
-                "say": "Three eighty-eight: a belt-driven wheel on a folding stand. It hums."},
-               {"price": "$519", "name": "Midnight Rookie", "line": "Gear-driven wheel and a seat that folds flat", "sound": "Sound: whirs and clicks", "tone": "yellow",
-                "say": "Five nineteen: a gear-driven wheel and a seat that folds flat. You'll hear it whir and click."},
-               {"price": "$1,828", "name": "Rosso GT", "line": "Direct drive, load-cell pedals, full cockpit", "sound": "Sound: close to silent", "tone": "purple",
-                "say": "Eighteen twenty-eight: direct drive, load-cell pedals and a full cockpit. Close to silent."}
-             ],
-             "note": "The $388 setup is quieter than the $519 one.",
-             "outro": "So the cheapest one is quieter than the middle one."},
-            {"type": "end", "title": "What to order for each one.", "cta": "Full list: link in bio",
-             "say": "What to order for each one is at the link in bio."}
+            {
+              "type": "hook",
+              "kicker": "Parents of a PS5 teen",
+              "title": "Three racing setups for a PS5. What does more money buy?",
+              "say": "Three racing setups for a PS5 teen. What does more money actually buy?"
+            },
+            {
+              "type": "compare",
+              "title": "With the TV you already have",
+              "items": [
+                {
+                  "price": "$388",
+                  "name": "Couch to Track",
+                  "line": "Belt-driven wheel on a folding stand",
+                  "sound": "Sound: a soft hum",
+                  "tone": "green",
+                  "say": "Three eighty-eight: a belt-driven wheel on a folding stand. It hums."
+                },
+                {
+                  "price": "$519",
+                  "name": "Midnight Rookie",
+                  "line": "Gear-driven wheel and a seat that folds flat",
+                  "sound": "Sound: whirs and clicks",
+                  "tone": "yellow",
+                  "say": "Five nineteen: a gear-driven wheel and a seat that folds flat. You'll hear it whir and click."
+                },
+                {
+                  "price": "$1,828",
+                  "name": "Rosso GT",
+                  "line": "Direct drive, load-cell pedals, full cockpit",
+                  "sound": "Sound: close to silent",
+                  "tone": "purple",
+                  "say": "Eighteen twenty-eight: direct drive, load-cell pedals and a full cockpit. Close to silent."
+                }
+              ],
+              "note": "The $388 setup is quieter than the $519 one.",
+              "outro": "So the cheapest one is quieter than the middle one."
+            },
+            {
+              "type": "end",
+              "title": "What to order for each one.",
+              "cta": "Full list: link in bio",
+              "say": "What to order for each one is at the link in bio."
+            }
           ]
         }
       }

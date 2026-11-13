@@ -17,48 +17,53 @@ body::before { content: ""; position: absolute; inset: 0; opacity: .07; pointer-
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.9 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); }
 .kerb { position: absolute; left: 0; right: 0; top: 0; height: 12px;
   background: repeating-linear-gradient(135deg, var(--kerb-red) 0 12px, var(--kerb-white) 12px 24px); }
-.brand { position: absolute; left: 30px; top: 30px; font-size: 15px; font-weight: 800; letter-spacing: .02em; color: var(--text); }
+.brand { position: absolute; left: 28px; top: 30px; font-size: 18px; font-weight: 800; letter-spacing: .02em; color: var(--text); }
 .brand i { font-style: normal; color: var(--accent); }
 .brand span { color: var(--muted); font-weight: 600; margin-left: 8px; }
-.scene { position: absolute; left: 30px; right: 30px; top: 92px; height: 640px; opacity: 0; will-change: opacity, transform; }
-.kicker { display: inline-block; font-size: 15px; font-weight: 700; padding: 6px 11px; border-radius: 5px; background: var(--purple); color: #fff; margin-bottom: 22px; }
-h1 { font-size: 46px; line-height: 1.08; font-weight: 800; letter-spacing: -.02em; }
-h2 { font-size: 30px; line-height: 1.12; font-weight: 800; letter-spacing: -.01em; margin-bottom: 18px; }
-.sub { margin-top: 20px; font-size: 26px; line-height: 1.25; color: var(--muted); font-weight: 600; }
+.scene { position: absolute; left: 28px; right: 28px; top: 84px; height: 652px; opacity: 0; will-change: opacity, transform; display: flex; flex-direction: column; }
+.scene.center { justify-content: center; padding-bottom: 60px; }
+.kicker { align-self: flex-start; font-size: 17px; font-weight: 700; padding: 7px 12px; border-radius: 5px; background: var(--purple); color: #fff; margin-bottom: 24px; }
+h1 { font-size: 58px; line-height: 1.04; font-weight: 850; letter-spacing: -.025em; }
+h2 { font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -.015em; margin-bottom: 18px; }
+.sub { margin-top: 22px; font-size: 30px; line-height: 1.22; color: var(--muted); font-weight: 650; }
+.hero { margin-top: 26px; height: 300px; border-radius: 10px; background: #f4f4f2; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.hero img { max-width: 92%; max-height: 92%; object-fit: contain; }
 .r { opacity: 0; }
-.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
-.row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+.row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 26px 20px; border-bottom: 1px solid var(--line); }
 .row:last-child { border-bottom: 0; }
-.row .lab { font-size: 15px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
-.row .nm { font-size: 21px; font-weight: 700; line-height: 1.2; }
-.row .pr { font-size: 28px; font-weight: 800; }
-.row .pr.zero { color: var(--green); font-size: 22px; }
-.total { margin-top: 16px; display: flex; justify-content: space-between; align-items: baseline; padding: 16px 18px; border-radius: 8px;
-  background: linear-gradient(90deg, rgba(157,92,255,.22), rgba(157,92,255,.06)); border: 1px solid rgba(157,92,255,.6); }
-.total b { font-size: 20px; } .total .num { font-size: 44px; font-weight: 900; color: #fff; }
-.note { margin-top: 12px; font-size: 15px; color: var(--muted); }
-.fact { display: grid; grid-template-columns: 14px 1fr; gap: 14px; padding: 16px 18px; border-bottom: 1px solid var(--line); align-items: start; }
+.row .ph { width: 128px; height: 128px; border-radius: 8px; background: #f4f4f2; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.row .ph img { max-width: 90%; max-height: 90%; object-fit: contain; }
+.row .lab { font-size: 19px; color: var(--muted); font-weight: 650; margin-bottom: 4px; }
+.row .nm { font-size: 29px; font-weight: 750; line-height: 1.16; }
+.row .pr { font-size: 40px; font-weight: 850; }
+.row .pr.zero { color: var(--green); }
+.total { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding: 20px 22px; border-radius: 10px;
+  background: linear-gradient(90deg, rgba(157,92,255,.28), rgba(157,92,255,.08)); border: 1px solid rgba(157,92,255,.7); }
+.total b { font-size: 24px; line-height: 1.15; } .total .num { font-size: 76px; font-weight: 900; color: #fff; letter-spacing: -.03em; }
+.note { margin-top: 12px; font-size: 17px; color: var(--muted); }
+.fact { display: grid; grid-template-columns: 18px 1fr; gap: 16px; padding: 28px 22px; border-bottom: 1px solid var(--line); align-items: start; }
 .fact:last-child { border-bottom: 0; }
-.dot { width: 14px; height: 14px; border-radius: 50%; margin-top: 6px; background: var(--muted); }
-.fact .k { font-size: 15px; color: var(--muted); font-weight: 600; } .fact .v { font-size: 23px; font-weight: 700; line-height: 1.22; margin-top: 3px; }
+.dot { width: 16px; height: 16px; border-radius: 50%; margin-top: 8px; background: var(--muted); }
+.fact .k { font-size: 20px; color: var(--muted); font-weight: 650; } .fact .v { font-size: 34px; font-weight: 750; line-height: 1.18; margin-top: 4px; }
 .tone-green { background: var(--green); } .tone-yellow { background: var(--yellow); } .tone-purple { background: var(--purple); } .tone-red { background: var(--red); }
 .c-green { color: var(--green); } .c-yellow { color: var(--yellow); } .c-purple { color: #b98bff; } .c-red { color: var(--red); }
-.cmp { padding: 16px 18px; margin-bottom: 12px; display: grid; grid-template-columns: 138px 1fr; gap: 12px; align-items: center; }
-.cmp .p { font-size: 33px; font-weight: 900; letter-spacing: -.02em; }
-.cmp .n { font-size: 15px; color: var(--muted); font-weight: 700; }
-.cmp .l { font-size: 19px; font-weight: 700; line-height: 1.22; margin-top: 2px; }
-.cmp .s { font-size: 17px; font-weight: 700; margin-top: 6px; }
-.insight { margin-top: 6px; padding: 16px 18px; border-left: 4px solid var(--yellow); background: rgba(242,194,0,.08); font-size: 22px; font-weight: 700; line-height: 1.25; }
+.cmp { padding: 24px 20px; margin-bottom: 14px; display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: center; }
+.cmp .p { font-size: 44px; font-weight: 900; letter-spacing: -.03em; }
+.cmp .n { font-size: 17px; color: var(--muted); font-weight: 700; }
+.cmp .l { font-size: 25px; font-weight: 750; line-height: 1.18; margin-top: 3px; }
+.cmp .s { font-size: 22px; font-weight: 750; margin-top: 7px; }
+.insight { margin-top: auto; padding: 18px 20px; border-left: 5px solid var(--yellow); background: rgba(242,194,0,.1); font-size: 28px; font-weight: 800; line-height: 1.2; }
 .plan { display: block; margin: 0 auto; }
 .plan .room { fill: #15161a; stroke: var(--text); stroke-width: 3; }
 .plan .fixed { fill: #24262b; stroke: #4a4e55; stroke-width: 1.5; }
-.plan .rig { stroke-width: 2; }
+.plan .rig { stroke-width: 2.5; }
 .plan text { font-family: "Inter"; font-weight: 700; }
-.cap { margin-top: 18px; font-size: 24px; font-weight: 800; line-height: 1.2; min-height: 64px; }
-.cap small { display: block; font-size: 17px; color: var(--muted); font-weight: 600; margin-top: 4px; }
-.cta { margin-top: 28px; display: inline-flex; align-items: center; gap: 12px; font-size: 28px; font-weight: 800; padding: 16px 22px; border-radius: 8px; background: var(--accent); color: #fff; }
-.site { margin-top: 18px; font-size: 22px; font-weight: 700; color: var(--muted); }
-.fine { position: absolute; left: 30px; right: 110px; top: 742px; font-size: 13px; line-height: 1.35; color: var(--muted); opacity: 0; }
+.cap { top: 14px; left: 0; right: 0; font-size: 29px; font-weight: 850; line-height: 1.15; }
+.cap small { display: block; font-size: 21px; color: var(--muted); font-weight: 650; margin-top: 6px; }
+.cta { margin-top: 34px; align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; font-size: 32px; font-weight: 850; padding: 18px 24px; border-radius: 10px; background: var(--accent); color: #fff; }
+.site { margin-top: 18px; font-size: 26px; font-weight: 750; color: var(--muted); }
+.fine { position: absolute; left: 28px; right: 110px; top: 748px; font-size: 13px; line-height: 1.35; color: var(--muted); opacity: 0; }
 </style>
 </head>
 <body>
@@ -74,14 +79,16 @@ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<
 const money = (n) => '$' + Math.round(n).toLocaleString('en-US');
 const ftin = (inches) => { const f = Math.floor(inches / 12), i = Math.round(inches % 12); return i ? `${f}′${i}″` : `${f}′`; };
 
+const img = (i) => i && i.url && i.licence ? `<img src="${esc(i.url)}" alt="">` : '';
 function el(html) { const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstChild; }
 
 const BUILD = {
   hook(s) {
-    return el(`<div class="scene">${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ''}<h1>${esc(s.title)}</h1>${s.sub ? `<div class="sub r" data-at="${s.subAt ?? 0.6}">${esc(s.sub)}</div>` : ''}</div>`);
+    const hero = img(s.hero);
+    return el(`<div class="scene ${hero ? '' : 'center'}">${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ''}<h1>${esc(s.title)}</h1>${s.sub ? `<div class="sub r" data-at="${s.subAt ?? 0.6}">${esc(s.sub)}</div>` : ''}${hero ? `<div class="hero r" data-at="${s.subAt ?? 0.6}">${hero}</div>` : ''}</div>`);
   },
   list(s) {
-    const rows = s.items.map((it, i) => `<div class="row r" data-at="${it.at}"><div><div class="lab">${esc(it.label)}</div><div class="nm">${esc(it.name)}</div></div>
+    const rows = s.items.map((it, i) => `<div class="row r" data-at="${it.at}" style="${img(it.img) ? '' : 'grid-template-columns: 1fr auto'}">${img(it.img) ? `<div class="ph">${img(it.img)}</div>` : ''}<div><div class="lab">${esc(it.label)}</div><div class="nm">${esc(it.name)}</div></div>
       <div class="pr ${it.price ? '' : 'zero'}">${it.price ? money(it.price) : esc(it.free || 'You have it')}</div></div>`).join('');
     const sum = s.items.reduce((a, it) => a + (it.price || 0), 0);
     return el(`<div class="scene"><h2>${esc(s.title)}</h2><div class="card">${rows}</div>
@@ -98,24 +105,24 @@ const BUILD = {
     return el(`<div class="scene"><h2>${esc(s.title)}</h2>${cards}${s.note ? `<div class="insight r" data-at="${s.outroAt}">${esc(s.note)}</div>` : ''}</div>`);
   },
   plan(s) {
-    const W = 440, room = s.room, k = (W - 20) / Math.max(room.w, room.d), H = room.d * k + 20;
+    const W = 484, room = s.room, k = (W - 20) / Math.max(room.w, room.d), H = room.d * k + 20;
     const R = (r, cls, extra = '') => `<rect class="${cls}" x="${10 + r.x * k}" y="${10 + r.y * k}" width="${r.w * k}" height="${r.d * k}" rx="3" ${extra}/>`;
-    const T = (r, size = 13, fill = '#ecebe6') => r.label ? `<text x="${10 + (r.x + r.w / 2) * k}" y="${10 + (r.y + r.d / 2) * k + size / 3}" font-size="${size}" fill="${fill}" text-anchor="middle">${esc(r.label)}</text>` : '';
-    const fixed = (room.fixed || []).map((r) => R(r, 'fixed') + T(r, 13, '#8b8f96')).join('');
+    const T = (r, size = 16, fill = '#ecebe6') => r.label ? `<text x="${10 + (r.x + r.w / 2) * k}" y="${10 + (r.y + r.d / 2) * k + size / 3}" font-size="${size}" fill="${fill}" text-anchor="middle">${esc(r.label)}</text>` : '';
+    const fixed = (room.fixed || []).map((r) => R(r, 'fixed') + T(r, 15, '#8b8f96')).join('');
     const colors = { green: '#1fbf62', yellow: '#f2c200', purple: '#9d5cff', red: '#ff4b3a' };
     const steps = s.items.map((st, i) => {
       const c = colors[st.tone] || '#e8412c';
-      const g = st.rects.map((r) => R(r, 'rig', `fill="${c}33" stroke="${c}" ${r.dashed ? 'stroke-dasharray="6 5"' : ''}`) + T(r, 12)).join('');
+      const g = st.rects.map((r) => R(r, 'rig', `fill="${c}33" stroke="${c}" ${r.dashed ? 'stroke-dasharray="6 5"' : ''}`) + T(r, 15)).join('');
       return `<g class="step" data-i="${i}" opacity="0">${g}</g>`;
     }).join('');
     const caps = s.items.map((st, i) => `<div class="cap step" data-i="${i}" style="position:absolute;opacity:0">${esc(st.caption)}${st.detail ? `<small>${esc(st.detail)}</small>` : ''}</div>`).join('');
     return el(`<div class="scene"><h2>${esc(s.title)}</h2>
       <svg class="plan" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><rect class="room" x="10" y="10" width="${room.w * k}" height="${room.d * k}"/>${fixed}${steps}
-      <text x="${W / 2}" y="${H - 16}" font-size="13" fill="#8b8f96" text-anchor="middle">${esc(room.label || `${ftin(room.w)} × ${ftin(room.d)} room`)}</text></svg>
-      <div style="position:relative">${caps}</div></div>`);
+      <text x="${W / 2}" y="${H - 16}" font-size="16" fill="#8b8f96" text-anchor="middle">${esc(room.label || `${ftin(room.w)} × ${ftin(room.d)} room`)}</text></svg>
+      <div style="position:relative;flex:1">${caps}</div></div>`);
   },
   end(s) {
-    return el(`<div class="scene"><h1 style="font-size:40px">${esc(s.title)}</h1>${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
+    return el(`<div class="scene center"><h1 style="font-size:50px">${esc(s.title)}</h1>${s.sub ? `<div class="sub">${esc(s.sub)}</div>` : ''}
       <div class="cta r" data-at="${s.ctaAt ?? 0.5}">${esc(s.cta || 'Full list: link in bio')} →</div><div class="site r" data-at="${s.ctaAt ?? 0.5}">${esc(s.site || 'roomracer.com')}</div></div>`);
   },
 };
