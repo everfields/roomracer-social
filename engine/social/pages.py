@@ -46,6 +46,15 @@ def build(root: Path, state_dir: Path, out: Path, fetch: Callable[[str], Path], 
         shutil.copy(src, out / "m" / f)
         size += src.stat().st_size
         kept.append(f)
+    # a format's samples (formats/<name>/samples/*.mp4), so the founder can watch them on a phone before a gate
+    for s in sorted(root.glob("formats/*/samples/*.mp4")):
+        if size + s.stat().st_size > SITE_CAP:
+            dropped.append(s.name)
+            continue
+        dest = out / "samples" / s.parent.parent.name / s.name
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(s, dest)
+        size += s.stat().st_size
     (out / "index.html").write_text('<!doctype html><meta name="robots" content="noindex"><title>media</title>\n',
                                     encoding="utf-8")
     return {"files": len(kept), "mb": round(size / 1048576, 1), "over_cap": dropped}
