@@ -292,10 +292,14 @@ def collect(state_dir: Path, cfg: Config, env: Mapping[str, str], *, now: dateti
     nets = {n.name: n for n in cfg.enabled()}
     for name in ("youtube", "instagram"):
         n = nets.get(name)
-        if not n or n.route != "direct" or not rows.get(name):
+        # A live network is asked even before its first post. It proves the credentials still work (a YouTube client left
+        # in "Testing" loses its token after 7 days, and nothing would say so until a post failed) and it records the
+        # followers the first post starts from.
+        if not n or n.route != "direct" or not (rows.get(name) or cfg.is_live(name)):
             continue
         try:
-            collect_youtube(c, rows[name], now, col) if name == "youtube" else collect_instagram(c, rows[name], col)
+            mine = rows.get(name) or []
+            collect_youtube(c, mine, now, col) if name == "youtube" else collect_instagram(c, mine, col)
         except (HttpError, RuntimeError, KeyError, ValueError) as e:
             col.problems.append(f"{name}: {redact_text(str(e))[:300]}")
     links: dict[str, str] = {}

@@ -834,6 +834,26 @@ class TestMetrics(TmpCase):
         self.assertEqual(row["likes"], "")
         self.assertEqual(row["views"], "120")
 
+    def test_a_live_network_is_asked_before_its_first_post(self):
+        asked = []
+
+        def fn(q):
+            asked.append(q.url)
+            if "oauth2" in q.url:
+                return HttpResponse.of_json(200, {"access_token": "t"})
+            return HttpResponse.of_json(200, {"items": [{"statistics": {"subscriberCount": "3"}}]})
+
+        env = {"YOUTUBE_CLIENT_ID": "i", "YOUTUBE_CLIENT_SECRET": "s", "YOUTUBE_REFRESH_TOKEN": "r"}
+        col = metrics.collect(self.r.state, self.r.cfg, env, now=et(2026, 11, 12, 12), live=True, transport=Stub(fn))
+        self.assertEqual([(a["network"], a["followers"]) for a in col.accounts if a["network"] == "youtube"], [("youtube", 3)])
+        self.assertTrue(any("oauth2" in u for u in asked))
+
+        def dead(q):  # the token died: the run says so, three hours later at most, not at the first failed post
+            return HttpResponse.of_json(400, {"error": "invalid_grant"}) if "oauth2" in q.url else HttpResponse.of_json(200, {})
+
+        col = metrics.collect(self.r.state, self.r.cfg, env, now=et(2026, 11, 12, 12), live=True, transport=Stub(dead))
+        self.assertTrue(any(p.startswith("youtube:") for p in col.problems), col.problems)
+
     def test_a_removed_video_is_caught(self):
         self.posted("youtube", "v1", "a")
 
