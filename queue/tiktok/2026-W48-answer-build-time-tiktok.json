@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-build-time-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-build-time.mp4",
+    "sha256": "751f49ceea305ab60d7d43f3cfe33fe5a7a2bec2f88fafd9638d442f62973c84",
+    "kind": "video"
+  },
+  "caption": "How long does a racing setup take to build? About 10 minutes for a folding wheel stand, about 30 for a cockpit that folds flat, about 2 hours for a frame that stays set up. We earn from qualifying purchases. #simracing #ps5 #giftideas",
+  "title": "How long does a racing wheel setup take to build? 10 minutes to 2 hours",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-27T05:00:00Z"
+}

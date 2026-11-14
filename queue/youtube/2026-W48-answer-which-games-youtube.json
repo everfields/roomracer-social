@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-which-games-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-which-games.mp4",
+    "sha256": "cf9f658c555724a5a1598d116e9351376dc8fa8fd39e4cebc6404ac3763545d6",
+    "kind": "video"
+  },
+  "caption": "Which PS5 games work with these racing wheels? Gran Turismo 7, Assetto Corsa Competizione and Assetto Corsa, on all three of our PS5 setups, from $439 with the TV you have. Prices are our estimates. We earn from qualifying purchases. #granturismo7 #ps5\n\nThe three setups and their games: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer",
+  "title": "Which PS5 games work with a racing wheel? Gran Turismo 7 and two more",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-12-03T05:00:00Z"
+}

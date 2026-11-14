@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-stand-or-cockpit-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-stand-or-cockpit.mp4",
+    "sha256": "b82e33ef92484a035bc39bb98e59f8d68a723b6883e5e2740e040b525a13b510",
+    "kind": "video"
+  },
+  "caption": "Wheel stand or cockpit? Drawn to scale in a 9 by 8 foot room: a stand takes 1′10″ × 2′4″ in front of your chair, a folding cockpit 2′ × 4′7″, a fixed frame 1′11″ × 4′5″ that stays up. We earn from qualifying purchases. #simracing #ps5",
+  "title": "Wheel stand or racing cockpit? The floor space of each, drawn to scale",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-30T05:00:00Z"
+}

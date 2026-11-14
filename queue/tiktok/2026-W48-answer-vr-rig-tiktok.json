@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-vr-rig-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-vr-rig.mp4",
+    "sha256": "401cda9597591e3446ce44489f3c0e135bffea7b46260a3d922cce2e0d4bc4b5",
+    "kind": "video"
+  },
+  "caption": "Can a racing rig use a VR headset instead of a screen? Yes. In our PC setup the Quest 3 is the screen. Stealth VR is $1,857 in full, $1,258 with a headset you own, and it needs a gaming PC. Prices are our estimates. We earn from qualifying purchases. #simracing #vr",
+  "title": "VR sim racing rig instead of a screen: what to order ($1,857)",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-12-02T05:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-black-friday-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-black-friday.mp4",
+    "sha256": "34f15cb011de1f7565cb1f13dc9dae8fb1ff645db654d55cf9c88d5aa32a2a60",
+    "kind": "video"
+  },
+  "caption": "Is a Black Friday racing wheel deal real? Know the usual price first: about $230 for a G923, $300 for a T248R, $800 for a Fanatec GT DD Pro. Under that at checkout is a real drop. Those are our estimates of typical US prices. We earn from qualifying purchases. #blackfriday #ps5\n\nTypical prices for every part: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer",
+  "title": "Black Friday racing wheel deal: how to tell if it's real",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-26T05:00:00Z"
+}

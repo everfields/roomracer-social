@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-outlets-instagram",
+  "network": "instagram",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-outlets.mp4",
+    "sha256": "375acb11e18ee3cabaae4a55f655659131889c30a129895e38614280fec845f9",
+    "kind": "video"
+  },
+  "caption": "How many outlets does a PS5 racing wheel need? With the TV you already have, one more: the wheel base. Pedals and the wheel plug into the base, and the base into the PS5. We earn from qualifying purchases. #ps5 #simracing",
+  "title": "How many outlets does a PS5 racing wheel need? One new one",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-12-01T05:00:00Z"
+}

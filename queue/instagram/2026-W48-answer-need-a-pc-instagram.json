@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-need-a-pc-instagram",
+  "network": "instagram",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-need-a-pc.mp4",
+    "sha256": "1baf2184c0d43f66b6eeb296d10a4d813cab784c7cf2474e42f0adaea40de8bc",
+    "kind": "video"
+  },
+  "caption": "Do you need a gaming PC for sim racing? No. With the TV you have, a PS5 setup is $439 and an Xbox one $608. A PC rig starts at $1,258 with a VR headset you own, and the PC isn't in it. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+  "title": "Do you need a gaming PC for sim racing? No: $439 on a PS5",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-12-01T05:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-couch-to-track-order-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-couch-to-track-order.mp4",
+    "sha256": "96166f53ee781a2547c17e667a175653200ab3fd1c77882ca7cd98c95434e42f",
+    "kind": "video"
+  },
+  "caption": "A racing wheel in front of the living-room TV, for a PS5: a folding wheel stand and a Thrustmaster T248R with its pedals in the box. $439 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing",
+  "title": "Racing wheel for the living-room TV and a PS5: what to order ($439)",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-23T05:00:00Z"
+}

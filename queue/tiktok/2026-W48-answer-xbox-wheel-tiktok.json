@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-xbox-wheel-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-xbox-wheel.mp4",
+    "sha256": "0326f85a2d5553cb6482ef0847a87a68b9c397e1d252c6f0cf0aee28d8f76a4c",
+    "kind": "video"
+  },
+  "caption": "Will a PS5 racing wheel work on an Xbox? No: a PlayStation wheel won't run on an Xbox. The Xbox setup we designed is a Moza R3 on a wheel stand, $608 with the TV you have. Prices are our estimates. We earn from qualifying purchases. #xbox #simracing",
+  "title": "Will a PS5 racing wheel work on an Xbox? No. Here's what does ($608)",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-24T05:00:00Z"
+}
