@@ -203,20 +203,20 @@
       }
     },
     {
-      "id": "2026-W48-answer-pedals-in-box",
+      "id": "2026-W48-answer-pedals-included",
       "format": "answer",
       "networks": [
         "tiktok",
         "instagram",
         "youtube"
       ],
-      "caption": "Do racing wheels come with pedals? The Logitech G923, the Thrustmaster T248R and the Moza R3 for Xbox all have pedals in the box. A load-cell brake is the upgrade, about $200. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+      "caption": "Do racing wheels come with pedals? The Logitech G923 ($230), the Thrustmaster T248R ($300) and the Moza R3 for Xbox ($329) all have them in the box. On day one the wheel clamps to a desk and the pedals go on the floor. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
       "captions": {
-        "youtube": "Do racing wheels come with pedals? The Logitech G923, the Thrustmaster T248R and the Moza R3 for Xbox all have pedals in the box. A load-cell brake is the upgrade, about $200. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5\n\nWhat comes in each box: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
+        "youtube": "Do racing wheels come with pedals? The Logitech G923 ($230), the Thrustmaster T248R ($300) and the Moza R3 for Xbox ($329) all have them in the box. On day one the wheel clamps to a desk and the pedals go on the floor. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5\n\nWhat's in each box: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
       },
-      "title": "Do racing wheels come with pedals? Three starter wheels, what's in the box",
+      "title": "Do racing wheels come with pedals? Open one starter box",
       "earliest": "2026-11-25T05:00:00Z",
-      "script": "Do racing wheels come with pedals? These three do. / The Logitech G nine twenty-three, about two thirty: wheel and pedals in one box. The Thrustmaster T two forty-eight R, about three hundred: pedals in the box too. And for an Xbox, the Moza R three, about three twenty-nine, with two pedals. / The upgrade later is a load-cell brake, about two hundred. It brakes by pressure, like a car. / Every box: link in bio.",
+      "script": "Do racing wheels come with pedals? In these three starter wheels, yes. Here's what's in the box. /  The Logitech G nine twenty-three for PlayStation: about two thirty for the base. The wheel is included. And so are the pedals. Same with the Thrustmaster T two forty-eight R, and the Moza R three for Xbox. /  On day one, the wheel base clamps to a sturdy desk. The pedals from the same box go on the floor in front of the chair. / Each box: link in bio.",
       "prompts": {
         "voice": "af_heart",
         "speed": 1.1,
@@ -227,57 +227,101 @@
             {
               "type": "hook",
               "kicker": "Before you order",
-              "title": "Are the pedals in the box?",
-              "sub": "These three, yes.",
-              "say": "Do racing wheels come with pedals? These three do."
+              "title": "Do the pedals come with it?",
+              "sub": "In these three, yes.",
+              "say": "Do racing wheels come with pedals? In these three starter wheels, yes. Here's what's in the box."
             },
             {
-              "type": "compare",
-              "title": "What's in the box",
+              "type": "list",
+              "title": "One Logitech G923 box",
               "items": [
                 {
-                  "price": "$230",
-                  "name": "Logitech G923",
-                  "line": "Wheel and pedals in one box.",
-                  "sound": "Pedals included",
-                  "tone": "green",
-                  "say": "The Logitech G nine twenty-three, about two thirty: wheel and pedals in one box."
+                  "label": "Wheel base",
+                  "name": "Logitech G923 (PlayStation)",
+                  "price": 230,
+                  "say": "The Logitech G nine twenty-three for PlayStation: about two thirty for the base."
                 },
                 {
-                  "price": "$300",
-                  "name": "Thrustmaster T248R",
-                  "line": "Wheel and pedals in one box.",
-                  "sound": "Pedals included",
-                  "tone": "green",
-                  "say": "The Thrustmaster T two forty-eight R, about three hundred: pedals in the box too."
+                  "label": "Wheel",
+                  "name": "G923 rim",
+                  "price": 0,
+                  "free": true,
+                  "say": "The wheel is included."
                 },
                 {
-                  "price": "$329",
-                  "name": "Moza R3, for Xbox",
-                  "line": "Wheel and two pedals in one box.",
-                  "sound": "Pedals included",
-                  "tone": "green",
-                  "say": "And for an Xbox, the Moza R three, about three twenty-nine, with two pedals."
+                  "label": "Pedals",
+                  "name": "G923 pedals",
+                  "price": 0,
+                  "free": true,
+                  "say": "And so are the pedals."
                 }
-              ]
+              ],
+              "totalLabel": "All in one box",
+              "outro": "Same with the Thrustmaster T two forty-eight R, and the Moza R three for Xbox.",
+              "note": "Same in the Thrustmaster T248R box ($300, PS5) and the Moza R3 box ($329, Xbox)."
             },
             {
-              "type": "facts",
-              "title": "The upgrade, later",
+              "type": "plan",
+              "title": "Day one: a desk is enough",
+              "room": {
+                "w": 96,
+                "d": 84,
+                "label": "Top view · not to scale",
+                "fixed": [
+                  {
+                    "x": 4,
+                    "y": 6,
+                    "w": 88,
+                    "d": 24,
+                    "label": "Desk"
+                  },
+                  {
+                    "x": 56,
+                    "y": 60,
+                    "w": 30,
+                    "d": 20,
+                    "label": "Chair"
+                  }
+                ]
+              },
               "items": [
                 {
-                  "k": "Load-cell brake",
-                  "v": "About $200. Brakes by pressure, like a car.",
-                  "tone": "purple",
-                  "say": "The upgrade later is a load-cell brake, about two hundred. It brakes by pressure, like a car."
+                  "caption": "Wheel base → desk edge",
+                  "detail": "It clamps on. No stand yet.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 60,
+                      "y": 24,
+                      "w": 20,
+                      "d": 12,
+                      "label": "Wheel"
+                    }
+                  ],
+                  "say": "On day one, the wheel base clamps to a sturdy desk."
+                },
+                {
+                  "caption": "Pedals → the floor",
+                  "detail": "In the same box.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 58,
+                      "y": 42,
+                      "w": 24,
+                      "d": 14,
+                      "label": "Pedals"
+                    }
+                  ],
+                  "say": "The pedals from the same box go on the floor in front of the chair."
                 }
               ]
             },
             {
               "type": "end",
-              "title": "Every box, listed.",
+              "title": "Pedals included.",
               "cta": "What's in each box: link in bio",
-              "say": "Every box: link in bio."
+              "say": "Each box: link in bio."
             }
           ]
         }
