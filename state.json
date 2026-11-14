@@ -1,7 +1,13 @@
 {
   "alarms": {
-    "runway-youtube": {
+    "quarantine": {
       "cleared": false,
+      "sent_at": "2026-11-14T13:18:14Z",
+      "title": "intake quarantined 3 post(s)"
+    },
+    "runway-youtube": {
+      "cleared": true,
+      "cleared_at": "2026-11-14T13:18:14Z",
       "sent_at": "2026-11-14T11:46:07Z",
       "title": "youtube: 3.5 days of posts left"
     }
