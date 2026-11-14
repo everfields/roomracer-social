@@ -1,6 +1,6 @@
 {
-  "id": "2026-W47-answer-works-with-ps5-instagram",
-  "network": "instagram",
+  "id": "2026-W47-answer-works-with-ps5-tiktok",
+  "network": "tiktok",
   "format": "answer",
   "batch": "2026-W47",
   "media": {
@@ -17,5 +17,30 @@
     "realistic": false
   },
   "trial": false,
-  "earliest": "2026-11-16T05:00:00Z"
+  "earliest": "2026-11-16T05:00:00Z",
+  "intake": {
+    "ok": false,
+    "at": "2026-11-14T11:44:13Z",
+    "problems": [
+      "near-duplicate of 2026-W47-answer-set-up-tiktok (distance 7.0)"
+    ],
+    "warnings": [],
+    "probe": {
+      "width": 1080,
+      "height": 1920,
+      "duration_s": 23.0,
+      "video_codec": "h264",
+      "pix_fmt": "yuv420p",
+      "fps": 30.0,
+      "audio_codec": "aac",
+      "bytes": 1866535
+    },
+    "phash": [
+      "5800715300000000",
+      "5826380000000000",
+      "5826380e3b180000",
+      "5826382e2f180000",
+      "58007f5330003600"
+    ]
+  }
 }

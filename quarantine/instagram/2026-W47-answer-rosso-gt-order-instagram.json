@@ -17,5 +17,30 @@
     "realistic": false
   },
   "trial": false,
-  "earliest": "2026-11-16T05:00:00Z"
+  "earliest": "2026-11-16T05:00:00Z",
+  "intake": {
+    "ok": false,
+    "at": "2026-11-14T11:44:13Z",
+    "problems": [
+      "near-duplicate of 2026-W47-answer-midnight-rookie-order-instagram (distance 8.6)"
+    ],
+    "warnings": [],
+    "probe": {
+      "width": 1080,
+      "height": 1920,
+      "duration_s": 39.1,
+      "video_codec": "h264",
+      "pix_fmt": "yuv420p",
+      "fps": 30.0,
+      "audio_codec": "aac",
+      "bytes": 3047326
+    },
+    "phash": [
+      "58005f274c000000",
+      "5819710000000000",
+      "5819714959000000",
+      "4c6b220000000000",
+      "5800710000001600"
+    ]
+  }
 }
