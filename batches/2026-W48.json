@@ -1,0 +1,1270 @@
+{
+  "week": "2026-W48",
+  "posts": [
+    {
+      "id": "2026-W48-answer-couch-to-track-order",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "A racing wheel in front of the living-room TV, for a PS5: a folding wheel stand and a Thrustmaster T248R with its pedals in the box. $439 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing",
+      "captions": {
+        "youtube": "A racing wheel in front of the living-room TV, for a PS5: a folding wheel stand and a Thrustmaster T248R with its pedals in the box. $439 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing\n\nThe full list, and what it takes with a new TV: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Racing wheel for the living-room TV and a PS5: what to order ($439)",
+      "earliest": "2026-11-23T05:00:00Z",
+      "script": "A racing wheel in front of the living-room TV, for a PS5. What do you order? / A wheel stand, one foot ten by two foot four, in front of the sofa you have. It folds away behind it. / The Next Level Racing Wheel Stand Lite, about one thirty-nine. The Thrustmaster T two forty-eight R, about three hundred, pedals in the box. And the TV you already have. That's four thirty-nine. / The list is in the bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Living-room TV",
+              "title": "Racing wheel, sofa, PS5. What do we order?",
+              "say": "A racing wheel in front of the living-room TV, for a PS5. What do you order?"
+            },
+            {
+              "type": "plan",
+              "title": "It goes in front of the sofa",
+              "room": {
+                "w": 132,
+                "d": 120,
+                "label": "11′ × 10′ living room",
+                "fixed": [
+                  {
+                    "x": 36,
+                    "y": 2,
+                    "w": 60,
+                    "d": 16,
+                    "label": "TV"
+                  },
+                  {
+                    "x": 24,
+                    "y": 78,
+                    "w": 84,
+                    "d": 28,
+                    "label": "Sofa"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Wheel stand · 1′10″ × 2′4″",
+                  "detail": "You sit on the sofa. It folds behind it after.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 55,
+                      "y": 54,
+                      "w": 22,
+                      "d": 28,
+                      "label": "Stand"
+                    }
+                  ],
+                  "say": "A wheel stand, one foot ten by two foot four, in front of the sofa you have. It folds away behind it."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "What to order",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Wheel stand",
+                  "name": "Next Level Racing Wheel Stand Lite",
+                  "price": 139,
+                  "say": "The Next Level Racing Wheel Stand Lite, about one thirty-nine."
+                },
+                {
+                  "label": "Wheel and pedals, in one box",
+                  "name": "Thrustmaster T248R",
+                  "price": 300,
+                  "say": "The Thrustmaster T two forty-eight R, about three hundred, pedals in the box."
+                },
+                {
+                  "label": "Screen",
+                  "name": "The TV you already have",
+                  "price": 0,
+                  "free": "$0",
+                  "say": "And the TV you already have."
+                }
+              ],
+              "outro": "That's four thirty-nine."
+            },
+            {
+              "type": "end",
+              "title": "Couch to Track, in full and in 3D.",
+              "sub": "Made for PS5. The page has the check.",
+              "cta": "What to order: link in bio",
+              "say": "The list is in the bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-xbox-wheel",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Will a PS5 racing wheel work on an Xbox? No: a PlayStation wheel won't run on an Xbox. The Xbox setup we designed is a Moza R3 on a wheel stand, $608 with the TV you have. Prices are our estimates. We earn from qualifying purchases. #xbox #simracing",
+      "captions": {
+        "youtube": "Will a PS5 racing wheel work on an Xbox? No: a PlayStation wheel won't run on an Xbox. The Xbox setup we designed is a Moza R3 on a wheel stand, $608 with the TV you have. Prices are our estimates. We earn from qualifying purchases. #xbox #simracing\n\nThe Xbox setup, part by part: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
+      },
+      "title": "Will a PS5 racing wheel work on an Xbox? No. Here's what does ($608)",
+      "earliest": "2026-11-24T05:00:00Z",
+      "script": "Got an Xbox, not a PS5? A PlayStation racing wheel won't work on it. / A PlayStation wheel won't run on an Xbox. On a Series X or S, only Xbox-licensed wheels work. / The Moza R three, about three twenty-nine, with its Xbox wheel and pedals. A Next Level Racing wheel stand, two seventy-nine. And your TV. Six oh eight. / Xbox setup: link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gift guide · Xbox",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Got an Xbox?",
+              "title": "Will a PS5 racing wheel work on it?",
+              "sub": "No. Here's what does.",
+              "say": "Got an Xbox, not a PS5? A PlayStation racing wheel won't work on it."
+            },
+            {
+              "type": "facts",
+              "title": "Wheels pick a side",
+              "items": [
+                {
+                  "k": "PlayStation wheels",
+                  "v": "Won't run on an Xbox.",
+                  "tone": "red",
+                  "say": "A PlayStation wheel won't run on an Xbox."
+                },
+                {
+                  "k": "Xbox Series X or S",
+                  "v": "Only Xbox-licensed wheels work.",
+                  "tone": "green",
+                  "say": "On a Series X or S, only Xbox-licensed wheels work."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "Garage Hero, for Xbox",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Wheel and pedals, in one box",
+                  "name": "Moza R3, Xbox wheel",
+                  "price": 329,
+                  "say": "The Moza R three, about three twenty-nine, with its Xbox wheel and pedals."
+                },
+                {
+                  "label": "Wheel stand",
+                  "name": "Next Level Racing Wheel Stand 2.0",
+                  "price": 279,
+                  "say": "A Next Level Racing wheel stand, two seventy-nine."
+                },
+                {
+                  "label": "Screen",
+                  "name": "The TV you already have",
+                  "price": 0,
+                  "free": "$0",
+                  "say": "And your TV."
+                }
+              ],
+              "outro": "Six oh eight."
+            },
+            {
+              "type": "end",
+              "title": "Direct drive, on an Xbox.",
+              "sub": "Wheel and pedals in one box.",
+              "cta": "The Xbox setup: link in bio",
+              "say": "Xbox setup: link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-pedals-in-box",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Do racing wheels come with pedals? The Logitech G923, the Thrustmaster T248R and the Moza R3 for Xbox all have pedals in the box. A load-cell brake is the upgrade, about $200. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+      "captions": {
+        "youtube": "Do racing wheels come with pedals? The Logitech G923, the Thrustmaster T248R and the Moza R3 for Xbox all have pedals in the box. A load-cell brake is the upgrade, about $200. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5\n\nWhat comes in each box: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
+      },
+      "title": "Do racing wheels come with pedals? Three starter wheels, what's in the box",
+      "earliest": "2026-11-25T05:00:00Z",
+      "script": "Do racing wheels come with pedals? These three do. / The Logitech G nine twenty-three, about two thirty: wheel and pedals in one box. The Thrustmaster T two forty-eight R, about three hundred: pedals in the box too. And for an Xbox, the Moza R three, about three twenty-nine, with two pedals. / The upgrade later is a load-cell brake, about two hundred. It brakes by pressure, like a car. / Every box: link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you order",
+              "title": "Are the pedals in the box?",
+              "sub": "These three, yes.",
+              "say": "Do racing wheels come with pedals? These three do."
+            },
+            {
+              "type": "compare",
+              "title": "What's in the box",
+              "items": [
+                {
+                  "price": "$230",
+                  "name": "Logitech G923",
+                  "line": "Wheel and pedals in one box.",
+                  "sound": "Pedals included",
+                  "tone": "green",
+                  "say": "The Logitech G nine twenty-three, about two thirty: wheel and pedals in one box."
+                },
+                {
+                  "price": "$300",
+                  "name": "Thrustmaster T248R",
+                  "line": "Wheel and pedals in one box.",
+                  "sound": "Pedals included",
+                  "tone": "green",
+                  "say": "The Thrustmaster T two forty-eight R, about three hundred: pedals in the box too."
+                },
+                {
+                  "price": "$329",
+                  "name": "Moza R3, for Xbox",
+                  "line": "Wheel and two pedals in one box.",
+                  "sound": "Pedals included",
+                  "tone": "green",
+                  "say": "And for an Xbox, the Moza R three, about three twenty-nine, with two pedals."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "The upgrade, later",
+              "items": [
+                {
+                  "k": "Load-cell brake",
+                  "v": "About $200. Brakes by pressure, like a car.",
+                  "tone": "purple",
+                  "say": "The upgrade later is a load-cell brake, about two hundred. It brakes by pressure, like a car."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Every box, listed.",
+              "cta": "What's in each box: link in bio",
+              "say": "Every box: link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-black-friday",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Is a Black Friday racing wheel deal real? Know the usual price first: about $230 for a G923, $300 for a T248R, $800 for a Fanatec GT DD Pro. Under that at checkout is a real drop. Those are our estimates of typical US prices. We earn from qualifying purchases. #blackfriday #ps5",
+      "captions": {
+        "youtube": "Is a Black Friday racing wheel deal real? Know the usual price first: about $230 for a G923, $300 for a T248R, $800 for a Fanatec GT DD Pro. Under that at checkout is a real drop. Those are our estimates of typical US prices. We earn from qualifying purchases. #blackfriday #ps5\n\nTypical prices for every part: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Black Friday racing wheel deal: how to tell if it's real",
+      "earliest": "2026-11-26T05:00:00Z",
+      "script": "Is that Black Friday racing wheel deal real? Know the usual price first. / A Logitech G nine twenty-three usually costs about two thirty. A Thrustmaster T two forty-eight R, about three hundred. A Fanatec Gran Turismo DD Pro, about eight hundred. Judge the checkout price, not the crossed-out one. Under the usual price is a real deal. / Order by December eleventh.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Black Friday",
+          "fine": "Usual prices are our estimates of typical US prices (Nov 2026), not a store's price. The price at checkout is the one that counts. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Black Friday",
+              "title": "Is that racing wheel deal real?",
+              "sub": "Know the usual price first.",
+              "say": "Is that Black Friday racing wheel deal real? Know the usual price first."
+            },
+            {
+              "type": "compare",
+              "title": "The usual US price",
+              "items": [
+                {
+                  "price": "$230",
+                  "name": "Logitech G923",
+                  "line": "Gear-driven. Pedals in the box.",
+                  "sound": "Under $230 is a real drop",
+                  "tone": "green",
+                  "say": "A Logitech G nine twenty-three usually costs about two thirty."
+                },
+                {
+                  "price": "$300",
+                  "name": "Thrustmaster T248R",
+                  "line": "Belt-driven. Pedals in the box.",
+                  "sound": "Under $300 is a real drop",
+                  "tone": "yellow",
+                  "say": "A Thrustmaster T two forty-eight R, about three hundred."
+                },
+                {
+                  "price": "$800",
+                  "name": "Fanatec GT DD Pro",
+                  "line": "Direct drive, made for Gran Turismo.",
+                  "sound": "Under $800 is a real drop",
+                  "tone": "purple",
+                  "say": "A Fanatec Gran Turismo DD Pro, about eight hundred."
+                }
+              ],
+              "note": "Judge the checkout price, not the crossed-out one.",
+              "outro": "Judge the checkout price, not the crossed-out one. Under the usual price is a real deal."
+            },
+            {
+              "type": "end",
+              "title": "Under the usual price? That's the deal.",
+              "sub": "Order by Friday, December 11.",
+              "cta": "Usual prices: link in bio",
+              "say": "Order by December eleventh."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-build-time",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "How long does a racing setup take to build? About 10 minutes for a folding wheel stand, about 30 for a cockpit that folds flat, about 2 hours for a frame that stays set up. We earn from qualifying purchases. #simracing #ps5 #giftideas",
+      "captions": {
+        "youtube": "How long does a racing setup take to build? About 10 minutes for a folding wheel stand, about 30 for a cockpit that folds flat, about 2 hours for a frame that stays set up. We earn from qualifying purchases. #simracing #ps5 #giftideas\n\nAssembly time for every setup: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
+      },
+      "title": "How long does a racing wheel setup take to build? 10 minutes to 2 hours",
+      "earliest": "2026-11-27T05:00:00Z",
+      "script": "It's a gift for the twenty-fifth, and it comes in boxes. How long does a racing setup take to build? From ten minutes to a whole afternoon. / Couch to Track: about ten minutes. A wheel stand that folds away. Midnight Rookie: about thirty. A cockpit that folds flat. Rosso GT: about two hours. A frame that stays set up. / Build times: link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gift guide",
+          "fine": "Assembly times are our estimates from each part's design, not hands-on tests. Totals are our estimates of typical US prices (Nov 2026). Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Gift on the 25th?",
+              "title": "How long does a racing setup take to build?",
+              "sub": "From ten minutes to an afternoon.",
+              "say": "It's a gift for the twenty-fifth, and it comes in boxes. How long does a racing setup take to build? From ten minutes to a whole afternoon."
+            },
+            {
+              "type": "compare",
+              "title": "Assembly, about",
+              "items": [
+                {
+                  "price": "10 min",
+                  "name": "Couch to Track · $1,038",
+                  "line": "A wheel stand that folds away.",
+                  "sound": "Done in minutes",
+                  "tone": "green",
+                  "say": "Couch to Track: about ten minutes. A wheel stand that folds away."
+                },
+                {
+                  "price": "30 min",
+                  "name": "Midnight Rookie · $907",
+                  "line": "A cockpit that folds flat.",
+                  "sound": "Under an hour",
+                  "tone": "yellow",
+                  "say": "Midnight Rookie: about thirty. A cockpit that folds flat."
+                },
+                {
+                  "price": "2 hrs",
+                  "name": "Rosso GT · $3,056",
+                  "line": "A frame that stays set up.",
+                  "sound": "Plan an afternoon",
+                  "tone": "purple",
+                  "say": "Rosso GT: about two hours. A frame that stays set up."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Each setup lists its build time.",
+              "cta": "Build times: link in bio",
+              "say": "Build times: link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-439-or-519",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Two starter PS5 racing setups: $439 uses your sofa and a wheel stand, $519 brings its own seat that folds flat. One hums, one whirs. Both with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #ps5 #giftideas",
+      "captions": {
+        "youtube": "Two starter PS5 racing setups: $439 uses your sofa and a wheel stand, $519 brings its own seat that folds flat. One hums, one whirs. Both with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #ps5 #giftideas\n\nBoth setups, part by part: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Cheapest PS5 racing setups: $439 or $519, sofa or folding seat?",
+      "earliest": "2026-11-28T05:00:00Z",
+      "script": "Four thirty-nine or five nineteen? It's the sofa, or a seat of its own. / Couch to Track: a wheel stand in front of your sofa, and it folds away. Midnight Rookie brings its own seat, two feet by four foot seven, and it folds flat. / The cheaper one is belt-driven: a soft hum. The other is gear-driven: it whirs and clicks. / Both lists: link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Two starter setups",
+              "title": "$439 or $519?",
+              "sub": "Sofa, or a seat of its own.",
+              "say": "Four thirty-nine or five nineteen? It's the sofa, or a seat of its own."
+            },
+            {
+              "type": "plan",
+              "title": "Sofa, or a seat of its own",
+              "room": {
+                "w": 120,
+                "d": 108,
+                "label": "10′ × 9′ room",
+                "fixed": [
+                  {
+                    "x": 30,
+                    "y": 2,
+                    "w": 60,
+                    "d": 14,
+                    "label": "TV"
+                  },
+                  {
+                    "x": 4,
+                    "y": 72,
+                    "w": 60,
+                    "d": 26,
+                    "label": "Sofa"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "$439 · Couch to Track",
+                  "detail": "A stand, 1′10″ × 2′4″, in front of your sofa. Folds away.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 23,
+                      "y": 40,
+                      "w": 22,
+                      "d": 28,
+                      "label": "Stand"
+                    }
+                  ],
+                  "say": "Couch to Track: a wheel stand in front of your sofa, and it folds away."
+                },
+                {
+                  "caption": "$519 · Midnight Rookie",
+                  "detail": "Its own seat, 2′ × 4′7″. Folds flat.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 84,
+                      "y": 24,
+                      "w": 24,
+                      "d": 55,
+                      "label": "Seat"
+                    }
+                  ],
+                  "say": "Midnight Rookie brings its own seat, two feet by four foot seven, and it folds flat."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "How loud",
+              "items": [
+                {
+                  "k": "$439 · belt-driven",
+                  "v": "A soft hum.",
+                  "tone": "green",
+                  "say": "The cheaper one is belt-driven: a soft hum."
+                },
+                {
+                  "k": "$519 · gear-driven",
+                  "v": "It whirs and clicks.",
+                  "tone": "yellow",
+                  "say": "The other is gear-driven: it whirs and clicks."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Both made for PS5, with your TV.",
+              "cta": "Both lists: link in bio",
+              "say": "Both lists: link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-rosso-gt-corner",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "For a teen who already loves Gran Turismo: a direct-drive base, load-cell pedals, a frame and a seat. $1,828 with the TV you have, and a corner about 2 by 4.5 feet that it keeps. Prices are our estimates. We earn from qualifying purchases. #granturismo7 #simracing",
+      "captions": {
+        "youtube": "For a teen who already loves Gran Turismo: a direct-drive base, load-cell pedals, a frame and a seat. $1,828 with the TV you have, and a corner about 2 by 4.5 feet that it keeps. Prices are our estimates. We earn from qualifying purchases. #granturismo7 #simracing\n\nThe four parts and the floor space: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Gran Turismo on PS5, serious setup: the 4 parts and the corner it needs",
+      "earliest": "2026-11-29T05:00:00Z",
+      "script": "Your teen already loves Gran Turismo on the PS5, and wants the real thing. The serious setup is four parts, and a corner of the room. / The frame is just under two feet by four foot five, and it stays set up. Give it a corner. / The Fanatec Gran Turismo DD Pro, about eight hundred. A Sim-Lab frame, four forty-nine. A Sparco seat, three seventy-nine. Load-cell pedals, two hundred. Eighteen twenty-eight. / The full list is in the bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Teen loves Gran Turismo?",
+              "title": "Four parts and a corner of the room.",
+              "say": "Your teen already loves Gran Turismo on the PS5, and wants the real thing. The serious setup is four parts, and a corner of the room."
+            },
+            {
+              "type": "plan",
+              "title": "First, the corner it keeps",
+              "room": {
+                "w": 120,
+                "d": 132,
+                "label": "10′ × 11′ bedroom",
+                "fixed": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "w": 42,
+                    "d": 80,
+                    "label": "Bed"
+                  },
+                  {
+                    "x": 84,
+                    "y": 100,
+                    "w": 34,
+                    "d": 18,
+                    "label": "Desk"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Frame 1′11″ × 4′5″, in front of your TV",
+                  "detail": "It stays set up. Give it a corner.",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 88,
+                      "y": 4,
+                      "w": 30,
+                      "d": 10,
+                      "label": "TV",
+                      "dashed": true
+                    },
+                    {
+                      "x": 92,
+                      "y": 20,
+                      "w": 23,
+                      "d": 53,
+                      "label": "Frame"
+                    }
+                  ],
+                  "say": "The frame is just under two feet by four foot five, and it stays set up. Give it a corner."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "The four parts",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Direct drive, wheel in the box",
+                  "name": "Fanatec Gran Turismo DD Pro",
+                  "price": 800,
+                  "say": "The Fanatec Gran Turismo DD Pro, about eight hundred."
+                },
+                {
+                  "label": "Frame",
+                  "name": "Sim-Lab GT1 Evo",
+                  "price": 449,
+                  "say": "A Sim-Lab frame, four forty-nine."
+                },
+                {
+                  "label": "Seat",
+                  "name": "Sparco R100",
+                  "price": 379,
+                  "say": "A Sparco seat, three seventy-nine."
+                },
+                {
+                  "label": "Load-cell pedals",
+                  "name": "Fanatec CSL Pedals",
+                  "price": 200,
+                  "say": "Load-cell pedals, two hundred."
+                }
+              ],
+              "outro": "Eighteen twenty-eight."
+            },
+            {
+              "type": "end",
+              "title": "Rosso GT, part by part.",
+              "cta": "The serious setup: link in bio",
+              "say": "The full list is in the bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-stand-or-cockpit",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Wheel stand or cockpit? Drawn to scale in a 9 by 8 foot room: a stand takes 1′10″ × 2′4″ in front of your chair, a folding cockpit 2′ × 4′7″, a fixed frame 1′11″ × 4′5″ that stays up. We earn from qualifying purchases. #simracing #ps5",
+      "captions": {
+        "youtube": "Wheel stand or cockpit? Drawn to scale in a 9 by 8 foot room: a stand takes 1′10″ × 2′4″ in front of your chair, a folding cockpit 2′ × 4′7″, a fixed frame 1′11″ × 4′5″ that stays up. We earn from qualifying purchases. #simracing #ps5\n\nFloor space for every setup: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Wheel stand or racing cockpit? The floor space of each, drawn to scale",
+      "earliest": "2026-11-30T05:00:00Z",
+      "script": "Wheel stand or cockpit? Start with the floor you have. / A wheel stand: one foot ten by two foot four, and you use your own chair. A folding cockpit: two feet by four foot seven, with its own seat. A frame: just under two by four foot five, and it stays. / Measure first. Link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Floor space",
+          "fine": "Footprints are each part's listed size, drawn to scale. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "title": "Wheel stand or cockpit?",
+              "sub": "Start with the floor.",
+              "say": "Wheel stand or cockpit? Start with the floor you have."
+            },
+            {
+              "type": "plan",
+              "title": "Three footprints, to scale",
+              "room": {
+                "w": 108,
+                "d": 96,
+                "label": "9′ × 8′ room",
+                "fixed": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "w": 40,
+                    "d": 18,
+                    "label": "Dresser"
+                  },
+                  {
+                    "x": 70,
+                    "y": 72,
+                    "w": 36,
+                    "d": 22,
+                    "label": "Chair",
+                    "dashed": false
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Stand · 1′10″ × 2′4″",
+                  "detail": "Uses your chair. Folds away.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 77,
+                      "y": 40,
+                      "w": 22,
+                      "d": 28,
+                      "label": "Stand"
+                    }
+                  ],
+                  "say": "A wheel stand: one foot ten by two foot four, and you use your own chair."
+                },
+                {
+                  "caption": "Folding cockpit · 2′ × 4′7″",
+                  "detail": "Its own seat. Folds flat.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 40,
+                      "y": 34,
+                      "w": 24,
+                      "d": 55,
+                      "label": "Cockpit"
+                    }
+                  ],
+                  "say": "A folding cockpit: two feet by four foot seven, with its own seat."
+                },
+                {
+                  "caption": "Frame · 1′11″ × 4′5″",
+                  "detail": "Stays set up for good.",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 10,
+                      "y": 36,
+                      "w": 23,
+                      "d": 53,
+                      "label": "Frame"
+                    }
+                  ],
+                  "say": "A frame: just under two by four foot five, and it stays."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Measure the floor, then pick.",
+              "cta": "Floor space: link in bio",
+              "say": "Measure first. Link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-need-a-pc",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Do you need a gaming PC for sim racing? No. With the TV you have, a PS5 setup is $439 and an Xbox one $608. A PC rig starts at $1,258 with a VR headset you own, and the PC isn't in it. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+      "captions": {
+        "youtube": "Do you need a gaming PC for sim racing? No. With the TV you have, a PS5 setup is $439 and an Xbox one $608. A PC rig starts at $1,258 with a VR headset you own, and the PC isn't in it. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5\n\nSetups for PS5, Xbox and PC: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
+      },
+      "title": "Do you need a gaming PC for sim racing? No: $439 on a PS5",
+      "earliest": "2026-12-01T05:00:00Z",
+      "script": "Do you need a gaming PC for a racing wheel? Your teen wants one, and someone told you it takes a PC. It doesn't. A console is enough to start. / On a PS5, from four thirty-nine with your TV. On an Xbox, six oh eight. On a PC, from twelve fifty-eight with a headset you own, plus the gaming PC. / A console is enough to start. Link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you order",
+              "title": "Do we need a gaming PC?",
+              "sub": "No. A console is enough.",
+              "say": "Do you need a gaming PC for a racing wheel? Your teen wants one, and someone told you it takes a PC. It doesn't. A console is enough to start."
+            },
+            {
+              "type": "compare",
+              "title": "With what you already have",
+              "items": [
+                {
+                  "price": "$439",
+                  "name": "PS5 or Xbox · from",
+                  "line": "With your TV, on the console you have.",
+                  "sound": "No PC needed",
+                  "tone": "green",
+                  "say": "On a PS5, from four thirty-nine with your TV. On an Xbox, six oh eight."
+                },
+                {
+                  "price": "$1,258",
+                  "name": "PC · from",
+                  "line": "With a VR headset you own.",
+                  "sound": "Plus the gaming PC",
+                  "tone": "yellow",
+                  "say": "On a PC, from twelve fifty-eight with a headset you own, plus the gaming PC."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "A console is enough to start.",
+              "sub": "A PC takes the strongest wheels, later.",
+              "cta": "Every setup: link in bio",
+              "say": "A console is enough to start. Link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-outlets",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "How many outlets does a PS5 racing wheel need? With the TV you already have, one more: the wheel base. Pedals and the wheel plug into the base, and the base into the PS5. We earn from qualifying purchases. #ps5 #simracing",
+      "captions": {
+        "youtube": "How many outlets does a PS5 racing wheel need? With the TV you already have, one more: the wheel base. Pedals and the wheel plug into the base, and the base into the PS5. We earn from qualifying purchases. #ps5 #simracing\n\nPlugs and parts for every setup: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "How many outlets does a PS5 racing wheel need? One new one",
+      "earliest": "2026-12-01T05:00:00Z",
+      "script": "How many outlets does a racing wheel need? With the TV you have, one more. / The wheel base plugs into the wall. That's the new outlet. The wheel and pedals connect to the base, and the base to the PS5. / New TV? Two outlets.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "A schematic, not to scale. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "title": "How many outlets does it need?",
+              "sub": "With your TV: one more.",
+              "say": "How many outlets does a racing wheel need? With the TV you have, one more."
+            },
+            {
+              "type": "plan",
+              "title": "What plugs in where",
+              "room": {
+                "w": 96,
+                "d": 84,
+                "label": "Behind the TV · not to scale",
+                "fixed": [
+                  {
+                    "x": 8,
+                    "y": 6,
+                    "w": 80,
+                    "d": 14,
+                    "label": "TV"
+                  },
+                  {
+                    "x": 10,
+                    "y": 30,
+                    "w": 20,
+                    "d": 12,
+                    "label": "PS5"
+                  },
+                  {
+                    "x": 66,
+                    "y": 30,
+                    "w": 20,
+                    "d": 12,
+                    "label": "Outlet"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Wheel base → outlet",
+                  "detail": "The one new plug.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 40,
+                      "y": 52,
+                      "w": 18,
+                      "d": 14,
+                      "label": "Base"
+                    },
+                    {
+                      "x": 58,
+                      "y": 38,
+                      "w": 10,
+                      "d": 16,
+                      "dashed": true
+                    }
+                  ],
+                  "say": "The wheel base plugs into the wall. That's the new outlet."
+                },
+                {
+                  "caption": "Wheel and pedals → base",
+                  "detail": "Then the base → the PS5.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 40,
+                      "y": 52,
+                      "w": 18,
+                      "d": 14,
+                      "label": "Base"
+                    },
+                    {
+                      "x": 38,
+                      "y": 70,
+                      "w": 22,
+                      "d": 12,
+                      "label": "Pedals"
+                    },
+                    {
+                      "x": 24,
+                      "y": 42,
+                      "w": 16,
+                      "d": 14,
+                      "dashed": true
+                    }
+                  ],
+                  "say": "The wheel and pedals connect to the base, and the base to the PS5."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "A new TV? That's a second outlet.",
+              "cta": "Each setup's plugs: link in bio",
+              "say": "New TV? Two outlets."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-how-many-boxes",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Will a racing setup arrive in one box? Usually not. With the TV you have, Couch to Track and Midnight Rookie come in 2 boxes each, Rosso GT in 4, often from different sellers. Open them when they arrive. Prices are our estimates. We earn from qualifying purchases. #giftideas #ps5",
+      "captions": {
+        "youtube": "Will a racing setup arrive in one box? Usually not. With the TV you have, Couch to Track and Midnight Rookie come in 2 boxes each, Rosso GT in 4, often from different sellers. Open them when they arrive. Prices are our estimates. We earn from qualifying purchases. #giftideas #ps5\n\nWhat to order, and by when: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Racing wheel for Christmas: how many boxes will arrive?",
+      "earliest": "2026-12-02T05:00:00Z",
+      "script": "Will a racing setup arrive in one box, in time for Christmas? Usually not. It comes in parts, and that changes when you should order. / Couch to Track is two boxes. Midnight Rookie, two. Rosso GT is four, often from different sellers. / Our advice: order by Friday, December eleventh. And open every box when it arrives, so there's time to replace a missing part. / Every part: link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "December 11 is our suggestion, not a carrier deadline: check each retailer's date at checkout. Prices are our estimates of typical US prices (Nov 2026). Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Christmas delivery",
+              "title": "Will it come in one box?",
+              "sub": "Usually not.",
+              "say": "Will a racing setup arrive in one box, in time for Christmas? Usually not. It comes in parts, and that changes when you should order."
+            },
+            {
+              "type": "compare",
+              "title": "Boxes, with your TV",
+              "items": [
+                {
+                  "price": "2",
+                  "name": "Couch to Track · $439",
+                  "line": "Wheel stand, and wheel with pedals.",
+                  "sound": "Two boxes",
+                  "tone": "green",
+                  "say": "Couch to Track is two boxes."
+                },
+                {
+                  "price": "2",
+                  "name": "Midnight Rookie · $519",
+                  "line": "Seat, and wheel with pedals.",
+                  "sound": "Two boxes",
+                  "tone": "green",
+                  "say": "Midnight Rookie, two."
+                },
+                {
+                  "price": "4",
+                  "name": "Rosso GT · $1,828",
+                  "line": "Frame, seat, wheel base, pedals.",
+                  "sound": "Four boxes, often different sellers",
+                  "tone": "yellow",
+                  "say": "Rosso GT is four, often from different sellers."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "So",
+              "items": [
+                {
+                  "k": "Order by",
+                  "v": "Friday, December 11. Our advice.",
+                  "tone": "purple",
+                  "say": "Our advice: order by Friday, December eleventh."
+                },
+                {
+                  "k": "When they arrive",
+                  "v": "Open every box. Time to swap a missing part.",
+                  "tone": "green",
+                  "say": "And open every box when it arrives, so there's time to replace a missing part."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Every part, listed.",
+              "cta": "What to order: link in bio",
+              "say": "Every part: link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-vr-rig",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Can a racing rig use a VR headset instead of a screen? Yes. In our PC setup the Quest 3 is the screen. Stealth VR is $1,857 in full, $1,258 with a headset you own, and it needs a gaming PC. Prices are our estimates. We earn from qualifying purchases. #simracing #vr",
+      "captions": {
+        "youtube": "Can a racing rig use a VR headset instead of a screen? Yes. In our PC setup the Quest 3 is the screen. Stealth VR is $1,857 in full, $1,258 with a headset you own, and it needs a gaming PC. Prices are our estimates. We earn from qualifying purchases. #simracing #vr\n\nThe VR setup, part by part: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
+      },
+      "title": "VR sim racing rig instead of a screen: what to order ($1,857)",
+      "earliest": "2026-12-02T05:00:00Z",
+      "script": "Can a racing rig use a VR headset instead of a screen? Yes, if there's a gaming PC at home. Here's a setup where the headset is the screen. / A Fanatec CSL DD base, five twenty-nine. A McLaren GT3 wheel, two thirty. Load-cell pedals, two hundred. A folding cockpit, two ninety-nine. And the screen is a Quest three, five ninety-nine. Eighteen fifty-seven. Twelve fifty-eight with a headset you own. / The cockpit takes two foot ten by five foot seven, and needs no screen in front of it. It folds for storage. / PC not included. Link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gift guide · PC",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Gaming PC at home?",
+              "title": "VR instead of a screen?",
+              "sub": "Yes. Here's a PC setup.",
+              "say": "Can a racing rig use a VR headset instead of a screen? Yes, if there's a gaming PC at home. Here's a setup where the headset is the screen."
+            },
+            {
+              "type": "list",
+              "title": "Stealth VR",
+              "totalLabel": "Everything",
+              "items": [
+                {
+                  "label": "Wheel base",
+                  "name": "Fanatec CSL DD",
+                  "price": 529,
+                  "say": "A Fanatec CSL DD base, five twenty-nine."
+                },
+                {
+                  "label": "Wheel",
+                  "name": "CSL Elite McLaren GT3 V2",
+                  "price": 230,
+                  "say": "A McLaren GT3 wheel, two thirty."
+                },
+                {
+                  "label": "Load-cell pedals",
+                  "name": "Fanatec CSL Pedals",
+                  "price": 200,
+                  "say": "Load-cell pedals, two hundred."
+                },
+                {
+                  "label": "Cockpit, folds",
+                  "name": "Next Level Racing GTLite Pro",
+                  "price": 299,
+                  "say": "A folding cockpit, two ninety-nine."
+                },
+                {
+                  "label": "Screen",
+                  "name": "Meta Quest 3 (512GB)",
+                  "price": 599,
+                  "say": "And the screen is a Quest three, five ninety-nine."
+                }
+              ],
+              "outro": "Eighteen fifty-seven. Twelve fifty-eight with a headset you own."
+            },
+            {
+              "type": "plan",
+              "title": "It folds, but it's long",
+              "room": {
+                "w": 96,
+                "d": 120,
+                "label": "8′ × 10′ room",
+                "fixed": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "w": 56,
+                    "d": 22,
+                    "label": "Desk + PC"
+                  },
+                  {
+                    "x": 60,
+                    "y": 84,
+                    "w": 34,
+                    "d": 22,
+                    "label": "Bed"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Cockpit · 2′10″ × 5′7″",
+                  "detail": "No screen in front: the headset is the screen.",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 10,
+                      "y": 30,
+                      "w": 34,
+                      "d": 67,
+                      "label": "Cockpit"
+                    }
+                  ],
+                  "say": "The cockpit takes two foot ten by five foot seven, and needs no screen in front of it. It folds for storage."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Needs a gaming PC, not in the price.",
+              "cta": "The VR setup: link in bio",
+              "say": "PC not included. Link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-which-games",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Which PS5 games work with these racing wheels? Gran Turismo 7, Assetto Corsa Competizione and Assetto Corsa, on all three of our PS5 setups, from $439 with the TV you have. Prices are our estimates. We earn from qualifying purchases. #granturismo7 #ps5",
+      "captions": {
+        "youtube": "Which PS5 games work with these racing wheels? Gran Turismo 7, Assetto Corsa Competizione and Assetto Corsa, on all three of our PS5 setups, from $439 with the TV you have. Prices are our estimates. We earn from qualifying purchases. #granturismo7 #ps5\n\nThe three setups and their games: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Which PS5 games work with a racing wheel? Gran Turismo 7 and two more",
+      "earliest": "2026-12-03T05:00:00Z",
+      "script": "Which PS5 games work with a racing wheel? / Gran Turismo seven, PlayStation's own racing game. Assetto Corsa Competizione, GT3 racing on real circuits. And Assetto Corsa: road cars and track days. / No PC, and no new TV. All three: link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "title": "Which games work with the wheel?",
+              "say": "Which PS5 games work with a racing wheel?"
+            },
+            {
+              "type": "facts",
+              "title": "On all three setups",
+              "items": [
+                {
+                  "k": "Gran Turismo 7",
+                  "v": "PlayStation's own racing game.",
+                  "tone": "purple",
+                  "say": "Gran Turismo seven, PlayStation's own racing game."
+                },
+                {
+                  "k": "Assetto Corsa Competizione",
+                  "v": "GT3 racing on real circuits.",
+                  "tone": "yellow",
+                  "say": "Assetto Corsa Competizione, GT3 racing on real circuits."
+                },
+                {
+                  "k": "Assetto Corsa",
+                  "v": "Road cars and track days.",
+                  "tone": "green",
+                  "say": "And Assetto Corsa: road cars and track days."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Wheel, game, PS5. That's it.",
+              "sub": "No PC, no new TV.",
+              "cta": "All three setups: link in bio",
+              "say": "No PC, and no new TV. All three: link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    }
+  ]
+}
