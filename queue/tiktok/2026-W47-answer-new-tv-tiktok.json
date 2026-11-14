@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-new-tv-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-new-tv.mp4",
+    "sha256": "ec5cf06eaa947f15314bbc63d8fde5d7a038d0250b86cdfd64f1d05d24b97b6c",
+    "kind": "video"
+  },
+  "caption": "Does a PS5 racing wheel need a new TV? No: the same two setups cost $519 and $1,828 in front of the TV you have, against $907 and $3,056 with their own screen. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+  "title": "Do you need a new TV for a PS5 racing wheel? $519 vs $907",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}

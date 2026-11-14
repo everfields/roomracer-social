@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-how-loud-instagram",
+  "network": "instagram",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-how-loud.mp4",
+    "sha256": "bc17badc31d02a792634412c6f54c7f58c65de08ac80c62650febfb2b8d37c0d",
+    "kind": "video"
+  },
+  "caption": "Is a racing wheel loud? It depends on how the wheel base is built: gear-driven ones whir and click, belt-driven ones hum, direct drive is close to silent apart from the pedals. We earn from qualifying purchases. #simracing #ps5",
+  "title": "Is a racing wheel loud? Gear vs belt vs direct drive",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}

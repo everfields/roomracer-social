@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-rosso-gt-order-instagram",
+  "network": "instagram",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-rosso-gt-order.mp4",
+    "sha256": "fb5cd12306ca9ba2fa173840525d8caad875862d2d806ff14005d3c2b98db569",
+    "kind": "video"
+  },
+  "caption": "What a serious PS5 racing setup takes: a cockpit, a seat, a direct-drive base and load-cell pedals. $1,828 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #simracing #granturismo7",
+  "title": "Serious PS5 racing setup for Gran Turismo: exactly what to order ($1,828)",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-works-with-ps5-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-works-with-ps5.mp4",
+    "sha256": "b91d5f6a09156f6b1ba8ccfd8ad9122b9f89b9dcae5ca901fae75487a11f314f",
+    "kind": "video"
+  },
+  "caption": "Will a racing wheel work with the PS5 you already have? Each wheel on our list is made for PlayStation, and every part passes our PS5 check. Specs we haven't checked by hand say so. We earn from qualifying purchases. #ps5 #granturismo7",
+  "title": "Will a racing wheel work with our PS5? What to check before you buy",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}

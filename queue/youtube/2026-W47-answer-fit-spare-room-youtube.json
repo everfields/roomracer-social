@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-fit-spare-room-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-fit-spare-room.mp4",
+    "sha256": "f6be4a6b7024c161b8940bc58e27933fa6d811e3ae9143d8e5e2b21579fe1e94",
+    "kind": "video"
+  },
+  "caption": "Will a full racing cockpit fit in a spare room? Two PS5 setups on a 9x10 ft room with a desk, drawn to scale from each part's published size. We earn from qualifying purchases. #simracing #homesetup\n\nFloor space for every setup: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer",
+  "title": "Will a racing cockpit fit in a spare room? Drawn to scale",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-set-up-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-set-up.mp4",
+    "sha256": "8bbd943bf8b3babffde49bf311e94bcbffab50d3795ca6270a97a111e4421b4d",
+    "kind": "video"
+  },
+  "caption": "How hard is a racing wheel to set up on a PS5? The wheel and pedals plug into the base, the base into the PS5, and it takes two outlets. Some cockpits fold flat; the serious one stays put. We earn from qualifying purchases. #ps5 #giftideas",
+  "title": "How hard is a PS5 racing wheel to set up? Plugs, outlets, folding",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-order-by-instagram",
+  "network": "instagram",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-order-by.mp4",
+    "sha256": "e429be7ce549fa380c06504561d0988decb752744651a66332acaa5e7b8bd748",
+    "kind": "video"
+  },
+  "caption": "When to order a racing wheel for Christmas: our advice is by Friday, December 11. Cockpits ship in big boxes, and building one takes a weekend. Our suggestion, not a carrier deadline. We earn from qualifying purchases. #giftideas #simracing",
+  "title": "When to order a racing wheel for Christmas (our advice)",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-519-or-1828-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-519-or-1828.mp4",
+    "sha256": "989d99079ff46d00cc5ad54af4ea1d3724febc6e48be602421db8bbc14e15a5a",
+    "kind": "video"
+  },
+  "caption": "$519 or $1,828 for a PS5 racing setup: what's the difference? A gear wheel and a folding seat, against direct drive, load-cell pedals and a frame that stays put. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+  "title": "PS5 racing setup: $519 or $1,828, what's the difference?",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T05:00:00Z"
+}
