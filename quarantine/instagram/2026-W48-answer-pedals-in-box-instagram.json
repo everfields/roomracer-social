@@ -1,6 +1,6 @@
 {
-  "id": "2026-W48-answer-pedals-in-box-tiktok",
-  "network": "tiktok",
+  "id": "2026-W48-answer-pedals-in-box-instagram",
+  "network": "instagram",
   "format": "answer",
   "batch": "2026-W48",
   "media": {
@@ -17,5 +17,30 @@
     "realistic": false
   },
   "trial": false,
-  "earliest": "2026-11-25T05:00:00Z"
+  "earliest": "2026-11-25T05:00:00Z",
+  "intake": {
+    "ok": false,
+    "at": "2026-11-14T13:17:35Z",
+    "problems": [
+      "near-duplicate of 2026-W48-answer-how-many-boxes-instagram (distance 7.8)"
+    ],
+    "warnings": [],
+    "probe": {
+      "width": 1080,
+      "height": 1920,
+      "duration_s": 30.3,
+      "video_codec": "h264",
+      "pix_fmt": "yuv420p",
+      "fps": 30.0,
+      "audio_codec": "aac",
+      "bytes": 2628001
+    },
+    "phash": [
+      "5000337b18000000",
+      "5c6f4e0000000000",
+      "5c6f4e6f6d4e0000",
+      "56372f0000000000",
+      "5000576b70005600"
+    ]
+  }
 }
