@@ -3,6 +3,7 @@
     validate                        check social.json and every queue row's shape
     due                             exit 0 when some network has a slot due (the gate that ends idle wakes)
     publish [--live] [--network N] [--no-wait]
+    batches                         pull the week's batch from the company repo into batches/ (approved formats only)
     intake [--recheck]              check new posts, quarantine the failures, report the runway
     pages --out DIR                 build the Pages runway
     metrics                         collect the numbers, rebuild the summary and the scoreboard
@@ -34,6 +35,7 @@ from urllib.parse import urlencode
 from . import VERSION
 from .alarms import Alarms
 from .base import Retryable
+from .batches import pull as pull_batches
 from .buffer import CHANNELS, ORGS, BufferTikTok
 from .config import Config, ConfigError, load
 from .http import Request, UrllibTransport, redact_text
@@ -79,6 +81,14 @@ def cmd_validate(a, cfg: Config, root: Path, state: Path) -> int:
     if not problems:
         print(f"ok: {cfg.company}, networks {', '.join(n.name for n in cfg.enabled())}, engine {VERSION}")
     return 1 if problems else 0
+
+
+def cmd_batches(a, cfg: Config, root: Path, state: Path) -> int:
+    report = pull_batches(root, cfg.company_repo, os.environ, UrllibTransport(), now_utc())
+    out(report)
+    for r in report["refused"]:
+        print(f"::warning::batch {r['file']} refused: {'; '.join(r['why'])}")
+    return 0
 
 
 def cmd_due(a, cfg: Config, root: Path, state: Path) -> int:
@@ -293,7 +303,7 @@ def cmd_status(a, cfg: Config, root: Path, state: Path) -> int:
 
 
 COMMANDS = {
-    "validate": cmd_validate, "due": cmd_due, "publish": cmd_publish, "intake": cmd_intake, "pages": cmd_pages,
+    "validate": cmd_validate, "batches": cmd_batches, "due": cmd_due, "publish": cmd_publish, "intake": cmd_intake, "pages": cmd_pages,
     "metrics": cmd_metrics, "watch": cmd_watch, "archive": cmd_archive, "resolve": cmd_resolve, "resume": cmd_resume,
     "check-public": cmd_check_public, "token-refresh": cmd_token_refresh, "youtube-auth": cmd_youtube_auth,
     "status": cmd_status, "buffer-channels": cmd_buffer_channels,

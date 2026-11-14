@@ -1,0 +1,31 @@
+{
+  "name": "RoomRacer",
+  "accent_part": "Racer",
+  "site": "roomracer.com",
+  "cta": "Full list: link in bio",
+  "locale": "en-US",
+  "currency": "USD",
+  "units": "imperial",
+  "motif": "kerb",
+  "voice": "af_heart",
+  "speed": 1.05,
+  "fine": "Prices are our estimates of typical US prices, not a store's price. Synthetic voice. We earn from qualifying purchases.",
+  "colors": {
+    "bg": "#111214",
+    "panel": "#17181b",
+    "panel2": "#1d1f23",
+    "line": "#2e3136",
+    "text": "#ecebe6",
+    "muted": "#8b8f96",
+    "accent": "#e8412c",
+    "on-accent": "#ffffff",
+    "purple": "#9d5cff",
+    "green": "#1fbf62",
+    "yellow": "#f2c200",
+    "red": "#ff4b3a",
+    "room": "#15161a",
+    "photo": "#f4f4f2",
+    "kerb-red": "#d7261e",
+    "kerb-white": "#efede6"
+  }
+}

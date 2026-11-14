@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from social import alarms as alarms_mod, intake, metrics, pages, phash, publish, schedule, watch  # noqa: E402
+from social import alarms as alarms_mod, batches, intake, metrics, pages, phash, publish, schedule, watch  # noqa: E402
 from social.base import Media, PostSpec, Retryable  # noqa: E402
 from social.buffer import BufferTikTok, BufferX  # noqa: E402
 from social.config import ConfigError, load  # noqa: E402
@@ -147,6 +147,70 @@ class TestConfig(TmpCase):
         self.assertEqual(cfg.networks["instagram"].route, "buffer")
         self.assertEqual(cfg.networks["tiktok"].slots, [])
         self.assertFalse(cfg.is_live("tiktok"))
+
+    def test_auto_goes_live_network_by_network_as_credentials_arrive(self):
+        r = Repo(env={"SOCIAL_LIVE_NETWORKS": "auto", "SOCIAL_READY_NETWORKS": "youtube  x"})
+        self.addCleanup(r.close)
+        cfg = r.cfg
+        self.assertTrue(cfg.is_live("youtube"))    # its secrets exist: it does not wait for the others
+        self.assertFalse(cfg.is_live("tiktok"))    # no credentials yet
+        self.assertFalse(cfg.is_live("x"))         # ready, but not a network this company enabled
+        r2 = Repo(env={"SOCIAL_LIVE_NETWORKS": "auto", "SOCIAL_READY_NETWORKS": "youtube", "SOCIAL_CRON": "dry-run"})
+        self.addCleanup(r2.close)
+        self.assertFalse(r2.cfg.is_live("youtube"))  # the master switch still decides
+
+
+class TestBatches(TmpCase):
+    NOW = datetime(2026, 11, 14, 12, 0, tzinfo=UTC)  # ISO week 2026-W46
+
+    def company(self, files: dict[str, dict]):
+        raw = {n: json.dumps(b).encode() for n, b in files.items()}
+
+        def answer(req: Request) -> HttpResponse:
+            self.assertEqual(req.headers["Authorization"], "Bearer tok")
+            if req.url.endswith("/contents/company/social/batches"):
+                return HttpResponse.of_json(200, [{"name": n, "type": "file", "sha": batches.blob_sha(d)} for n, d in raw.items()])
+            name = req.url.rsplit("/", 1)[1]
+            return HttpResponse(200, {}, raw[name]) if name in raw else HttpResponse(404)
+
+        return Stub(answer)
+
+    def approve(self, fmt="answer", gate="owner/test#40"):
+        d = self.r.dir / "formats" / fmt
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "format.json").write_text(json.dumps({"gpu": False, "approved": gate}), encoding="utf-8")
+
+    def pull(self, stub):
+        return batches.pull(self.r.dir, "owner/test", {"COS_EVENT_TOKEN": "tok"}, stub, self.NOW)
+
+    def test_a_new_batch_arrives_once(self):
+        self.approve()
+        stub = self.company({"2026-W47.json": {"week": "2026-W47", "posts": [{"id": "a", "format": "answer"}]}})
+        self.assertEqual(self.pull(stub)["new"], ["batches/2026-W47.json"])
+        self.assertTrue((self.r.dir / "batches" / "2026-W47.json").is_file())
+        again = self.pull(stub)
+        self.assertEqual((again["new"], again["unchanged"]), ([], 1))
+        self.assertEqual(len(stub.requests), 3)  # the second pull only lists: the sha says nothing changed
+
+    def test_a_format_nobody_approved_never_rides_in(self):
+        self.approve("answer")
+        (self.r.dir / "formats" / "hotlap").mkdir(parents=True)
+        (self.r.dir / "formats" / "hotlap" / "format.json").write_text('{"approved": null}', encoding="utf-8")
+        stub = self.company({"2026-W47.json": {"week": "2026-W47", "posts": [{"id": "a", "format": "answer"}, {"id": "b", "format": "hotlap"}]}})
+        report = self.pull(stub)
+        self.assertEqual(report["new"], [])
+        self.assertIn("hotlap", report["refused"][0]["why"][0])
+        self.assertFalse((self.r.dir / "batches" / "2026-W47.json").exists())
+
+    def test_past_weeks_and_other_files_are_ignored(self):
+        self.approve()
+        post = {"posts": [{"id": "a", "format": "answer"}]}
+        stub = self.company({"2026-W45.json": post, "notes.md": post, "2026-W46.json": post})
+        self.assertEqual(self.pull(stub)["new"], ["batches/2026-W46.json"])
+
+    def test_no_token_is_a_quiet_skip(self):
+        self.assertIn("missing", batches.pull(self.r.dir, "owner/test", {}, Stub(lambda r: HttpResponse(500)), self.NOW)["skipped"])
+
 
 
 class TestSchedule(TmpCase):

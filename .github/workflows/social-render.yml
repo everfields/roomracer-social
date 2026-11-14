@@ -24,6 +24,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: social-render
@@ -83,6 +84,11 @@ jobs:
             if [ "${{ github.event_name }}" != "workflow_dispatch" ] || [ "${{ inputs.upload }}" = "true" ]; then args+=(--upload); fi
             python engine/pc/render.py "${args[@]}"
           done
+      # A push made with the workflow's own token starts no other workflow, so the intake is called by name: without
+      # this the rendered posts would sit unchecked and never publish (found before RoomRacer's first batch, 2026-11-14).
+      - name: hand the posts to the intake
+        if: steps.pick.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.upload)
+        run: gh workflow run social-intake.yml --ref main
       - uses: actions/upload-artifact@v4
         if: steps.pick.outputs.files != ''
         with:

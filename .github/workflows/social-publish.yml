@@ -28,6 +28,11 @@ env:
   GITHUB_TOKEN: ${{ github.token }}
   SOCIAL_CRON: ${{ vars.SOCIAL_CRON || 'off' }}
   SOCIAL_LIVE_NETWORKS: ${{ vars.SOCIAL_LIVE_NETWORKS }}
+  SOCIAL_READY_NETWORKS: >-
+    ${{ secrets.YOUTUBE_REFRESH_TOKEN != '' && 'youtube' || '' }}
+    ${{ secrets.INSTAGRAM_ACCESS_TOKEN != '' && 'instagram' || '' }}
+    ${{ secrets.BUFFER_API_KEY != '' && vars.BUFFER_CHANNEL_TIKTOK != '' && 'tiktok' || '' }}
+    ${{ secrets.BUFFER_API_KEY != '' && vars.BUFFER_CHANNEL_X != '' && 'x' || '' }}
   SOCIAL_PUBLIC_BASE_URL: ${{ vars.SOCIAL_PUBLIC_BASE_URL }}
   SOCIAL_ROUTE_TIKTOK: ${{ vars.SOCIAL_ROUTE_TIKTOK }}
   SOCIAL_ROUTE_INSTAGRAM: ${{ vars.SOCIAL_ROUTE_INSTAGRAM }}

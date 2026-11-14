@@ -1,6 +1,6 @@
 {
   "gpu": false,
   "renders_on": "github",
-  "approved": null,
-  "gate": "the founder item that shows its samples"
+  "approved": "everfields/roomracer#40 (Carlos, /approve, 2026-11-13)",
+  "gate": "everfields/roomracer#40"
 }

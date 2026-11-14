@@ -151,7 +151,15 @@ def load(root: Path, env: Mapping[str, str]) -> Config:
     cron = (env.get("SOCIAL_CRON") or raw.get("cron") or "off").strip().lower()
     if cron not in CRON_MODES:
         raise ConfigError(f"SOCIAL_CRON={cron!r}: one of {', '.join(CRON_MODES)}")
-    live = frozenset(x for x in re.split(r"[,\s|]+", (env.get("SOCIAL_LIVE_NETWORKS") or "").lower()) if x)
+    live = {x for x in re.split(r"[,\s|]+", (env.get("SOCIAL_LIVE_NETWORKS") or "").lower()) if x}
+    # `auto`: an enabled network goes live by itself the moment its credentials exist. The founder approved the networks
+    # (they are the enabled ones) and the formats (only approved ones reach the queue), so nobody has to flip a switch,
+    # and one network never waits for another. Each workflow says which are ready in SOCIAL_READY_NETWORKS, from the
+    # presence of the secrets, never their values.
+    if "auto" in live:
+        ready = {x for x in re.split(r"[,\s|]+", (env.get("SOCIAL_READY_NETWORKS") or "").lower()) if x}
+        live = (live - {"auto"}) | {n for n in ready if n in nets and nets[n].enabled}
+    live = frozenset(live)
     w, b, r = raw.get("warmup") or {}, raw.get("brake") or {}, raw.get("runway") or {}
     return Config(
         company=str(raw.get("company") or root.name),

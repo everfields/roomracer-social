@@ -1,0 +1,55 @@
+name: social-batches
+
+# The week's batch comes by itself. Every hour this pulls the company repo's company/social/batches/ (read with
+# COS_EVENT_TOKEN), writes what is new to batches/ and starts the render for it: nothing waits for the founder's PC.
+# Only approved formats pass (formats/<name>/format.json "approved"). GitHub drops most scheduled runs (3 hourly runs in
+# 26 h at RoomRacer, 2026-11-12), so the outside clock's `social-tick` wakes it too, and on its own schedule it is one
+# more clock for the publisher. An idle run ends in seconds. Managed by the launch-company skill.
+on:
+  schedule:
+    - cron: "41 * * * *"
+  repository_dispatch:
+    types: [social-tick]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: social-batches
+  cancel-in-progress: false
+
+env:
+  PYTHONPATH: engine
+  PYTHONUNBUFFERED: "1"
+  GH_TOKEN: ${{ github.token }}
+  SOCIAL_CRON: ${{ vars.SOCIAL_CRON || 'off' }}
+  SOCIAL_PUBLIC_BASE_URL: ${{ vars.SOCIAL_PUBLIC_BASE_URL }}
+
+jobs:
+  pull:
+    if: github.event_name == 'workflow_dispatch' || vars.SOCIAL_CRON == 'dry-run' || vars.SOCIAL_CRON == 'live'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: pull the batches
+        env:
+          COS_EVENT_TOKEN: ${{ secrets.COS_EVENT_TOKEN }}
+        run: python -m social batches
+      - name: commit and render what is new
+        run: |
+          git add batches
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          files=$(git diff --cached --name-only -- 'batches/*.json')
+          git -c user.name=social-batches -c user.email=social-batches@users.noreply.github.com commit -q -m "[batches] $(echo $files)"
+          git pull -q --rebase origin main
+          git push -q origin HEAD:main
+          for f in $files; do gh workflow run social-render.yml --ref main -f batch="$f" -f upload=true; done
+      - name: one more clock for the publisher
+        if: github.event_name == 'schedule'
+        run: gh workflow run social-publish.yml --ref main
