@@ -163,15 +163,20 @@ class TestConfig(TmpCase):
 class TestBatches(TmpCase):
     NOW = datetime(2026, 11, 14, 12, 0, tzinfo=UTC)  # ISO week 2026-W46
 
-    def company(self, files: dict[str, dict]):
-        raw = {n: json.dumps(b).encode() for n, b in files.items()}
+    @staticmethod
+    def issue(n: int, week: str, batch: dict, *, sha: str | None = None) -> dict:
+        import base64, gzip, hashlib
+        raw = json.dumps(batch).encode()
+        meta = {"week": week, "sha": sha or hashlib.sha256(raw).hexdigest(), "posts": len(batch.get("posts", []))}
+        body = f"The social batch.\n\n```cos-social-batch\n{base64.b64encode(gzip.compress(raw)).decode()}\n```\n\n<!-- cos-social-batch:{json.dumps(meta)} -->"
+        return {"number": n, "body": body}
 
+    def company(self, issues: list[dict]):
         def answer(req: Request) -> HttpResponse:
             self.assertEqual(req.headers["Authorization"], "Bearer tok")
-            if req.url.endswith("/contents/company/social/batches"):
-                return HttpResponse.of_json(200, [{"name": n, "type": "file", "sha": batches.blob_sha(d)} for n, d in raw.items()])
-            name = req.url.rsplit("/", 1)[1]
-            return HttpResponse(200, {}, raw[name]) if name in raw else HttpResponse(404)
+            self.assertTrue(req.url.endswith("/repos/owner/test/issues"))
+            self.assertEqual(req.params["labels"], "cos:social-batch")
+            return HttpResponse.of_json(200, issues)
 
         return Stub(answer)
 
@@ -185,32 +190,35 @@ class TestBatches(TmpCase):
 
     def test_a_new_batch_arrives_once(self):
         self.approve()
-        stub = self.company({"2026-W47.json": {"week": "2026-W47", "posts": [{"id": "a", "format": "answer"}]}})
+        batch = {"week": "2026-W47", "posts": [{"id": "a", "format": "answer"}]}
+        stub = self.company([self.issue(7, "2026-W47", batch)])
         self.assertEqual(self.pull(stub)["new"], ["batches/2026-W47.json"])
-        self.assertTrue((self.r.dir / "batches" / "2026-W47.json").is_file())
+        self.assertEqual(json.loads((self.r.dir / "batches" / "2026-W47.json").read_text(encoding="utf-8")), batch)
         again = self.pull(stub)
         self.assertEqual((again["new"], again["unchanged"]), ([], 1))
-        self.assertEqual(len(stub.requests), 3)  # the second pull only lists: the sha says nothing changed
 
     def test_a_format_nobody_approved_never_rides_in(self):
         self.approve("answer")
         (self.r.dir / "formats" / "hotlap").mkdir(parents=True)
         (self.r.dir / "formats" / "hotlap" / "format.json").write_text('{"approved": null}', encoding="utf-8")
-        stub = self.company({"2026-W47.json": {"week": "2026-W47", "posts": [{"id": "a", "format": "answer"}, {"id": "b", "format": "hotlap"}]}})
-        report = self.pull(stub)
+        batch = {"week": "2026-W47", "posts": [{"id": "a", "format": "answer"}, {"id": "b", "format": "hotlap"}]}
+        report = self.pull(self.company([self.issue(7, "2026-W47", batch)]))
         self.assertEqual(report["new"], [])
         self.assertIn("hotlap", report["refused"][0]["why"][0])
         self.assertFalse((self.r.dir / "batches" / "2026-W47.json").exists())
 
-    def test_past_weeks_and_other_files_are_ignored(self):
+    def test_past_weeks_are_ignored_and_a_tampered_issue_is_refused(self):
         self.approve()
         post = {"posts": [{"id": "a", "format": "answer"}]}
-        stub = self.company({"2026-W45.json": post, "notes.md": post, "2026-W46.json": post})
-        self.assertEqual(self.pull(stub)["new"], ["batches/2026-W46.json"])
+        report = self.pull(self.company([
+            self.issue(5, "2026-W45", post), self.issue(6, "2026-W46", post), self.issue(8, "2026-W47", post, sha="0" * 64),
+            {"number": 9, "body": "a person wrote this"}]))
+        self.assertEqual(report["new"], ["batches/2026-W46.json"])
+        self.assertEqual([r["file"] for r in report["refused"]], ["#8", "#9"])
+        self.assertIn("checksum", report["refused"][0]["why"][0])
 
     def test_no_token_is_a_quiet_skip(self):
         self.assertIn("missing", batches.pull(self.r.dir, "owner/test", {}, Stub(lambda r: HttpResponse(500)), self.NOW)["skipped"])
-
 
 
 class TestSchedule(TmpCase):

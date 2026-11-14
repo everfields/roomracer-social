@@ -1,7 +1,8 @@
 name: social-batches
 
-# The week's batch comes by itself. Every hour this pulls the company repo's company/social/batches/ (read with
-# COS_EVENT_TOKEN), writes what is new to batches/ and starts the render for it: nothing waits for the founder's PC.
+# The week's batch comes by itself. The company's engine posts each batch on an issue labelled cos:social-batch in its
+# own repo; this reads those issues with COS_EVENT_TOKEN (Issues on the company repo, nothing more), writes what is new
+# to batches/ and starts the render for it: nothing waits for the founder's PC.
 # Only approved formats pass (formats/<name>/format.json "approved"). GitHub drops most scheduled runs (3 hourly runs in
 # 26 h at RoomRacer, 2026-11-12), so the outside clock's `social-tick` wakes it too, and on its own schedule it is one
 # more clock for the publisher. An idle run ends in seconds. Managed by the launch-company skill.
