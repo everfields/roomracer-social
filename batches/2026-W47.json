@@ -1,0 +1,713 @@
+{
+  "week": "2026-W47",
+  "posts": [
+    {
+      "id": "2026-W47-answer-new-tv",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Does a PS5 racing wheel need a new TV? No: the same two setups cost $519 and $1,828 in front of the TV you have, against $907 and $3,056 with their own screen. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+      "captions": {
+        "youtube": "Does a PS5 racing wheel need a new TV? No: the same two setups cost $519 and $1,828 in front of the TV you have, against $907 and $3,056 with their own screen. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5\n\nEvery setup, with and without a screen: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Do you need a new TV for a PS5 racing wheel? $519 vs $907",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "Do you need a new TV for a PS5 racing wheel? Short answer: no. / Midnight Rookie is nine oh seven with its own screen, or five nineteen with your TV. Rosso GT is three thousand fifty-six, or eighteen twenty-eight with your TV. And the PS5 isn't included: each one uses the console you have. / Skip the screen and its stand. What to order is at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you order",
+              "title": "Do we need a new TV for a racing wheel?",
+              "sub": "Short answer: no.",
+              "say": "Do you need a new TV for a PS5 racing wheel? Short answer: no."
+            },
+            {
+              "type": "facts",
+              "title": "Your TV or a new one",
+              "items": [
+                {
+                  "k": "Midnight Rookie",
+                  "v": "$907, or $519 with your TV.",
+                  "tone": "yellow",
+                  "say": "Midnight Rookie is nine oh seven with its own screen, or five nineteen with your TV."
+                },
+                {
+                  "k": "Rosso GT",
+                  "v": "$3,056, or $1,828 with your TV.",
+                  "tone": "purple",
+                  "say": "Rosso GT is three thousand fifty-six, or eighteen twenty-eight with your TV."
+                },
+                {
+                  "k": "PS5",
+                  "v": "Not included: use the one you have.",
+                  "tone": "green",
+                  "say": "And the PS5 isn't included: each one uses the console you have."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Skip the screen and its stand.",
+              "sub": "Set the wheel up in front of your TV.",
+              "cta": "What to order: link in bio",
+              "say": "Skip the screen and its stand. What to order is at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-midnight-rookie-order",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "What to order for Midnight Rookie, a PS5 racing setup with a seat that folds flat: two boxes, $519 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #ps5 #giftideas",
+      "captions": {
+        "youtube": "What to order for Midnight Rookie, a PS5 racing setup with a seat that folds flat: two boxes, $519 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #ps5 #giftideas\n\nThe full list, floor space and noise: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "PS5 racing wheel and folding seat: exactly what to order ($519)",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "A racing wheel and a seat that folds flat, for a PS5. Here's what to order. / The Playseat Challenge X, about two eighty-nine. The Logitech G nine twenty-three, about two thirty, pedals in the box. And the TV you already have. That's five nineteen, all in. / The wheel is made for the PS5. The seat folds flat when you're done. It's gear-driven, so you'll hear it whir and click. / The full setup is at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "PS5 gift",
+              "title": "A racing wheel and a seat that folds flat.",
+              "sub": "Here's what to order.",
+              "say": "A racing wheel and a seat that folds flat, for a PS5. Here's what to order."
+            },
+            {
+              "type": "list",
+              "title": "What to order",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Seat, Logitech G Edition",
+                  "name": "Playseat Challenge X",
+                  "price": 289,
+                  "say": "The Playseat Challenge X, about two eighty-nine."
+                },
+                {
+                  "label": "Wheel and pedals, in one box",
+                  "name": "Logitech G923 TRUEFORCE",
+                  "price": 230,
+                  "say": "The Logitech G nine twenty-three, about two thirty, pedals in the box."
+                },
+                {
+                  "label": "Screen",
+                  "name": "The TV you already have",
+                  "price": 0,
+                  "free": "$0",
+                  "say": "And the TV you already have."
+                }
+              ],
+              "outro": "That's five nineteen, all in."
+            },
+            {
+              "type": "facts",
+              "title": "Before you order",
+              "items": [
+                {
+                  "k": "PS5",
+                  "v": "Made for PS5. Confirm on the brand's page.",
+                  "tone": "green",
+                  "say": "The wheel is made for the PS5."
+                },
+                {
+                  "k": "Floor",
+                  "v": "About 2′ × 4′7″. The seat folds flat.",
+                  "tone": "green",
+                  "say": "The seat folds flat when you're done."
+                },
+                {
+                  "k": "How loud",
+                  "v": "Gear-driven: it whirs and clicks.",
+                  "tone": "yellow",
+                  "say": "It's gear-driven, so you'll hear it whir and click."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Midnight Rookie, in full and in 3D.",
+              "cta": "What to order: link in bio",
+              "say": "The full setup is at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-how-loud",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Is a racing wheel loud? It depends on how the wheel base is built: gear-driven ones whir and click, belt-driven ones hum, direct drive is close to silent apart from the pedals. We earn from qualifying purchases. #simracing #ps5",
+      "captions": {
+        "youtube": "Is a racing wheel loud? It depends on how the wheel base is built: gear-driven ones whir and click, belt-driven ones hum, direct drive is close to silent apart from the pedals. We earn from qualifying purchases. #simracing #ps5\n\nEach setup's noise, floor space and price: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Is a racing wheel loud? Gear vs belt vs direct drive",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "Is a racing wheel loud? It depends on how the wheel base is built. / Gear-driven wheels whir and click when the wheel pushes back. Fine in a bedroom with the door shut. Belt-driven ones hum, quieter than gears. Direct drive is close to silent. What you hear is the pedals. / Living over someone? A rug under the pedals takes most of the knock. Every setup's noise is at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Noise lines come from how each wheel base is built, not from hands-on tests. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you order",
+              "title": "Is a racing wheel loud?",
+              "sub": "It depends on how it's built.",
+              "say": "Is a racing wheel loud? It depends on how the wheel base is built."
+            },
+            {
+              "type": "facts",
+              "title": "How loud",
+              "items": [
+                {
+                  "k": "Gear-driven",
+                  "v": "Whirs and clicks. Fine with the door shut.",
+                  "tone": "yellow",
+                  "say": "Gear-driven wheels whir and click when the wheel pushes back. Fine in a bedroom with the door shut."
+                },
+                {
+                  "k": "Belt-driven",
+                  "v": "A soft hum, quieter than a gear wheel.",
+                  "tone": "green",
+                  "say": "Belt-driven ones hum, quieter than gears."
+                },
+                {
+                  "k": "Direct drive",
+                  "v": "Close to silent. You hear the pedals.",
+                  "tone": "purple",
+                  "say": "Direct drive is close to silent. What you hear is the pedals."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "A rug under the pedals takes most of the knock.",
+              "cta": "Every setup's noise: link in bio",
+              "say": "Living over someone? A rug under the pedals takes most of the knock. Every setup's noise is at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-rosso-gt-order",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "What a serious PS5 racing setup takes: a cockpit, a seat, a direct-drive base and load-cell pedals. $1,828 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #simracing #granturismo7",
+      "captions": {
+        "youtube": "What a serious PS5 racing setup takes: a cockpit, a seat, a direct-drive base and load-cell pedals. $1,828 with the TV you already have. Prices are our estimates. We earn from qualifying purchases. #simracing #granturismo7\n\nThe full list, floor space and noise: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Serious PS5 racing setup for Gran Turismo: exactly what to order ($1,828)",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "Your teen already loves Gran Turismo? Here's the serious setup, and exactly what to order. / A Sim-Lab GT1 Evo frame, about four forty-nine. A Sparco seat, three seventy-nine. The Fanatec Gran Turismo DD Pro, about eight hundred, with its wheel in the box. And load-cell pedals, two hundred. With the TV you already have, that's eighteen twenty-eight. / The wheel base is made for the PS5. The frame stays set up, so give it a corner. And direct drive is close to silent. / The full setup is at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "For a teen who loves Gran Turismo",
+              "title": "The serious PS5 racing setup.",
+              "sub": "Exactly what to order.",
+              "say": "Your teen already loves Gran Turismo? Here's the serious setup, and exactly what to order."
+            },
+            {
+              "type": "list",
+              "title": "What to order",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Cockpit, frame only",
+                  "name": "Sim-Lab GT1 Evo",
+                  "price": 449,
+                  "say": "A Sim-Lab GT1 Evo frame, about four forty-nine."
+                },
+                {
+                  "label": "Reclining seat",
+                  "name": "Sparco R100",
+                  "price": 379,
+                  "say": "A Sparco seat, three seventy-nine."
+                },
+                {
+                  "label": "Wheel base, wheel in the box",
+                  "name": "Fanatec GT DD Pro",
+                  "price": 800,
+                  "say": "The Fanatec Gran Turismo DD Pro, about eight hundred, with its wheel in the box."
+                },
+                {
+                  "label": "Pedals, load cell kit",
+                  "name": "Fanatec CSL Pedals",
+                  "price": 200,
+                  "say": "And load-cell pedals, two hundred."
+                }
+              ],
+              "outro": "With the TV you already have, that's eighteen twenty-eight."
+            },
+            {
+              "type": "facts",
+              "title": "Before you order",
+              "items": [
+                {
+                  "k": "PS5",
+                  "v": "Made for PS5. Confirm on the brand's page.",
+                  "tone": "green",
+                  "say": "The wheel base is made for the PS5."
+                },
+                {
+                  "k": "Floor",
+                  "v": "About 1′11″ × 4′5″. It stays set up.",
+                  "tone": "yellow",
+                  "say": "The frame stays set up, so give it a corner."
+                },
+                {
+                  "k": "How loud",
+                  "v": "Direct drive: close to silent.",
+                  "tone": "green",
+                  "say": "And direct drive is close to silent."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Rosso GT, in full and in 3D.",
+              "cta": "What to order: link in bio",
+              "say": "The full setup is at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-fit-spare-room",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Will a full racing cockpit fit in a spare room? Two PS5 setups on a 9x10 ft room with a desk, drawn to scale from each part's published size. We earn from qualifying purchases. #simracing #homesetup",
+      "captions": {
+        "youtube": "Will a full racing cockpit fit in a spare room? Two PS5 setups on a 9x10 ft room with a desk, drawn to scale from each part's published size. We earn from qualifying purchases. #simracing #homesetup\n\nFloor space for every setup: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Will a racing cockpit fit in a spare room? Drawn to scale",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "Will a racing cockpit fit in a spare room? Here's nine by ten feet, with a desk, drawn to scale. / Midnight Rookie: a seat two feet by four foot seven, with a monitor stand in front. The seat folds flat. Rosso GT: a cockpit just under two feet by four foot five, with a TV stand. This one stays set up. / Leave room to get in and out. Floor space for every setup is at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Floor space from each part's published size. Prices are our estimates of typical US prices (Nov 2026). Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you order",
+              "title": "Will a racing cockpit fit in a spare room?",
+              "sub": "A 9 × 10 ft room with a desk, to scale.",
+              "say": "Will a racing cockpit fit in a spare room? Here's nine by ten feet, with a desk, drawn to scale."
+            },
+            {
+              "type": "plan",
+              "title": "Floor space, to scale",
+              "room": {
+                "w": 108,
+                "d": 120,
+                "label": "9′ × 10′ spare room",
+                "fixed": [
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "w": 60,
+                    "d": 24,
+                    "label": "Desk"
+                  },
+                  {
+                    "x": 0,
+                    "y": 104,
+                    "w": 36,
+                    "d": 14,
+                    "label": "Bookcase"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "$907 · seat 2′ × 4′7″, plus a monitor stand",
+                  "detail": "Its own screen. The seat folds flat.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 70,
+                      "y": 8,
+                      "w": 31,
+                      "d": 28,
+                      "label": "Monitor"
+                    },
+                    {
+                      "x": 73.5,
+                      "y": 40,
+                      "w": 24,
+                      "d": 55,
+                      "label": "Seat"
+                    }
+                  ],
+                  "say": "Midnight Rookie: a seat two feet by four foot seven, with a monitor stand in front. The seat folds flat."
+                },
+                {
+                  "caption": "$3,056 · cockpit 1′11″ × 4′5″, plus a TV stand",
+                  "detail": "The frame stays set up.",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 68,
+                      "y": 8,
+                      "w": 35,
+                      "d": 28,
+                      "label": "TV stand"
+                    },
+                    {
+                      "x": 74,
+                      "y": 40,
+                      "w": 23,
+                      "d": 53,
+                      "label": "Cockpit"
+                    }
+                  ],
+                  "say": "Rosso GT: a cockpit just under two feet by four foot five, with a TV stand. This one stays set up."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Leave room to get in and out.",
+              "cta": "Floor space for each: link in bio",
+              "say": "Leave room to get in and out. Floor space for every setup is at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-set-up",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "How hard is a racing wheel to set up on a PS5? The wheel and pedals plug into the base, the base into the PS5, and it takes two outlets. Some cockpits fold flat; the serious one stays put. We earn from qualifying purchases. #ps5 #giftideas",
+      "captions": {
+        "youtube": "How hard is a racing wheel to set up on a PS5? The wheel and pedals plug into the base, the base into the PS5, and it takes two outlets. Some cockpits fold flat; the serious one stays put. We earn from qualifying purchases. #ps5 #giftideas\n\nWhat each setup needs, with the full list: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "How hard is a PS5 racing wheel to set up? Plugs, outlets, folding",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "How hard is a racing wheel to set up on a PS5? / The wheel and pedals connect to the wheel base, and the base to the PS5. It needs two outlets by the PS5. One, if you use your TV. Some setups fold flat. The serious one stays set up. / Each setup's outlets and floor space are at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Christmas morning",
+              "title": "How hard is it to set up?",
+              "sub": "Plugs, outlets and folding.",
+              "say": "How hard is a racing wheel to set up on a PS5?"
+            },
+            {
+              "type": "facts",
+              "title": "Setting it up",
+              "items": [
+                {
+                  "k": "Plugs",
+                  "v": "Wheel and pedals → base → PS5.",
+                  "tone": "green",
+                  "say": "The wheel and pedals connect to the wheel base, and the base to the PS5."
+                },
+                {
+                  "k": "Outlets",
+                  "v": "Two by the PS5. One if you use your TV.",
+                  "tone": "green",
+                  "say": "It needs two outlets by the PS5. One, if you use your TV."
+                },
+                {
+                  "k": "Folding",
+                  "v": "Midnight Rookie's seat folds flat.",
+                  "tone": "yellow",
+                  "say": "Some setups fold flat. The serious one stays set up."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Each setup lists its outlets and floor.",
+              "cta": "What to order: link in bio",
+              "say": "Each setup's outlets and floor space are at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-works-with-ps5",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "Will a racing wheel work with the PS5 you already have? Each wheel on our list is made for PlayStation, and every part passes our PS5 check. Specs we haven't checked by hand say so. We earn from qualifying purchases. #ps5 #granturismo7",
+      "captions": {
+        "youtube": "Will a racing wheel work with the PS5 you already have? Each wheel on our list is made for PlayStation, and every part passes our PS5 check. Specs we haven't checked by hand say so. We earn from qualifying purchases. #ps5 #granturismo7\n\nWhat we checked for each setup: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Will a racing wheel work with our PS5? What to check before you buy",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "Will a racing wheel work with the PS5 you already have? / Each wheel on our list is made for PlayStation. Every part passes our PS5 compatibility check. Specs we haven't checked by hand say so. Confirm those on the brand's page. / All three run Gran Turismo seven. The check for each setup is at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Our check, not a brand's guarantee. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Parents of a PS5 teen",
+              "title": "Will it work with the PS5 we have?",
+              "say": "Will a racing wheel work with the PS5 you already have?"
+            },
+            {
+              "type": "facts",
+              "title": "What to check",
+              "items": [
+                {
+                  "k": "The wheel",
+                  "v": "Each one is made for PlayStation.",
+                  "tone": "green",
+                  "say": "Each wheel on our list is made for PlayStation."
+                },
+                {
+                  "k": "The parts",
+                  "v": "All pass our PS5 compatibility check.",
+                  "tone": "green",
+                  "say": "Every part passes our PS5 compatibility check."
+                },
+                {
+                  "k": "By hand",
+                  "v": "Specs not checked by hand say so.",
+                  "tone": "yellow",
+                  "say": "Specs we haven't checked by hand say so. Confirm those on the brand's page."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "All three run Gran Turismo 7.",
+              "cta": "What to order: link in bio",
+              "say": "All three run Gran Turismo seven. The check for each setup is at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-519-or-1828",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "$519 or $1,828 for a PS5 racing setup: what's the difference? A gear wheel and a folding seat, against direct drive, load-cell pedals and a frame that stays put. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+      "captions": {
+        "youtube": "$519 or $1,828 for a PS5 racing setup: what's the difference? A gear wheel and a folding seat, against direct drive, load-cell pedals and a frame that stays put. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5\n\nBoth setups, part by part: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "PS5 racing setup: $519 or $1,828, what's the difference?",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "Five nineteen or eighteen twenty-eight for a PS5 racing setup. What's the difference? / Five nineteen: a gear-driven wheel with its pedals in the box, and a seat that folds flat. Eighteen twenty-eight: direct drive, load-cell pedals, and a frame that stays set up. And the more expensive one is the quieter one. / Both lists are at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you order",
+              "title": "$519 or $1,828. What's the difference?",
+              "say": "Five nineteen or eighteen twenty-eight for a PS5 racing setup. What's the difference?"
+            },
+            {
+              "type": "compare",
+              "title": "With the TV you already have",
+              "items": [
+                {
+                  "price": "$519",
+                  "name": "Midnight Rookie",
+                  "line": "Gear-driven wheel, pedals in the box, a seat that folds flat",
+                  "sound": "Sound: whirs and clicks",
+                  "tone": "yellow",
+                  "say": "Five nineteen: a gear-driven wheel with its pedals in the box, and a seat that folds flat."
+                },
+                {
+                  "price": "$1,828",
+                  "name": "Rosso GT",
+                  "line": "Direct drive, load-cell pedals, a frame that stays set up",
+                  "sound": "Sound: close to silent",
+                  "tone": "purple",
+                  "say": "Eighteen twenty-eight: direct drive, load-cell pedals, and a frame that stays set up."
+                }
+              ],
+              "note": "The more expensive one is the quieter one.",
+              "outro": "And the more expensive one is the quieter one."
+            },
+            {
+              "type": "end",
+              "title": "Both, part by part.",
+              "cta": "Full list: link in bio",
+              "say": "Both lists are at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-order-by",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "When to order a racing wheel for Christmas: our advice is by Friday, December 11. Cockpits ship in big boxes, and building one takes a weekend. Our suggestion, not a carrier deadline. We earn from qualifying purchases. #giftideas #simracing",
+      "captions": {
+        "youtube": "When to order a racing wheel for Christmas: our advice is by Friday, December 11. Cockpits ship in big boxes, and building one takes a weekend. Our suggestion, not a carrier deadline. We earn from qualifying purchases. #giftideas #simracing\n\nWhat to order, and by when: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "When to order a racing wheel for Christmas (our advice)",
+      "earliest": "2026-11-16T05:00:00Z",
+      "script": "When should you order a racing wheel for Christmas? Our advice: by Friday, December eleventh. / Cockpits and stands ship in big boxes. And you'll want a weekend to build it before the twenty-fifth. Each store posts its own last day for Christmas delivery. Check it at checkout. / What to order is at the link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "The date is our suggestion, not a carrier deadline. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Christmas 2026",
+              "title": "When should we order it?",
+              "sub": "Our advice: by Friday, December 11.",
+              "say": "When should you order a racing wheel for Christmas? Our advice: by Friday, December eleventh."
+            },
+            {
+              "type": "facts",
+              "title": "Why that date",
+              "items": [
+                {
+                  "k": "Boxes",
+                  "v": "Cockpits and stands ship in big boxes.",
+                  "tone": "yellow",
+                  "say": "Cockpits and stands ship in big boxes."
+                },
+                {
+                  "k": "Building",
+                  "v": "Keep a weekend to build it.",
+                  "tone": "green",
+                  "say": "And you'll want a weekend to build it before the twenty-fifth."
+                },
+                {
+                  "k": "Delivery",
+                  "v": "Check each store's last day at checkout.",
+                  "tone": "yellow",
+                  "say": "Each store posts its own last day for Christmas delivery. Check it at checkout."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Our suggestion, not a carrier deadline.",
+              "cta": "What to order: link in bio",
+              "say": "What to order is at the link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    }
+  ]
+}
