@@ -1,0 +1,15 @@
+{
+  "alarms": {
+    "runway-youtube": {
+      "cleared": false,
+      "sent_at": "2026-11-14T11:46:07Z",
+      "title": "youtube: 3.5 days of posts left"
+    }
+  },
+  "brake_reason": {},
+  "brake_until": {},
+  "failures": {},
+  "first_post": {},
+  "seen": {},
+  "stopped": {}
+}
