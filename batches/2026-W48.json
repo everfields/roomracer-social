@@ -1,5 +1,6 @@
 {
   "week": "2026-W48",
+  "note": "2026-11-15 15:30 CET: resent unchanged so the social repo renders it again. The render at 10:54 UTC (run 43706348108) crashed on the first new post: headless Chrome did not write DevToolsActivePort within the 10 s frames.mjs waits, and a failed render is never retried. Posts unchanged.",
   "posts": [
     {
       "id": "2026-W48-answer-couch-to-track-order",
