@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-upgrade-g29-pc-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-upgrade-g29-pc.mp4",
+    "sha256": "90f7be7ee62bbbdc99c2065ec0d3021091d092c1bb5bbb616e345d4412445298",
+    "kind": "video"
+  },
+  "caption": "I own a Logitech G29 and race on PC: what's the best next $300? Pedals first: the Logitech G RS Pedals, about $159, and keep the wheel. Our rig score goes from 60 to 71. Prices are our estimates. We earn from qualifying purchases. #simracing #logitechg29",
+  "title": "G29 on PC: the best next $300 is pedals ($159)",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-26T06:00:00Z"
+}

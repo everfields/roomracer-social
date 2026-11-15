@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-upgrade-t248r-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-upgrade-t248r.mp4",
+    "sha256": "9a8528710e618fc2384b02e2e8152e20a44b9b1bbcc080e4a9a61432a603254b",
+    "kind": "video"
+  },
+  "caption": "I own a Thrustmaster T248R: is $300 worth spending on it? On PS5, nothing up to $600 in our catalog raises its rig score; the next real step is $910 (Logitech G RS50 with G PRO pedals, 67 to 80). On PC, the Thrustmaster T-LCM Pedals at about $239 take it from 67 to 74 and you keep the wheel. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #thrustmaster\n\nThe T248R's next step, on PS5 and on PC: https://roomracer.com/upgrade/thrustmaster-t248r?src=yt-upgrade",
+  "title": "Thrustmaster T248R: is $300 worth spending on it? On PS5, keep your money",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-28T06:00:00Z"
+}
