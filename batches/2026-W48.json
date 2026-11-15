@@ -1309,6 +1309,158 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W48-answer-upgrade-g29-pc",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "I own a Logitech G29 and race on PC: what's the best next $300? Pedals first: the Logitech G RS Pedals, about $159, and keep the wheel. Our rig score goes from 60 to 71. Prices are our estimates. We earn from qualifying purchases. #simracing #logitechg29",
+      "captions": {
+        "youtube": "I own a Logitech G29 and race on PC: what's the best next $300? Pedals first: the Logitech G RS Pedals, about $159, and keep the wheel. Our rig score goes from 60 to 71. Prices are our estimates. We earn from qualifying purchases. #simracing #logitechg29\n\nThe $300, $600 and $1,000 steps: https://roomracer.com/upgrade/logitech-g29?src=yt-upgrade"
+      },
+      "title": "G29 on PC: the best next $300 is pedals ($159)",
+      "earliest": "2026-11-26T06:00:00Z",
+      "script": "I own a Logitech G29 and I race on PC. What's the best next three hundred dollars? Pedals first. Keep the wheel. / The Logitech G RS Pedals, about one fifty-nine. And the G29 you already have. That's one fifty-nine, not three hundred. Same wheel, same force, so your desk or stand holds it as before. / Our rig score goes from sixty to seventy-one. Only the G29 pedals go. / The six hundred and thousand dollar steps are on roomracer dot com, slash upgrade.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Upgrade path",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Rig score: our rating from AI analysis of public information, not hands-on tests. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "I own a G29",
+              "title": "I race on PC. What's the best next $300?",
+              "sub": "Pedals first. Keep the wheel.",
+              "say": "I own a Logitech G29 and I race on PC. What's the best next three hundred dollars? Pedals first. Keep the wheel."
+            },
+            {
+              "type": "list",
+              "title": "What to order",
+              "totalLabel": "You spend",
+              "items": [
+                {
+                  "label": "Pedals",
+                  "name": "Logitech G RS Pedals",
+                  "price": 159,
+                  "say": "The Logitech G RS Pedals, about one fifty-nine."
+                },
+                {
+                  "label": "Wheel",
+                  "name": "The G29 you already have",
+                  "price": 0,
+                  "free": "$0",
+                  "say": "And the G29 you already have."
+                }
+              ],
+              "outro": "That's one fifty-nine, not three hundred. Same wheel, same force, so your desk or stand holds it as before.",
+              "note": "Same 2.2 Nm wheel: your desk or stand holds it as before."
+            },
+            {
+              "type": "facts",
+              "title": "What changes",
+              "items": [
+                {
+                  "k": "Rig score",
+                  "v": "60 → 71",
+                  "tone": "green",
+                  "say": "Our rig score goes from sixty to seventy-one."
+                },
+                {
+                  "k": "G29 pedals",
+                  "v": "Replaced. The rest stays.",
+                  "tone": "yellow",
+                  "say": "Only the G29 pedals go."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Pedals first, on PC.",
+              "sub": "Up to $600 and $1,000 on the page.",
+              "cta": "roomracer.com/upgrade/logitech-g29",
+              "say": "The six hundred and thousand dollar steps are on roomracer dot com, slash upgrade."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W48-answer-upgrade-t248r",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "instagram",
+        "youtube"
+      ],
+      "caption": "I own a Thrustmaster T248R: is $300 worth spending on it? On PS5, nothing up to $600 in our catalog raises its rig score; the next real step is $910 (Logitech G RS50 with G PRO pedals, 67 to 80). On PC, the Thrustmaster T-LCM Pedals at about $239 take it from 67 to 74 and you keep the wheel. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #thrustmaster",
+      "captions": {
+        "youtube": "I own a Thrustmaster T248R: is $300 worth spending on it? On PS5, nothing up to $600 in our catalog raises its rig score; the next real step is $910 (Logitech G RS50 with G PRO pedals, 67 to 80). On PC, the Thrustmaster T-LCM Pedals at about $239 take it from 67 to 74 and you keep the wheel. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #thrustmaster\n\nThe T248R's next step, on PS5 and on PC: https://roomracer.com/upgrade/thrustmaster-t248r?src=yt-upgrade"
+      },
+      "title": "Thrustmaster T248R: is $300 worth spending on it? On PS5, keep your money",
+      "earliest": "2026-11-28T06:00:00Z",
+      "script": "I own a Thrustmaster T two forty-eight R. Is three hundred dollars worth spending on it? On PS5, keep your money. / On PS5, nothing up to six hundred in our catalog raises its score. The next real step is nine ten, the Logitech G RS fifty with G PRO pedals. Sixty-seven to eighty. On PC it's different: the Thrustmaster T-LCM pedals, about two thirty-nine, and keep the wheel. Sixty-seven to seventy-four. / On PS5, save up. On PC, pedals. It's on roomracer dot com, slash upgrade.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Upgrade path",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Rig score: our rating from AI analysis of public information, not hands-on tests. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "I own a T248R",
+              "title": "Is $300 worth spending on it?",
+              "sub": "On PS5: keep your money.",
+              "say": "I own a Thrustmaster T two forty-eight R. Is three hundred dollars worth spending on it? On PS5, keep your money."
+            },
+            {
+              "type": "facts",
+              "title": "What $300 and $600 buy",
+              "items": [
+                {
+                  "k": "PS5 · up to $600",
+                  "v": "Nothing in our catalog raises its score.",
+                  "tone": "yellow",
+                  "say": "On PS5, nothing up to six hundred in our catalog raises its score."
+                },
+                {
+                  "k": "PS5 · next real step",
+                  "v": "$910: Logitech G RS50 + G PRO Pedals, 67 → 80.",
+                  "tone": "purple",
+                  "say": "The next real step is nine ten, the Logitech G RS fifty with G PRO pedals. Sixty-seven to eighty."
+                },
+                {
+                  "k": "PC · $239",
+                  "v": "Thrustmaster T-LCM Pedals, keep the wheel, 67 → 74.",
+                  "tone": "green",
+                  "say": "On PC it's different: the Thrustmaster T-LCM pedals, about two thirty-nine, and keep the wheel. Sixty-seven to seventy-four."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "On PS5, save up. On PC, pedals.",
+              "sub": "Rig score is ours, from public specs.",
+              "cta": "roomracer.com/upgrade/thrustmaster-t248r",
+              "say": "On PS5, save up. On PC, pedals. It's on roomracer dot com, slash upgrade."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
