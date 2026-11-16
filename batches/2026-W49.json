@@ -1,0 +1,66 @@
+{
+ "week": "2026-W49",
+ "posts": [
+  {
+   "id": "2026-W49-answer-upgrade-g29-ps5",
+   "format": "answer",
+   "networks": [
+    "tiktok",
+    "instagram",
+    "youtube"
+   ],
+   "caption": "G29 on PS5: can you just buy better pedals? Not with anything in our catalog: on PS5 the pedals plug into the wheel base. The next step is a new base, Thrustmaster T248R at $300 (rig score 60 to 67). Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #logitechg29",
+   "captions": {
+    "youtube": "G29 on PS5: can you just buy better pedals? Not with anything in our catalog: on PS5 the pedals plug into the wheel base. The next step is a new base, Thrustmaster T248R at $300 (rig score 60 to 67). Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #logitechg29\n\nWhat carries over, on PS5 and on PC: https://roomracer.com/upgrade/logitech-g29?src=yt-upgrade"
+   },
+   "title": "G29 on PS5: just buy better pedals? What our check says",
+   "earliest": "2026-12-04T06:00:00Z",
+   "script": "Better pedals for my G29 on PS5? Not on their own. On PS5 the pedals plug into the wheel base, so the upgrade is a new base. Three hundred: Thrustmaster T two forty-eight R, pedals in the box. Score sixty to sixty-seven. Details on roomracer dot com, slash upgrade.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Upgrade path",
+     "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Rig score: our rating from AI analysis of public information, not hands-on tests. Synthetic voice. We earn from qualifying purchases.",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "G29 \u00b7 PS5",
+       "title": "Better pedals?",
+       "sub": "Not on their own.",
+       "say": "Better pedals for my G29 on PS5? Not on their own."
+      },
+      {
+       "type": "facts",
+       "title": "On PS5",
+       "items": [
+        {
+         "k": "Pedals",
+         "v": "Plug into the wheel base.",
+         "tone": "yellow",
+         "say": "On PS5, pedals plug into the wheel base."
+        },
+        {
+         "k": "$300",
+         "v": "Thrustmaster T248R, pedals in the box. 60 \u2192 67.",
+         "tone": "green",
+         "say": "So three hundred: the T two forty-eight R, pedals in the box. Sixty to sixty-seven."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "On PS5: a new base.",
+       "cta": "roomracer.com/upgrade/logitech-g29",
+       "say": "The full check is on roomracer dot com, slash upgrade."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
+  }
+ ]
+}
