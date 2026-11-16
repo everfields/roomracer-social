@@ -17,5 +17,30 @@
     "realistic": false
   },
   "trial": false,
-  "earliest": "2026-12-04T06:00:00Z"
+  "earliest": "2026-12-04T06:00:00Z",
+  "intake": {
+    "ok": false,
+    "at": "2026-11-16T12:10:56Z",
+    "problems": [
+      "near-duplicate of 2026-W48-answer-upgrade-g29-pc-instagram (distance 9.8)"
+    ],
+    "warnings": [],
+    "probe": {
+      "width": 1080,
+      "height": 1920,
+      "duration_s": 19.7,
+      "video_codec": "h264",
+      "pix_fmt": "yuv420p",
+      "fps": 30.0,
+      "audio_codec": "aac",
+      "bytes": 1392174
+    },
+    "phash": [
+      "b100461000000101",
+      "7123000000000101",
+      "7123364000000101",
+      "7123364000000101",
+      "b1242b70005c0101"
+    ]
+  }
 }
