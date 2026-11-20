@@ -2,7 +2,7 @@
   "alarms": {
     "heartbeat": {
       "cleared": false,
-      "sent_at": "2026-11-19T01:28:29Z",
+      "sent_at": "2026-11-20T01:37:24Z",
       "title": "the PC sent no heartbeat"
     },
     "quarantine": {
@@ -26,6 +26,11 @@
     "youtube": "2026-11-16"
   },
   "seen": {
+    "FIUt01XO6_g": {
+      "first_seen": "2026-11-20T01:37:00Z",
+      "item": "2026-W47-answer-midnight-rookie-order-youtube",
+      "network": "youtube"
+    },
     "PSx40cNOEHs": {
       "first_seen": "2026-11-18T01:38:00Z",
       "item": "2026-W47-answer-fit-spare-room-youtube",
