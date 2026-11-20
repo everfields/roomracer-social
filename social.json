@@ -20,14 +20,7 @@
       ],
       "handle": ""
     },
-    "instagram": {
-      "enabled": true,
-      "route": "direct",
-      "slots": [
-        "12:37",
-        "19:07"
-      ]
-    },
+    "instagram": {"enabled": false, "route": "direct", "slots": ["12:37", "19:07"]},
     "youtube": {
       "enabled": true,
       "route": "direct",
