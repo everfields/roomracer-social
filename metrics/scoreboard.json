@@ -2,17 +2,17 @@
   "networks": {
     "youtube": {
       "posts_with_numbers": 5,
-      "floor": 76,
+      "floor": 77,
       "formats": {
         "answer": {
           "posts": 5,
-          "median_views": 76,
+          "median_views": 77,
           "best_views": 117,
-          "best_vs_floor": 1.54,
+          "best_vs_floor": 1.52,
           "state": "trial"
         }
       }
     }
   },
-  "at": "2026-11-21T11:28:42Z"
+  "at": "2026-11-21T19:33:27Z"
 }
