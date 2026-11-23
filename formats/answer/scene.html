@@ -12,7 +12,7 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { width: 540px; height: 960px; overflow: hidden; background: var(--bg); color: var(--text);
-  font-family: "Inter", system-ui, sans-serif; font-feature-settings: "tnum" 1, "ss01" 1; -webkit-font-smoothing: antialiased; }
+  font-family: "Inter", system-ui, sans-serif; font-feature-settings: "ss01" 1; -webkit-font-smoothing: antialiased; }
 body::before { content: ""; position: absolute; inset: 0; opacity: .07; pointer-events: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.9 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); }
 .kerb { position: absolute; left: 0; right: 0; top: 0; height: 12px;
@@ -39,6 +39,7 @@ h2 { font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -.015e
 .row .nm { font-size: 29px; font-weight: 750; line-height: 1.16; }
 .row .pr { font-size: 40px; font-weight: 850; }
 .row .pr.zero { color: var(--green); }
+.pr, .num, .cmp .p { font-feature-settings: "tnum" 1, "ss01" 1; }
 .total { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding: 20px 22px; border-radius: 10px;
   background: linear-gradient(90deg, rgba(157,92,255,.28), rgba(157,92,255,.08)); border: 1px solid rgba(157,92,255,.7); }
 .total b { font-size: 24px; line-height: 1.15; } .total .num { font-size: 76px; font-weight: 900; color: #fff; letter-spacing: -.03em; }
