@@ -52,7 +52,7 @@
     "alarm_days": 5,
     "target_days": 10
   },
-  "heartbeat_alarm_hours": 36,
+  "heartbeat_alarm_hours": 192,
   "alarms": {
     "mode": "issues",
     "repo": "everfields/roomracer",
