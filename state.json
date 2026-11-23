@@ -2,7 +2,7 @@
   "alarms": {
     "heartbeat": {
       "cleared": false,
-      "sent_at": "2026-11-22T02:38:36Z",
+      "sent_at": "2026-11-23T08:11:43Z",
       "title": "the PC sent no heartbeat"
     },
     "quarantine": {
