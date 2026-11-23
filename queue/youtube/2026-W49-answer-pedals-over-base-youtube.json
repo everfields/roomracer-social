@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-pedals-over-base-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-pedals-over-base.mp4",
+    "sha256": "ffb122772bbed514067595faa5a9f08a8a17a0fdb03314a5a1dc1c2c3d05dcad",
+    "kind": "video"
+  },
+  "caption": "In our PC rig the pedals cost more than the wheel base, on purpose: a 9 Nm Moza R9 base at about $329, and Moza CRP2 pedals with a 200 kg load-cell brake at about $369. The whole rig is $2,234, your PC not included. Prices are our estimates. We earn from qualifying purchases. #simracing #pcgaming\n\nPapaya Sprint, part by part: https://roomracer.com/rigs/papaya-sprint?src=yt-answer",
+  "title": "Why the pedals in this PC sim rig cost more than the wheel base",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-30T05:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-t-gt-iii-box-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-t-gt-iii-box.mp4",
+    "sha256": "fbe8e39bd5997c98ec1cca3925434cbb0cb6c42ac57c931e1e34e4b78095459a",
+    "kind": "video"
+  },
+  "caption": "Thrustmaster's T-GT III goes on sale December 3 at an announced $749.99: a 5 Nm direct-drive base with peaks up to 10 Nm, a T-GT rim with four dials for Gran Turismo and a load-cell brake in the box, for PS5. The T598 has the same 5 Nm for about $600. Specs from the announcement, not a test. We earn from qualifying purchases. #granturismo7 #thrustmaster",
+  "title": "Thrustmaster T-GT III for PS5: what's in the box, from the announcement",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-12-01T04:00:00Z"
+}
