@@ -1,66 +1,457 @@
 {
- "week": "2026-W49",
- "posts": [
-  {
-   "id": "2026-W49-answer-upgrade-g29-ps5",
-   "format": "answer",
-   "networks": [
-    "tiktok",
-    "instagram",
-    "youtube"
-   ],
-   "caption": "G29 on PS5: can you just buy better pedals? Not with anything in our catalog: on PS5 the pedals plug into the wheel base. The next step is a new base, Thrustmaster T248R at $300 (rig score 60 to 67). Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #logitechg29",
-   "captions": {
-    "youtube": "G29 on PS5: can you just buy better pedals? Not with anything in our catalog: on PS5 the pedals plug into the wheel base. The next step is a new base, Thrustmaster T248R at $300 (rig score 60 to 67). Prices are our estimates. We earn from qualifying purchases. #simracing #ps5 #logitechg29\n\nWhat carries over, on PS5 and on PC: https://roomracer.com/upgrade/logitech-g29?src=yt-upgrade"
-   },
-   "title": "G29 on PS5: just buy better pedals? What our check says",
-   "earliest": "2026-12-04T06:00:00Z",
-   "script": "Better pedals for my G29 on PS5? Not on their own. On PS5 the pedals plug into the wheel base, so the upgrade is a new base. Three hundred: Thrustmaster T two forty-eight R, pedals in the box. Score sixty to sixty-seven. Details on roomracer dot com, slash upgrade.",
-   "prompts": {
-    "voice": "af_heart",
-    "speed": 1.1,
-    "spec": {
-     "tag": "Upgrade path",
-     "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Rig score: our rating from AI analysis of public information, not hands-on tests. Synthetic voice. We earn from qualifying purchases.",
-     "scenes": [
-      {
-       "type": "hook",
-       "kicker": "G29 \u00b7 PS5",
-       "title": "Better pedals?",
-       "sub": "Not on their own.",
-       "say": "Better pedals for my G29 on PS5? Not on their own."
+  "week": "2026-W49",
+  "posts": [
+    {
+      "id": "2026-W49-answer-pedals-over-base",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "In our PC rig the pedals cost more than the wheel base, on purpose: a 9 Nm Moza R9 base at about $329, and Moza CRP2 pedals with a 200 kg load-cell brake at about $369. The whole rig is $2,234, your PC not included. Prices are our estimates. We earn from qualifying purchases. #simracing #pcgaming",
+      "captions": {
+        "youtube": "In our PC rig the pedals cost more than the wheel base, on purpose: a 9 Nm Moza R9 base at about $329, and Moza CRP2 pedals with a 200 kg load-cell brake at about $369. The whole rig is $2,234, your PC not included. Prices are our estimates. We earn from qualifying purchases. #simracing #pcgaming\n\nPapaya Sprint, part by part: https://roomracer.com/rigs/papaya-sprint?src=yt-answer"
       },
-      {
-       "type": "facts",
-       "title": "On PS5",
-       "items": [
-        {
-         "k": "Pedals",
-         "v": "Plug into the wheel base.",
-         "tone": "yellow",
-         "say": "On PS5, pedals plug into the wheel base."
-        },
-        {
-         "k": "$300",
-         "v": "Thrustmaster T248R, pedals in the box. 60 \u2192 67.",
-         "tone": "green",
-         "say": "So three hundred: the T two forty-eight R, pedals in the box. Sixty to sixty-seven."
+      "title": "Why the pedals in this PC sim rig cost more than the wheel base",
+      "earliest": "2026-11-30T05:00:00Z",
+      "script": "Why do the pedals cost more than the wheel? / R9 base, 9 Nm, 329. CRP2 pedals, 200 kg load cell, 369. A load cell reads how hard you press. / The whole rig, seven parts: 2,234, PC not in it.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "PC rig",
+          "fine": "Prices are our estimates of typical US prices (Nov 23, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "PC sim rig",
+              "title": "Pedals that cost more than the wheel?",
+              "say": "Why do the pedals cost more than the wheel?"
+            },
+            {
+              "type": "compare",
+              "title": "Papaya Sprint, two parts",
+              "items": [
+                {
+                  "price": "$329",
+                  "name": "Moza R9 V3 wheel base",
+                  "line": "9 Nm direct drive",
+                  "sound": "What you steer with",
+                  "tone": "yellow",
+                  "say": "The Moza R9 base: nine newton-metres of direct drive, about three twenty-nine."
+                },
+                {
+                  "price": "$369",
+                  "name": "Moza CRP2 pedals",
+                  "line": "200 kg load-cell brake",
+                  "sound": "Where lap time is",
+                  "tone": "purple",
+                  "say": "The Moza CRP2 pedals, with a two hundred kilo load-cell brake: about three sixty-nine."
+                }
+              ],
+              "note": "A load cell reads how hard you press, not how far.",
+              "outro": "A load cell reads how hard you press, not how far. Braking is where you find time."
+            },
+            {
+              "type": "list",
+              "title": "The whole PC rig",
+              "totalLabel": "Papaya Sprint",
+              "items": [
+                {
+                  "label": "Wheel base",
+                  "name": "Moza R9 V3",
+                  "price": 329,
+                  "say": "Base, three twenty-nine."
+                },
+                {
+                  "label": "Wheel",
+                  "name": "Moza KS",
+                  "price": 229,
+                  "say": "Wheel, two twenty-nine."
+                },
+                {
+                  "label": "Pedals",
+                  "name": "Moza CRP2",
+                  "price": 369,
+                  "say": "Pedals, three sixty-nine."
+                },
+                {
+                  "label": "Frame and seat",
+                  "name": "Trak Racer TR80 Lite, NLR ES1",
+                  "price": 898,
+                  "say": "Frame and seat, eight ninety-eight."
+                },
+                {
+                  "label": "Screen and stand",
+                  "name": "Samsung G5 32\" on a stand",
+                  "price": 409,
+                  "say": "Screen and stand, four oh nine."
+                }
+              ],
+              "outro": "Twenty-two thirty-four. Your PC isn't in it."
+            },
+            {
+              "type": "end",
+              "title": "Braking is where you find time.",
+              "cta": "Papaya Sprint: link in bio",
+              "say": "The parts are in the link."
+            }
+          ]
         }
-       ]
       },
-      {
-       "type": "end",
-       "title": "On PS5: a new base.",
-       "cta": "roomracer.com/upgrade/logitech-g29",
-       "say": "The full check is on roomracer dot com, slash upgrade."
+      "ai": {
+        "generated": false,
+        "realistic": false
       }
-     ]
+    },
+    {
+      "id": "2026-W49-answer-t-gt-iii-box",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Thrustmaster's T-GT III goes on sale December 3 at an announced $749.99: a 5 Nm direct-drive base with peaks up to 10 Nm, a T-GT rim with four dials for Gran Turismo and a load-cell brake in the box, for PS5. The T598 has the same 5 Nm for about $600. Specs from the announcement, not a test. We earn from qualifying purchases. #granturismo7 #thrustmaster",
+      "captions": {
+        "youtube": "Thrustmaster's T-GT III goes on sale December 3 at an announced $749.99: a 5 Nm direct-drive base with peaks up to 10 Nm, a T-GT rim with four dials for Gran Turismo and a load-cell brake in the box, for PS5. The T598 has the same 5 Nm for about $600. Specs from the announcement, not a test. We earn from qualifying purchases. #granturismo7 #thrustmaster\n\nThe T-GT III's page, and what to compare it with: https://roomracer.com/parts/wheel-bases/thrustmaster-t-gt-iii?src=yt-answer"
+      },
+      "title": "Thrustmaster T-GT III for PS5: what's in the box, from the announcement",
+      "earliest": "2026-12-01T04:00:00Z",
+      "script": "T-GT III: what's in the box? / 5 Nm direct drive, peaks to 10. T-GT rim, four dials. Load-cell brake. PS5; PC not confirmed. / Or the T598: same torque for about 600, add a load cell later. Compare first.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "New wheel",
+          "fine": "Specs and price from Thrustmaster's announcement (list price, US), not from owners or a test. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Thrustmaster · December 3",
+              "title": "T-GT III: what's in the box?",
+              "sub": "From the announcement, before anyone has one.",
+              "say": "Thrustmaster's new T-GT III: what's in the box?"
+            },
+            {
+              "type": "facts",
+              "title": "From Thrustmaster's announcement",
+              "items": [
+                {
+                  "k": "Base",
+                  "v": "5 Nm direct drive, peaks to 10",
+                  "tone": "purple",
+                  "say": "A five newton-metre direct-drive base, with short peaks up to ten."
+                },
+                {
+                  "k": "Wheel",
+                  "v": "T-GT rim, four dials for GT7",
+                  "tone": "yellow",
+                  "say": "A T-GT rim with four dials mapped for Gran Turismo."
+                },
+                {
+                  "k": "Brake",
+                  "v": "Load cell, in the box",
+                  "tone": "green",
+                  "say": "And a load-cell brake in the same box."
+                },
+                {
+                  "k": "Works on",
+                  "v": "PS5 · PC not confirmed",
+                  "tone": "yellow",
+                  "say": "It's announced for PlayStation; PC isn't confirmed."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "Or the T598?",
+              "items": [
+                {
+                  "price": "$750",
+                  "name": "Thrustmaster T-GT III",
+                  "line": "List $749.99: 5 Nm, load-cell brake, GT rim",
+                  "sound": "From December 3",
+                  "tone": "purple",
+                  "say": "The T-GT III: seven forty-nine ninety-nine, with the load-cell brake in the box."
+                },
+                {
+                  "price": "about $600",
+                  "name": "Thrustmaster T598",
+                  "line": "Same 5 Nm; add a load cell kit later",
+                  "sound": "On sale now",
+                  "tone": "yellow",
+                  "say": "The T five ninety-eight: the same torque for less, and a load cell kit can come later."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Want the GT rim and dials? T-GT III.",
+              "sub": "Specs from Thrustmaster's announcement, not a test.",
+              "cta": "T-GT III vs T598: link in bio",
+              "say": "If the rim and dials don't matter, compare the T five ninety-eight first."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W49-answer-race-from-sofa",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Can you race from the sofa? A wheel stand takes about 1′10″ × 2′4″ in front of it and folds behind it after. A $139 stand and a $300 Thrustmaster T248R: $439 with the TV you have, one new outlet. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing",
+      "captions": {
+        "youtube": "Can you race from the sofa? A wheel stand takes about 1′10″ × 2′4″ in front of it and folds behind it after. A $139 stand and a $300 Thrustmaster T248R: $439 with the TV you have, one new outlet. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing\n\nCouch to Track, part by part: https://roomracer.com/rigs/couch-to-track?src=yt-answer"
+      },
+      "title": "Can you use a racing wheel from the sofa? A wheel stand, drawn to scale",
+      "earliest": "2026-12-02T05:00:00Z",
+      "script": "Race from the sofa? / A stand, one ten by two four, in front of it. The sofa is the seat. It folds behind it. / Stand 139, T248R 300: 439 with your TV. A soft hum, one outlet.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Living room",
+          "fine": "Prices are our estimates of typical US prices (Nov 23, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Living room",
+              "title": "Race from the sofa?",
+              "say": "Race from the sofa?"
+            },
+            {
+              "type": "plan",
+              "title": "A wheel stand, to scale",
+              "room": {
+                "w": 168,
+                "d": 144,
+                "label": "14′ × 12′ living room",
+                "fixed": [
+                  {
+                    "x": 40,
+                    "y": 2,
+                    "w": 88,
+                    "d": 10,
+                    "label": "TV wall"
+                  },
+                  {
+                    "x": 30,
+                    "y": 104,
+                    "w": 96,
+                    "d": 36,
+                    "label": "Sofa"
+                  },
+                  {
+                    "x": 136,
+                    "y": 104,
+                    "w": 30,
+                    "d": 30,
+                    "label": "Lamp table"
+                  },
+                  {
+                    "x": 2,
+                    "y": 40,
+                    "w": 20,
+                    "d": 48,
+                    "label": "Shelf"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Stand · 1′10″ × 2′4″",
+                  "detail": "In front of the sofa. Uses it as the seat.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 67,
+                      "y": 74,
+                      "w": 22,
+                      "d": 28,
+                      "label": "Stand"
+                    }
+                  ],
+                  "say": "A wheel stand takes one foot ten by two foot four, right in front of the sofa."
+                },
+                {
+                  "caption": "The sofa is the seat",
+                  "detail": "Or your own chair: no wheels works best.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 34,
+                      "y": 106,
+                      "w": 40,
+                      "d": 30,
+                      "label": "Seat",
+                      "dashed": true
+                    }
+                  ],
+                  "say": "The sofa is the seat. A chair without wheels works too."
+                },
+                {
+                  "caption": "After the race",
+                  "detail": "It folds and slides behind the sofa.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 44,
+                      "y": 140,
+                      "w": 40,
+                      "d": 4,
+                      "dashed": true
+                    }
+                  ],
+                  "say": "After the race it folds, and slides behind the sofa."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Couch to Track, with your TV",
+              "items": [
+                {
+                  "k": "Order",
+                  "v": "Stand $139 + Thrustmaster T248R $300",
+                  "tone": "green",
+                  "say": "A one thirty-nine stand and a three hundred T two forty-eight R."
+                },
+                {
+                  "k": "Total",
+                  "v": "$439",
+                  "tone": "green",
+                  "say": "Four thirty-nine with your TV."
+                },
+                {
+                  "k": "Noise",
+                  "v": "Belt-driven: a soft hum",
+                  "tone": "yellow",
+                  "say": "Belt-driven, so a soft hum."
+                },
+                {
+                  "k": "Outlets",
+                  "v": "1, for the wheel base",
+                  "tone": "green",
+                  "say": "One outlet, for the wheel base."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Sofa, stand, wheel: $439.",
+              "sub": "Uses the TV you have. Folds behind the sofa.",
+              "cta": "Couch to Track: link in bio",
+              "say": "The list is in the link."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W49-answer-907-or-7765",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "A $907 PS5 setup against a $7,765 PC rig: a gear-driven wheel and a seat that folds flat, against a 25 Nm direct-drive base, $1,399 load-cell pedals and a feet-up formula frame. The $7,765 includes a $1,519 PC. Prices are our estimates. We earn from qualifying purchases. #simracing #simrig",
+      "captions": {
+        "youtube": "A $907 PS5 setup against a $7,765 PC rig: a gear-driven wheel and a seat that folds flat, against a 25 Nm direct-drive base, $1,399 load-cell pedals and a feet-up formula frame. The $7,765 includes a $1,519 PC. Prices are our estimates. We earn from qualifying purchases. #simracing #simrig\n\nSilver Arrow, part by part: https://roomracer.com/rigs/silver-arrow?src=yt-answer"
+      },
+      "title": "$907 or $7,765 sim rig: what the extra money buys",
+      "earliest": "2026-12-03T05:00:00Z",
+      "script": "907 or 7,765: what does the money buy? / Midnight Rookie: gear wheel, folding seat, its own screen. Silver Arrow: 25 Nm, formula frame, the PC in the price. / All eight parts, 7,765. Most first rigs are the 907 one.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "What more money buys",
+          "fine": "Prices are our estimates of typical US prices (Nov 23, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "$907 or $7,765?",
+              "title": "What does the money buy?",
+              "say": "Nine oh seven, or seventy-seven sixty-five?"
+            },
+            {
+              "type": "compare",
+              "title": "Two of our rigs",
+              "items": [
+                {
+                  "price": "$907",
+                  "name": "Midnight Rookie · PS5",
+                  "line": "Gear-driven G923, seat folds flat, own 27\" screen",
+                  "sound": "PS5 you have",
+                  "tone": "green",
+                  "say": "Midnight Rookie: a gear-driven wheel, a seat that folds flat and its own screen, for the PS5 you have."
+                },
+                {
+                  "price": "$7,765",
+                  "name": "Silver Arrow · PC",
+                  "line": "25 Nm direct drive, feet-up formula frame",
+                  "sound": "PC included",
+                  "tone": "purple",
+                  "say": "Silver Arrow: twenty-five newton-metres, a feet-up formula frame, and the PC is in the price."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "Silver Arrow, part by part",
+              "totalLabel": "Silver Arrow",
+              "items": [
+                {
+                  "label": "PC",
+                  "name": "Our 1440p sim PC spec",
+                  "price": 1519,
+                  "say": "The PC, fifteen nineteen."
+                },
+                {
+                  "label": "Wheel base and wheel",
+                  "name": "Simucube 3 Pro, Ascher F64",
+                  "price": 2620,
+                  "say": "Base and wheel, twenty-six twenty."
+                },
+                {
+                  "label": "Pedals",
+                  "name": "Heusinkveld Ultimate+",
+                  "price": 1399,
+                  "say": "Pedals, thirteen ninety-nine."
+                },
+                {
+                  "label": "Frame, seat, screen",
+                  "name": "Sim-Lab P1X Pro, R100, 49\" G9",
+                  "price": 2227,
+                  "say": "Frame, seat, screen and mount, twenty-two twenty-seven."
+                }
+              ],
+              "outro": "Seventy-seven sixty-five."
+            },
+            {
+              "type": "end",
+              "title": "Most first rigs are the $907 one.",
+              "cta": "Both rigs: link in bio",
+              "say": "Both are in the link."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
-   },
-   "ai": {
-    "generated": false,
-    "realistic": false
-   }
-  }
- ]
+  ]
 }
