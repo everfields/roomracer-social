@@ -452,6 +452,546 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W49-answer-dd-pro-brake",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "The Gran Turismo DD Pro box has a 5 Nm base, the GT rim, a table clamp and two CSL Pedals with no load cell. Our Rosso GT swaps those pedals for CSL Pedals with the Load Cell Kit, about $220, because GT7 is all about braking. Before a screen it comes to $1,748. Prices are our estimates. We earn from qualifying purchases. #granturismo7 #ps5",
+      "captions": {
+        "youtube": "The Gran Turismo DD Pro box has a 5 Nm base, the GT rim, a table clamp and two CSL Pedals with no load cell. Our Rosso GT swaps those pedals for CSL Pedals with the Load Cell Kit, about $220, because GT7 is all about braking. Before a screen it comes to $1,748. Prices are our estimates. We earn from qualifying purchases. #granturismo7 #ps5\n\nThe Rosso GT, part by part: https://roomracer.com/rigs/rosso-gt?src=yt-answer"
+      },
+      "title": "Fanatec GT DD Pro: is the brake in the box good enough for GT7?",
+      "earliest": "2026-12-03T06:00:00Z",
+      "script": "GT DD Pro: is the brake good enough? / In the box: 5 Nm base, GT rim, table clamp, two CSL pedals without a load cell. / The Rosso GT swaps the pedals for the load-cell ones: base 700, pedals 220, GT1 Evo 449, R100 seat 379 = 1,748 before a screen.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "PS5 rig",
+          "fine": "Prices are our estimates of typical US prices (Nov 24, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Fanatec GT DD Pro",
+              "title": "Is the brake in the box good enough?",
+              "sub": "For Gran Turismo 7 on a PS5.",
+              "say": "Fanatec's GT DD Pro: is the brake in the box good enough?"
+            },
+            {
+              "type": "facts",
+              "title": "In the GT DD Pro box",
+              "items": [
+                {
+                  "k": "Base",
+                  "v": "5 Nm direct drive, clamps to a table",
+                  "tone": "green",
+                  "say": "Five newton-metres of direct drive, with a table clamp."
+                },
+                {
+                  "k": "Wheel",
+                  "v": "Gran Turismo rim, in the box",
+                  "tone": "green",
+                  "say": "The GT rim."
+                },
+                {
+                  "k": "Pedals",
+                  "v": "Two CSL Pedals, no load cell",
+                  "tone": "red",
+                  "say": "Two CSL pedals, no load cell: the weak link."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "Rosso GT, before a screen",
+              "totalLabel": "Rosso GT, no screen",
+              "items": [
+                {
+                  "label": "Wheel base",
+                  "name": "Fanatec GT DD Pro",
+                  "price": 700,
+                  "say": "Base, seven hundred."
+                },
+                {
+                  "label": "Wheel",
+                  "name": "GT rim, in the box",
+                  "price": 0,
+                  "free": "In the box",
+                  "say": "The wheel is in the box."
+                },
+                {
+                  "label": "Pedals",
+                  "name": "CSL Pedals + Load Cell Kit",
+                  "price": 220,
+                  "say": "Load-cell pedals, two twenty."
+                },
+                {
+                  "label": "Cockpit",
+                  "name": "Sim-Lab GT1 Evo",
+                  "price": 449,
+                  "say": "Cockpit, four forty-nine."
+                },
+                {
+                  "label": "Seat",
+                  "name": "Sparco R100",
+                  "price": 379,
+                  "say": "Seat, three seventy-nine."
+                }
+              ],
+              "outro": "Seventeen forty-eight before a screen."
+            },
+            {
+              "type": "end",
+              "title": "GT7 is all about braking.",
+              "sub": "So our garage swapped the pedals first.",
+              "cta": "Rosso GT: link in bio",
+              "say": "So we swapped the pedals first."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W49-answer-t598-or-dd-pro",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "T598 or GT DD Pro? Both hold 5 Nm, so torque doesn't decide it. The T598 is about $600 and runs on PS5 and PC only. The GT DD Pro is about $700, also runs on Xbox with a licensed rim, takes the Boost Kit to 8 Nm, and its base is smaller: 140 x 230 mm against 200 x 290. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing",
+      "captions": {
+        "youtube": "T598 or GT DD Pro? Both hold 5 Nm, so torque doesn't decide it. The T598 is about $600 and runs on PS5 and PC only. The GT DD Pro is about $700, also runs on Xbox with a licensed rim, takes the Boost Kit to 8 Nm, and its base is smaller: 140 x 230 mm against 200 x 290. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing\n\nT598 vs GT DD Pro, side by side: https://roomracer.com/compare/thrustmaster-t598-ps5-pc-vs-fanatec-gran-turismo-dd-pro-5-nm-bundle?src=yt-answer"
+      },
+      "title": "Thrustmaster T598 or Fanatec GT DD Pro for a PS5? Both are 5 Nm",
+      "earliest": "2026-11-25T06:00:00Z",
+      "script": "T598 or GT DD Pro? Both 5 Nm. / T598 about 600: PS5 and PC, bursts toward 10. GT DD Pro about 700: Xbox too, Boost Kit to 8. / On a desk, to scale: 200x290 vs 140x230 mm. / Only PS5 or PC: T598.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Wheel bases",
+          "fine": "Prices are our estimates of typical US prices (Nov 24, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Two 5 Nm bases",
+              "title": "T598 or GT DD Pro?",
+              "sub": "Same torque. Price and platform decide.",
+              "say": "T five ninety-eight, or GT DD Pro?"
+            },
+            {
+              "type": "compare",
+              "title": "Both hold 5 Nm",
+              "items": [
+                {
+                  "price": "about $600",
+                  "name": "Thrustmaster T598",
+                  "line": "Rim and two pedals in the box; short bursts toward 10 Nm",
+                  "sound": "PS5 and PC only",
+                  "tone": "yellow",
+                  "say": "The T five ninety-eight: about six hundred, PS5 and PC only."
+                },
+                {
+                  "price": "$700",
+                  "name": "Fanatec GT DD Pro",
+                  "line": "Rim and two pedals in the box; Boost Kit 180 to 8 Nm later",
+                  "sound": "PS5, PC, Xbox with a licensed rim",
+                  "tone": "purple",
+                  "say": "The GT DD Pro: about seven hundred, Xbox too, and a boost kit to eight."
+                }
+              ]
+            },
+            {
+              "type": "plan",
+              "title": "On a desk, to scale",
+              "room": {
+                "w": 48,
+                "d": 24,
+                "label": "4′ × 2′ desk",
+                "fixed": [
+                  {
+                    "x": 14,
+                    "y": 11,
+                    "w": 20,
+                    "d": 7,
+                    "label": "Keyboard"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "T598 · 200 × 290 mm · 4.5 kg",
+                  "detail": "The bigger base.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 4,
+                      "y": 1,
+                      "w": 8,
+                      "d": 11.4,
+                      "label": "T598"
+                    }
+                  ],
+                  "say": "The T five ninety-eight: two hundred by two ninety millimetres."
+                },
+                {
+                  "caption": "GT DD Pro · 140 × 230 mm · 3.3 kg",
+                  "detail": "Smaller, and it rates quieter. T598 dashed.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 4,
+                      "y": 1,
+                      "w": 8,
+                      "d": 11.4,
+                      "label": "T598",
+                      "dashed": true
+                    },
+                    {
+                      "x": 30,
+                      "y": 1,
+                      "w": 5.5,
+                      "d": 9.1,
+                      "label": "GT DD Pro"
+                    }
+                  ],
+                  "say": "The GT DD Pro: one forty by two thirty, and quieter."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Only PS5 or PC? The T598.",
+              "sub": "Xbox later, or a smaller base? The GT DD Pro.",
+              "cta": "Side by side: link in bio",
+              "say": "Only PlayStation or PC? The T five ninety-eight."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W49-answer-ultrawide-ps5",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Will a super-ultrawide work on a PS5? It connects, but consoles can't output 32:9, so the Odyssey OLED G9 shows a 16:9 picture with black bars on each side. On PC it fills all 49 inches at up to 240Hz. For PS5 or Xbox, the LG C6 48 fills the screen at 4K120. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing",
+      "captions": {
+        "youtube": "Will a super-ultrawide work on a PS5? It connects, but consoles can't output 32:9, so the Odyssey OLED G9 shows a 16:9 picture with black bars on each side. On PC it fills all 49 inches at up to 240Hz. For PS5 or Xbox, the LG C6 48 fills the screen at 4K120. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing\n\nOdyssey OLED G9 vs LG C6 48: https://roomracer.com/compare/samsung-odyssey-oled-g9-49-super-ultrawide-240hz-vs-lg-c6-48-4k-oled-tv?src=yt-answer"
+      },
+      "title": "Does a 49-inch ultrawide work on a PS5? Odyssey OLED G9 vs LG C6 48",
+      "earliest": "2026-11-29T06:00:00Z",
+      "script": "Ultrawide on a PS5? / G9 about 900 vs LG C6 48 about 1,000: four HDMI 2.1, fills the screen. / G9: 49 inch 32:9. On PS5: 16:9 with black bars. On PC: full width at 240Hz. / PS5 or Xbox: the TV.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Screens",
+          "fine": "Prices are our estimates of typical US prices (Nov 24, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Screens · PS5",
+              "title": "A 49-inch ultrawide on a PS5?",
+              "sub": "It plugs in. Here's what you see.",
+              "say": "A forty-nine inch ultrawide on a PS5?"
+            },
+            {
+              "type": "compare",
+              "title": "Same price range, two shapes",
+              "items": [
+                {
+                  "price": "$900",
+                  "name": "Samsung Odyssey OLED G9",
+                  "line": "49″ 32:9, one HDMI 2.1 and one DisplayPort",
+                  "sound": "Best on a PC",
+                  "tone": "yellow",
+                  "say": "The G nine, about nine hundred: best on PC."
+                },
+                {
+                  "price": "$1,000",
+                  "name": "LG C6 48″ OLED TV",
+                  "line": "4K120 and VRR on four HDMI 2.1 ports; fills the screen",
+                  "sound": "Best on PS5 or Xbox",
+                  "tone": "purple",
+                  "say": "The LG C six, about a thousand: fills the screen on console."
+                }
+              ],
+              "note": "Plan a TV stand about 1 m behind the pedals.",
+              "outro": "Plan a TV stand about a metre behind the pedals."
+            },
+            {
+              "type": "facts",
+              "title": "The G9 on each machine",
+              "items": [
+                {
+                  "k": "Shape",
+                  "v": "49″, 32:9, curved",
+                  "tone": "purple",
+                  "say": "Forty-nine inches, thirty-two by nine."
+                },
+                {
+                  "k": "On a PS5",
+                  "v": "16:9 picture, black bars each side",
+                  "tone": "red",
+                  "say": "On a PS5: sixteen by nine, with black bars."
+                },
+                {
+                  "k": "On a PC",
+                  "v": "Full width, up to 240Hz",
+                  "tone": "green",
+                  "say": "On a PC: the full width, up to two forty hertz."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "PS5 or Xbox? Get the TV.",
+              "sub": "PC with a strong GPU? The ultrawide.",
+              "cta": "G9 vs C6 48: link in bio",
+              "say": "On a console, get the TV."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W49-answer-how-many-nm",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "How much torque does a first wheel need? The Logitech G29 has about 2.2 Nm through gears, the T248R 3.1 Nm, the T598 and GT DD Pro 5 Nm of direct drive, where heavy cars can still feel light. The Moza R9 V3 has 9 Nm for about $329, still fine on a desk, but it doesn't work on PlayStation. Prices are our estimates. We earn from qualifying purchases. #simracing #racingwheel",
+      "captions": {
+        "youtube": "How much torque does a first wheel need? The Logitech G29 has about 2.2 Nm through gears, the T248R 3.1 Nm, the T598 and GT DD Pro 5 Nm of direct drive, where heavy cars can still feel light. The Moza R9 V3 has 9 Nm for about $329, still fine on a desk, but it doesn't work on PlayStation. Prices are our estimates. We earn from qualifying purchases. #simracing #racingwheel\n\nMoza R9 V3 vs Fanatec CSL DD: https://roomracer.com/compare/moza-r9-v3-9-nm-vs-fanatec-csl-dd-8-nm?src=yt-answer"
+      },
+      "title": "How many Nm does a first racing wheel need? 2.2 to 9 Nm, in plain numbers",
+      "earliest": "2026-11-26T06:00:00Z",
+      "script": "How many Nm? / G29 2.2 gear, notchy. T248R 3.1 hybrid. 5 Nm direct drive: heavy cars can feel light. 9 Nm: GT and road cars, still fine on a desk. / R9 V3 329 for 9 Nm vs CSL DD 480 for 8 Nm, neither on PlayStation.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Torque",
+          "fine": "Prices are our estimates of typical US prices (Nov 24, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Torque, in plain numbers",
+              "title": "How many Nm for a first wheel?",
+              "sub": "From 2.2 to 9, and what each feels like.",
+              "say": "How many newton-metres for a first wheel?"
+            },
+            {
+              "type": "facts",
+              "title": "What the numbers mean",
+              "items": [
+                {
+                  "k": "2.2 Nm",
+                  "v": "Logitech G29: gear drive, notchy",
+                  "tone": "red",
+                  "say": "Two point two: the G twenty-nine, gear driven."
+                },
+                {
+                  "k": "3.1 Nm",
+                  "v": "Thrustmaster T248R: hybrid drive",
+                  "tone": "yellow",
+                  "say": "Three point one: the T two forty-eight R."
+                },
+                {
+                  "k": "5 Nm",
+                  "v": "Direct drive; heavy cars can feel light",
+                  "tone": "yellow",
+                  "say": "Five: direct drive. Heavy cars can feel light."
+                },
+                {
+                  "k": "8–9 Nm",
+                  "v": "GT and road cars; fine on a desk",
+                  "tone": "green",
+                  "say": "Eight or nine: GT and road cars, fine on a desk."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "Two 8–9 Nm bases",
+              "items": [
+                {
+                  "price": "$329",
+                  "name": "Moza R9 V3",
+                  "line": "9 Nm, rim and pedals sold separately",
+                  "sound": "PC; Xbox only with its ESX rim",
+                  "tone": "purple",
+                  "say": "The Moza R nine: nine, for about three twenty-nine."
+                },
+                {
+                  "price": "$480",
+                  "name": "Fanatec CSL DD",
+                  "line": "8 Nm with the Boost Kit 180, rim and pedals separate",
+                  "sound": "PC; Xbox with a licensed rim",
+                  "tone": "yellow",
+                  "say": "The CSL DD: eight, for about four eighty."
+                }
+              ],
+              "note": "Neither base works on PlayStation.",
+              "outro": "Neither base works on PlayStation."
+            },
+            {
+              "type": "end",
+              "title": "On PC, 9 Nm for $329.",
+              "sub": "Torque alone shouldn't decide it.",
+              "cta": "R9 vs CSL DD: link in bio",
+              "say": "The side by side is in the link."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W49-answer-42-or-55-tv",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "42 or 55 inches for a racing rig? The LG C6 42 is 932 mm wide and fills your view from 70 to 90 cm. The TCL QM7K 55 is 1227 mm wide and wants a meter or more, on a stand, so it suits a living room better than a small rig room. The TCL is about $599, the LG about $900. Prices are our estimates. We earn from qualifying purchases. #simracing #gamingsetup",
+      "captions": {
+        "youtube": "42 or 55 inches for a racing rig? The LG C6 42 is 932 mm wide and fills your view from 70 to 90 cm. The TCL QM7K 55 is 1227 mm wide and wants a meter or more, on a stand, so it suits a living room better than a small rig room. The TCL is about $599, the LG about $900. Prices are our estimates. We earn from qualifying purchases. #simracing #gamingsetup\n\nTCL QM7K 55 vs LG C6 42: https://roomracer.com/compare/tcl-qm7k-55-4k-mini-led-tv-vs-lg-c6-42-4k-oled-tv?src=yt-answer"
+      },
+      "title": "42-inch or 55-inch TV for a sim rig? It depends how far away it sits",
+      "earliest": "2026-12-04T06:00:00Z",
+      "script": "42 or 55 inch? / To scale: LG C6 42, 932 mm wide, 70-90 cm away; TCL 55, 1227 mm, a meter or more. / TCL 599: doubles as the living-room TV, no burn-in. LG 900: lower lag, 9.5 kg, rig mount. / On the rig: 42.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Screens",
+          "fine": "Prices are our estimates of typical US prices (Nov 24, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Screens · rig",
+              "title": "42 or 55 inches?",
+              "sub": "Distance decides it, not size.",
+              "say": "Forty-two or fifty-five inches, for a rig?"
+            },
+            {
+              "type": "plan",
+              "title": "Where each one sits, to scale",
+              "room": {
+                "w": 96,
+                "d": 84,
+                "label": "8′ × 7′ rig corner",
+                "fixed": [
+                  {
+                    "x": 36,
+                    "y": 56,
+                    "w": 24,
+                    "d": 26,
+                    "label": "Seat"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "LG C6 42″ · 932 mm wide · 70–90 cm away",
+                  "detail": "Sized for a rig.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 29.7,
+                      "y": 26,
+                      "w": 36.7,
+                      "d": 4,
+                      "label": "42″"
+                    }
+                  ],
+                  "say": "The LG forty-two, nine thirty-two millimetres wide: seventy to ninety centimetres away."
+                },
+                {
+                  "caption": "TCL QM7K 55″ · 1227 mm wide · 1 m or more",
+                  "detail": "On a stand, further back. The 42 dashed.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 29.7,
+                      "y": 26,
+                      "w": 36.7,
+                      "d": 4,
+                      "label": "42″",
+                      "dashed": true
+                    },
+                    {
+                      "x": 23.8,
+                      "y": 10,
+                      "w": 48.3,
+                      "d": 4,
+                      "label": "55″"
+                    }
+                  ],
+                  "say": "The TCL fifty-five, twelve twenty-seven wide: a metre or more."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "Price and where it lives",
+              "items": [
+                {
+                  "price": "$599",
+                  "name": "TCL QM7K 55″ Mini-LED",
+                  "line": "Also the living-room TV; no burn-in worry",
+                  "sound": "17 kg, on a stand",
+                  "tone": "yellow",
+                  "say": "The TCL, about five ninety-nine: also the living-room TV."
+                },
+                {
+                  "price": "$900",
+                  "name": "LG C6 42″ OLED",
+                  "line": "About 10 ms input lag, clearer motion, four HDMI 2.1",
+                  "sound": "9.5 kg, easier on a rig mount",
+                  "tone": "purple",
+                  "say": "The LG, about nine hundred: lower lag, and lighter."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "TV on the rig? The 42.",
+              "sub": "One TV for the rig and the sofa? The 55.",
+              "cta": "Both TVs: link in bio",
+              "say": "On the rig, the forty-two."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
