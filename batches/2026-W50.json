@@ -1,0 +1,423 @@
+{
+  "week": "2026-W50",
+  "posts": [
+    {
+      "id": "2026-W50-answer-long-ps5-teen-wheel",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "caption": "What racing wheel to buy a teenager who has a PS5: three setups that work with the console you already have, with what to order, what each costs, the floor it takes and how loud it is.\n\nWith the TV you have: Couch to Track $439 (wheel stand + Thrustmaster T248R), Midnight Rookie $519 (folding cockpit + Logitech G923), Rosso GT $1,748 (frame, seat, Fanatec Gran Turismo DD Pro, load-cell pedals).\n\nEvery part, the floor plans and a 3D view: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-long\n\nPrices are our estimates of typical US prices, not a store's price; the price at checkout is the one that counts. Noise lines come from how each wheel base is built, not from hands-on tests. Synthetic voice. We earn from qualifying purchases. #ps5 #simracing #giftideas",
+      "title": "What racing wheel to buy a PS5 teen: 3 setups, what to order and the totals",
+      "earliest": "2026-11-15T05:00:00Z",
+      "script": "Hook: the parent's question. / Compare: the three setups with the TV you have. / Couch to Track: list, floor plan, facts. / Midnight Rookie: list, floor plan, facts. / Rosso GT: list, floor plan, facts. / What parents ask. / End: the page in the description.",
+      "options": {
+        "long_form": true
+      },
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.0,
+        "spec": {
+          "tag": "PS5 gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 24, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Parents of a PS5 teen",
+              "title": "What racing wheel do we buy a teen with a PS5?",
+              "sub": "Three setups, what to order, and the totals.",
+              "say": "What racing wheel should you buy a teenager who already has a PS5? Here are three setups that work with the console you have. For each one: exactly what to order, what it costs, how much floor it takes, and how loud it is."
+            },
+            {
+              "type": "compare",
+              "title": "Three setups, with the TV you have",
+              "items": [
+                {
+                  "price": 439,
+                  "name": "Couch to Track",
+                  "line": "Wheel stand in front of the TV. Folds away.",
+                  "sound": "Belt: a soft hum",
+                  "tone": "green",
+                  "say": "Couch to Track, about four thirty-nine. A wheel stand in front of the living-room TV, and it folds behind the sofa."
+                },
+                {
+                  "price": 519,
+                  "name": "Midnight Rookie",
+                  "line": "Cockpit with its own seat. Folds flat.",
+                  "sound": "Gear: whir and click",
+                  "tone": "yellow",
+                  "say": "Midnight Rookie, about five nineteen. A cockpit with its own seat, for a bedroom, and the seat folds flat."
+                },
+                {
+                  "price": 1748,
+                  "name": "Rosso GT",
+                  "line": "Frame, racing seat, direct drive.",
+                  "sound": "Direct drive: near silent",
+                  "tone": "purple",
+                  "say": "Rosso GT, about seventeen forty-eight. A frame, a racing seat and a direct-drive wheel, for a teen who already loves Gran Turismo."
+                }
+              ],
+              "note": "Our estimates of typical US prices, not a store's.",
+              "outro": "Every price here is our estimate of the typical US price. The price at checkout is the one that counts. Let's go through them one by one."
+            },
+            {
+              "type": "list",
+              "title": "1 · Couch to Track",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Wheel stand",
+                  "name": "Next Level Racing Wheel Stand Lite",
+                  "price": 139,
+                  "say": "First, a wheel stand: the Next Level Racing Wheel Stand Lite, about one thirty-nine."
+                },
+                {
+                  "label": "Wheel and pedals, in one box",
+                  "name": "Thrustmaster T248R (PlayStation/PC)",
+                  "price": 300,
+                  "say": "Then the wheel: a Thrustmaster T two forty-eight R, about three hundred. The wheel rim and the pedals come in the same box."
+                },
+                {
+                  "label": "Console and screen",
+                  "name": "The PS5 and TV you have",
+                  "price": 0,
+                  "free": "$0",
+                  "say": "And the PS5 and the TV you already have."
+                }
+              ],
+              "note": "With a new 55-inch TV: $1,038.",
+              "outro": "That's four thirty-nine. If you want a new fifty-five inch TV with it, the page has that version at ten thirty-eight."
+            },
+            {
+              "type": "plan",
+              "title": "Couch to Track in the living room",
+              "room": {
+                "w": 156,
+                "d": 144,
+                "label": "13′ × 12′ living room",
+                "fixed": [
+                  {
+                    "x": 4,
+                    "y": 104,
+                    "w": 84,
+                    "d": 36,
+                    "label": "Sofa"
+                  },
+                  {
+                    "x": 30,
+                    "y": 2,
+                    "w": 60,
+                    "d": 16,
+                    "label": "TV unit"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Stand · 1′10″ × 2′4″",
+                  "detail": "In front of the sofa. Folds behind it after.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 49,
+                      "y": 70,
+                      "w": 22,
+                      "d": 28,
+                      "label": "Stand"
+                    }
+                  ],
+                  "say": "The stand takes about one foot ten by two foot four, in front of the sofa, and the sofa is the seat. When they're done, it folds away behind it."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Couch to Track: the rest",
+              "items": [
+                {
+                  "k": "Works with your PS5",
+                  "v": "Thrustmaster makes the T248R for PS5",
+                  "tone": "green",
+                  "say": "Does it work with the PS5? Thrustmaster makes the T two forty-eight R for PlayStation 5, and the page has our compatibility check for every part."
+                },
+                {
+                  "k": "How loud",
+                  "v": "Belt-driven: a soft hum",
+                  "tone": "green",
+                  "say": "It's belt-driven, so it hums softly. Quieter than a gear wheel."
+                },
+                {
+                  "k": "Outlets",
+                  "v": "2 next to the PS5: wheel base and TV",
+                  "tone": "yellow",
+                  "say": "It needs two outlets next to the PS5: the wheel base and the TV."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "2 · Midnight Rookie",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Cockpit with seat",
+                  "name": "Playseat Challenge X - Logitech G Edition",
+                  "price": 289,
+                  "say": "Setup two is for a bedroom. A Playseat Challenge X, the Logitech G edition, about two eighty-nine. It's a cockpit with its own seat."
+                },
+                {
+                  "label": "Wheel and pedals, in one box",
+                  "name": "Logitech G923 TRUEFORCE (PlayStation/PC)",
+                  "price": 230,
+                  "say": "And a Logitech G nine twenty-three, the PlayStation version, about two thirty, with the pedals in the box."
+                }
+              ],
+              "note": "With its own 27-inch monitor and stand: $907.",
+              "outro": "That's five nineteen with your TV. With its own twenty-seven inch monitor and a stand, it's nine oh seven."
+            },
+            {
+              "type": "plan",
+              "title": "Midnight Rookie in a bedroom",
+              "room": {
+                "w": 120,
+                "d": 132,
+                "label": "10′ × 11′ bedroom",
+                "fixed": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "w": 42,
+                    "d": 80,
+                    "label": "Bed"
+                  },
+                  {
+                    "x": 2,
+                    "y": 112,
+                    "w": 40,
+                    "d": 18,
+                    "label": "Dresser"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Monitor stand · 2′7″ × 2′4″",
+                  "detail": "Only if it gets its own screen.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 74,
+                      "y": 4,
+                      "w": 31,
+                      "d": 28,
+                      "label": "Screen",
+                      "dashed": true
+                    }
+                  ],
+                  "say": "If it gets its own screen, the monitor stand takes about two foot seven by two foot four."
+                },
+                {
+                  "caption": "Cockpit · 2′ × 4′7″",
+                  "detail": "The seat folds flat after.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 78,
+                      "y": 34,
+                      "w": 24,
+                      "d": 55,
+                      "label": "Cockpit"
+                    }
+                  ],
+                  "say": "The cockpit is about two feet by four foot seven, right behind it. When they're done, the seat folds flat."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Midnight Rookie: the rest",
+              "items": [
+                {
+                  "k": "Works with your PS5",
+                  "v": "Logitech makes this G923 for PS5",
+                  "tone": "green",
+                  "say": "Logitech makes this G nine twenty-three for PlayStation 5."
+                },
+                {
+                  "k": "How loud",
+                  "v": "Gear-driven: the gears whir and click",
+                  "tone": "yellow",
+                  "say": "It's gear-driven, so you'll hear the gears whir and click when the wheel pushes back. Fine in a bedroom with the door shut. Noticeable in a quiet house late at night."
+                },
+                {
+                  "k": "Living over someone?",
+                  "v": "A rug or foam mat under the pedals",
+                  "tone": "yellow",
+                  "say": "Living over someone? A rug or a foam mat under the pedals takes most of the knock."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "3 · Rosso GT",
+              "totalLabel": "With your TV",
+              "items": [
+                {
+                  "label": "Frame",
+                  "name": "Sim-Lab GT1 Evo (frame only)",
+                  "price": 449,
+                  "say": "Setup three is the serious one. A Sim-Lab GT1 Evo frame, about four forty-nine."
+                },
+                {
+                  "label": "Seat",
+                  "name": "Sparco R100 Reclining Seat",
+                  "price": 379,
+                  "say": "A Sparco R one hundred seat, three seventy-nine."
+                },
+                {
+                  "label": "Direct drive, wheel in the box",
+                  "name": "Fanatec Gran Turismo DD Pro (5 Nm bundle)",
+                  "price": 700,
+                  "say": "The Fanatec Gran Turismo D D Pro, about seven hundred, a hundred less than at our previous price check. Its steering wheel is in the box."
+                },
+                {
+                  "label": "Load-cell pedals",
+                  "name": "Fanatec CSL Pedals with Load Cell Kit",
+                  "price": 220,
+                  "say": "And Fanatec's load-cell pedals, about two twenty."
+                }
+              ],
+              "note": "With a 42-inch OLED TV and its stand: $2,948.",
+              "outro": "That's seventeen forty-eight with your TV. With a forty-two inch OLED and a stand, twenty-nine forty-eight."
+            },
+            {
+              "type": "plan",
+              "title": "Rosso GT keeps its corner",
+              "room": {
+                "w": 120,
+                "d": 132,
+                "label": "10′ × 11′ bedroom",
+                "fixed": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "w": 42,
+                    "d": 80,
+                    "label": "Bed"
+                  },
+                  {
+                    "x": 84,
+                    "y": 112,
+                    "w": 34,
+                    "d": 18,
+                    "label": "Desk"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "TV stand · 2′11″ × 2′4″",
+                  "detail": "Only with its own TV.",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 80,
+                      "y": 2,
+                      "w": 35,
+                      "d": 28,
+                      "label": "TV",
+                      "dashed": true
+                    }
+                  ],
+                  "say": "With its own TV, the stand takes about two foot eleven by two foot four."
+                },
+                {
+                  "caption": "Frame · 1′11″ × 4′5″",
+                  "detail": "It stays set up. Give it a corner.",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 86,
+                      "y": 34,
+                      "w": 23,
+                      "d": 53,
+                      "label": "Frame"
+                    }
+                  ],
+                  "say": "The frame is about one foot eleven by four foot five. It doesn't fold, so give it a corner it can keep."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Rosso GT: the rest",
+              "items": [
+                {
+                  "k": "Works with your PS5",
+                  "v": "Fanatec makes the GT DD Pro for PS5",
+                  "tone": "green",
+                  "say": "Fanatec makes the Gran Turismo D D Pro for PlayStation 5."
+                },
+                {
+                  "k": "How loud",
+                  "v": "Direct drive: the motor is close to silent",
+                  "tone": "purple",
+                  "say": "Direct drive is close to silent. What you hear is the pedals, and a thump through the floor on hard braking."
+                },
+                {
+                  "k": "Games, all on PS5",
+                  "v": "Gran Turismo 7, ACC, Assetto Corsa",
+                  "tone": "green",
+                  "say": "All three setups run Gran Turismo 7, Assetto Corsa Competizione and Assetto Corsa on the PS5."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "What parents ask",
+              "items": [
+                {
+                  "k": "Is a PS5 included?",
+                  "v": "No. All three use the one you have.",
+                  "tone": "yellow",
+                  "say": "Is a PS5 included? No. All three use the console you have."
+                },
+                {
+                  "k": "Do we need a new TV?",
+                  "v": "No: $439, $519 or $1,748 with yours",
+                  "tone": "green",
+                  "say": "Do you need a new TV? No. With yours, it's four thirty-nine, five nineteen, or seventeen forty-eight."
+                },
+                {
+                  "k": "How hard to set up?",
+                  "v": "Wheel and pedals to the base, base to the PS5",
+                  "tone": "green",
+                  "say": "Setting it up: the wheel and pedals plug into the wheel base, and the wheel base plugs into the PS5."
+                },
+                {
+                  "k": "Order by (our suggestion)",
+                  "v": "Friday, December 11",
+                  "tone": "purple",
+                  "say": "And order by Friday, December eleventh. That's our suggestion, not a carrier's deadline: the boxes are big, and you'll want a weekend to build it before the twenty-fifth."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Every part, every number.",
+              "sub": "The three setups, the floor plans and a 3D view.",
+              "cta": "Link in the description",
+              "site": "roomracer.com/gifts/ps5-racing-wheel",
+              "say": "Every part, the floor plans, and a 3D view of each setup are on the page linked in the description. Prices there are our estimates too, and the price at checkout is the one that counts."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      },
+      "latest": "2026-12-12T05:00:00Z"
+    }
+  ]
+}
