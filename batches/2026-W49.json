@@ -992,6 +992,134 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W49-answer-pedals-in-the-box",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Do racing wheels come with pedals? These three starter wheels ship with them: the Logitech G923 for PlayStation ($230), the Thrustmaster T248R ($300) and the Moza R3 for Xbox ($329). Day one, the base clamps to a desk and the pedals sit on the floor. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5",
+      "captions": {
+        "youtube": "Do racing wheels come with pedals? These three starter wheels ship with them: the Logitech G923 for PlayStation ($230), the Thrustmaster T248R ($300) and the Moza R3 for Xbox ($329). Day one, the base clamps to a desk and the pedals sit on the floor. Prices are our estimates. We earn from qualifying purchases. #simracing #ps5\n\nWhat's in each box: https://roomracer.com/guides/first-sim-rig-gift?src=yt-answer"
+      },
+      "title": "Do racing wheels come with pedals? Open one starter box",
+      "earliest": "2026-12-05T07:00:00Z",
+      "script": "Do racing wheels come with pedals? In these three starter wheels, yes. Here's what's in the box. /  The Logitech G nine twenty-three for PlayStation: about two thirty for the base. The wheel is included. And so are the pedals. Same with the Thrustmaster T two forty-eight R, and the Moza R three for Xbox. /  On day one, the wheel base clamps to a sturdy desk. The pedals from the same box go on the floor in front of the chair. / Each box: link in bio.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gift guide",
+          "fine": "Prices are our estimates of typical US prices (Nov 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you order",
+              "title": "Do the pedals come with it?",
+              "sub": "In these three, yes.",
+              "say": "Do racing wheels come with pedals? In these three starter wheels, yes. Here's what's in the box."
+            },
+            {
+              "type": "list",
+              "title": "One Logitech G923 box",
+              "items": [
+                {
+                  "label": "Wheel base",
+                  "name": "Logitech G923 (PlayStation)",
+                  "price": 230,
+                  "say": "The Logitech G nine twenty-three for PlayStation: about two thirty for the base."
+                },
+                {
+                  "label": "Wheel",
+                  "name": "G923 rim",
+                  "price": 0,
+                  "free": "In the box",
+                  "say": "The wheel is included."
+                },
+                {
+                  "label": "Pedals",
+                  "name": "G923 pedals",
+                  "price": 0,
+                  "free": "In the box",
+                  "say": "And so are the pedals."
+                }
+              ],
+              "totalLabel": "All in one box",
+              "outro": "Same with the Thrustmaster T two forty-eight R, and the Moza R three for Xbox.",
+              "note": "Same in the Thrustmaster T248R box ($300, PS5) and the Moza R3 box ($329, Xbox)."
+            },
+            {
+              "type": "plan",
+              "title": "Day one: a desk is enough",
+              "room": {
+                "w": 96,
+                "d": 84,
+                "label": "Top view · not to scale",
+                "fixed": [
+                  {
+                    "x": 4,
+                    "y": 6,
+                    "w": 88,
+                    "d": 24,
+                    "label": "Desk"
+                  },
+                  {
+                    "x": 56,
+                    "y": 60,
+                    "w": 30,
+                    "d": 20,
+                    "label": "Chair"
+                  }
+                ]
+              },
+              "items": [
+                {
+                  "caption": "Wheel base → desk edge",
+                  "detail": "It clamps on. No stand yet.",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 60,
+                      "y": 24,
+                      "w": 20,
+                      "d": 12,
+                      "label": "Wheel"
+                    }
+                  ],
+                  "say": "On day one, the wheel base clamps to a sturdy desk."
+                },
+                {
+                  "caption": "Pedals → the floor",
+                  "detail": "In the same box.",
+                  "tone": "green",
+                  "rects": [
+                    {
+                      "x": 58,
+                      "y": 42,
+                      "w": 24,
+                      "d": 14,
+                      "label": "Pedals"
+                    }
+                  ],
+                  "say": "The pedals from the same box go on the floor in front of the chair."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Pedals included.",
+              "cta": "What's in each box: link in bio",
+              "say": "Each box: link in bio."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
