@@ -3,6 +3,7 @@
 New in the engine. Since 2026-11-02, uploads from unaudited API projects are no longer forced private, and the API
 allows 100 uploads a day. `status.containsSyntheticMedia` carries the AI disclosure. The OAuth client must be
 "In production": a "Testing" client's refresh token dies after 7 days. A vertical clip of 3 minutes or less is a Short.
+With options.long_form a post may run to 900 s and is returned as a regular video (watch?v=), not a Short.
 """
 
 from __future__ import annotations
@@ -15,6 +16,8 @@ from .http import HttpResponse, Request
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 UPLOAD_URL = "https://www.googleapis.com/upload/youtube/v3/videos"
 API = "https://www.googleapis.com/youtube/v3"
+SHORT_MAX_S = 180
+LONG_FORM_MAX_S = 900  # options.long_form: a regular video with a clickable description link (D-022, D-031)
 CATEGORY = "22"  # People & Blogs; a format may set its own
 STATUS_POLLS = 6
 STATUS_POLL_S = 10.0
@@ -43,8 +46,11 @@ class YouTubeDirect(Adapter):
               "2026). A Testing-mode OAuth client's refresh token dies in 7 days: keep the client In production.")
 
     def _post(self, media: Media, spec: PostSpec) -> PostResult:
-        if media.duration_s and media.duration_s > 180:
-            raise PublisherError(f"youtube: {media.duration_s:.0f}s is longer than a Short (180s)")
+        long_form = spec.options.get("long_form") is True
+        top = LONG_FORM_MAX_S if long_form else SHORT_MAX_S
+        if media.duration_s and media.duration_s > top:
+            what = "the long-form cap" if long_form else "a Short"
+            raise PublisherError(f"youtube: {media.duration_s:.0f}s is longer than {what} ({top}s)")
         title = (spec.title or spec.caption or "").strip()
         if not title:
             raise PublisherError("youtube: a Short needs a title")
@@ -55,7 +61,8 @@ class YouTubeDirect(Adapter):
                         "tags": list(spec.tags)[:15], "categoryId": spec.options.get("category", CATEGORY),
                         "defaultLanguage": spec.language, "defaultAudioLanguage": spec.language},
             "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False,
-                       "containsSyntheticMedia": bool(spec.ai_generated and spec.ai_realistic)},
+                       "containsSyntheticMedia": bool(spec.ai_generated and spec.ai_realistic)
+                       or spec.options.get("synthetic_media") is True},
         }
         init = self.send(Request("POST", UPLOAD_URL, params={"uploadType": "resumable", "part": "snippet,status"},
                                  headers={**auth, "X-Upload-Content-Length": str(media.size),
@@ -86,7 +93,8 @@ class YouTubeDirect(Adapter):
             if "not ready" not in str(e):
                 raise
             state, note = PROCESSING, "uploaded; YouTube is still processing it"
-        return PostResult(f"https://www.youtube.com/shorts/{vid}", vid, state, note)
+        url = f"https://www.youtube.com/watch?v={vid}" if long_form else f"https://www.youtube.com/shorts/{vid}"
+        return PostResult(url, vid, state, note)
 
     def dry_run_responder(self, req: Request) -> HttpResponse:
         parts = urlsplit(req.url)

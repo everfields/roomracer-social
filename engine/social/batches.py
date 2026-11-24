@@ -76,11 +76,22 @@ def unpack(body: str) -> tuple[str, bytes]:
     return week, raw
 
 
-def pull(root: Path, company_repo: str, env: Mapping[str, str], transport: Transport, now: datetime) -> dict:
+class MissingSetup(RuntimeError):
+    """The pipe is switched on (SOCIAL_CRON dry-run or live) but cannot reach the company's batches."""
+
+
+def pull(root: Path, company_repo: str, env: Mapping[str, str], transport: Transport, now: datetime,
+         cron: str = "off") -> dict:
     token = (env.get("COS_EVENT_TOKEN") or "").strip()
     report: dict = {"new": [], "unchanged": 0, "refused": []}
     if not token or not company_repo:
-        return {**report, "skipped": "COS_EVENT_TOKEN or company_repo is missing"}
+        missing = " and ".join(n for n, v in (("COS_EVENT_TOKEN", token), ("company_repo", company_repo)) if not v)
+        # Switched on, a skip is a silent failure: Intelligence Pick's social-batches ran green for days with no token
+        # while no batch arrived (2026-11-21). So the job fails, and the failure is the alarm.
+        if cron in ("dry-run", "live"):
+            raise MissingSetup(f"batches: SOCIAL_CRON is {cron} but {missing} is missing, so no batch can arrive. Set the "
+                               f"COS_EVENT_TOKEN secret (Issues: read on the company repo) and company_repo in social.json.")
+        return {**report, "skipped": f"{missing} is missing"}
     resp = transport.send(Request("GET", f"{API}/repos/{company_repo}/issues",
                                   headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json",
                                            "X-GitHub-Api-Version": "2022-11-28"},

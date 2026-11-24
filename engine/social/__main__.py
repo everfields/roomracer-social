@@ -7,8 +7,9 @@
     intake [--recheck]              check new posts, quarantine the failures, report the runway
     pages --out DIR                 build the Pages runway
     metrics                         collect the numbers, rebuild the summary and the scoreboard
-    watch                           runway, heartbeat, posts with no outcome
-    archive                         move items posted over a week ago to archive/
+    watch                           runway, a batch left unrendered, posts with no outcome
+    alarm KEY --title T --body B [--severity high] | KEY --clear --note N    from a job with no state (the render)
+    archive                         move items posted over a week ago, and unposted ones past their `latest`, to archive/
     resolve NETWORK ID (--url URL | --failed)   a person settles a post with no outcome
     resume NETWORK --reason TEXT    a person restarts a stopped network
     check-public URL                does this post show up for a logged-out viewer?
@@ -35,7 +36,7 @@ from urllib.parse import urlencode
 from . import VERSION
 from .alarms import Alarms
 from .base import Retryable
-from .batches import pull as pull_batches
+from .batches import MissingSetup, pull as pull_batches
 from .buffer import CHANNELS, ORGS, BufferTikTok
 from .config import Config, ConfigError, load
 from .http import Request, UrllibTransport, redact_text
@@ -84,7 +85,11 @@ def cmd_validate(a, cfg: Config, root: Path, state: Path) -> int:
 
 
 def cmd_batches(a, cfg: Config, root: Path, state: Path) -> int:
-    report = pull_batches(root, cfg.company_repo, os.environ, UrllibTransport(), now_utc())
+    try:
+        report = pull_batches(root, cfg.company_repo, os.environ, UrllibTransport(), now_utc(), cron=cfg.cron)
+    except MissingSetup as e:
+        print(f"::error::{e}")
+        return 1
     out(report)
     for r in report["refused"]:
         print(f"::warning::batch {r['file']} refused: {'; '.join(r['why'])}")
@@ -188,9 +193,26 @@ def cmd_watch(a, cfg: Config, root: Path, state: Path) -> int:
     return alarm_status(alarms)
 
 
+def cmd_alarm(a, cfg: Config, root: Path, state: Path) -> int:
+    """An alarm from a job that keeps no state (the render). It goes out whenever the pipe is switched on, dry run
+    included: a render that fails in a dry run is the week that will not publish once live (Every Little Room's W48
+    render failed with no alarm of its own, 2026-11-16)."""
+    if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,80}", a.key):
+        print(f"x bad alarm key {a.key!r}", file=sys.stderr)
+        return 2
+    on = cfg.cron in ("dry-run", "live")
+    alarms = Alarms.from_config(cfg, GuardState(state / "alarm-only.json"), os.environ, live=on, now=now_utc())
+    if a.clear:
+        alarms.clear_now(a.key, a.note or "cleared")
+    else:
+        alarms.raise_(a.key, a.title or a.key, a.body or a.title or a.key, a.severity)
+    out({"cron": cfg.cron, "sent": alarms.sent})
+    return alarm_status(alarms)
+
+
 def cmd_archive(a, cfg: Config, root: Path, state: Path) -> int:
     log = PostLog(state / "posts.csv")
-    final, moved = log.latest(), 0
+    final, moved, stale = log.latest(), 0, 0
     now = now_utc()
     for it in items(root):
         last = final.get((it.id, it.network))
@@ -198,7 +220,10 @@ def cmd_archive(a, cfg: Config, root: Path, state: Path) -> int:
         if last and last["status"] not in (PENDING, "retry") and when and now - when > timedelta(days=7):
             move(it, root, "archive")
             moved += 1
-    print(f"archived {moved}")
+        elif (not last or last["status"] == "retry") and it.stale(now):
+            move(it, root, "archive", {"stale": f"latest {it.data.get('latest')} passed unposted; archived {iso(now)}"})
+            stale += 1
+    print(f"archived {moved}, and {stale} unposted past their latest")
     return 0
 
 
@@ -304,7 +329,7 @@ def cmd_status(a, cfg: Config, root: Path, state: Path) -> int:
 
 COMMANDS = {
     "validate": cmd_validate, "batches": cmd_batches, "due": cmd_due, "publish": cmd_publish, "intake": cmd_intake, "pages": cmd_pages,
-    "metrics": cmd_metrics, "watch": cmd_watch, "archive": cmd_archive, "resolve": cmd_resolve, "resume": cmd_resume,
+    "metrics": cmd_metrics, "watch": cmd_watch, "alarm": cmd_alarm, "archive": cmd_archive, "resolve": cmd_resolve, "resume": cmd_resume,
     "check-public": cmd_check_public, "token-refresh": cmd_token_refresh, "youtube-auth": cmd_youtube_auth,
     "status": cmd_status, "buffer-channels": cmd_buffer_channels,
 }
@@ -332,6 +357,13 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("--url", default="")
             p.add_argument("--remote-id", default="")
             p.add_argument("--failed", action="store_true")
+        if name == "alarm":
+            p.add_argument("key")
+            p.add_argument("--title", default="")
+            p.add_argument("--body", default="")
+            p.add_argument("--severity", default="normal", choices=["normal", "high"])
+            p.add_argument("--clear", action="store_true")
+            p.add_argument("--note", default="")
         if name == "resume":
             p.add_argument("network")
             p.add_argument("--reason", required=True)

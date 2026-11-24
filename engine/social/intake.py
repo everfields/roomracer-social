@@ -33,6 +33,8 @@ HASHTAG = re.compile(r"(^|\s)#[^\s#]+")
 AI_TYPES = ("trainedalgorithmicmedia", "compositewithtrainedalgorithmicmedia")
 CAPTION_LIMIT = {"x": 280, "youtube": 4900, "instagram": 2200, "tiktok": 2200}
 MAX_S = {"youtube": 180, "instagram": 180, "tiktok": 600, "x": 140}
+LONG_FORM_MAX_S = 900  # a YouTube post with options.long_form: a regular video, not a Short (D-022, D-031)
+YOUTUBE_MAX_MB = 256 * 1024  # YouTube's own upload bar (256 GB), not TikTok's 60 MB single chunk
 
 
 @dataclass
@@ -73,8 +75,12 @@ def probe(path: Path) -> dict:
     }
 
 
-def media_problems(p: dict, network: str, rules: dict, kind: str = "video") -> tuple[list[str], list[str]]:
+def media_problems(p: dict, network: str, rules: dict, kind: str = "video",
+                   long_form: bool = False) -> tuple[list[str], list[str]]:
+    """long_form (YouTube only, the queue row's options.long_form): the length runs min_s..900 s and the size bar is
+    YouTube's; every other check stays."""
     errors, warnings = [], []
+    long_form = long_form and network == "youtube"
     w, h = p["width"], p["height"]
     aw, ah = rules["aspect"]
     if not w or not h:
@@ -84,7 +90,7 @@ def media_problems(p: dict, network: str, rules: dict, kind: str = "video") -> t
     if h < rules["min_height"]:
         errors.append(f"height {h} under {rules['min_height']}")
     if kind == "video":
-        top = min(rules["max_s"], MAX_S.get(network, rules["max_s"]))
+        top = LONG_FORM_MAX_S if long_form else min(rules["max_s"], MAX_S.get(network, rules["max_s"]))
         if not rules["min_s"] <= p["duration_s"] <= top:
             errors.append(f"length {p['duration_s']}s outside {rules['min_s']}-{top}s")
         if p["video_codec"] not in rules["video_codecs"]:
@@ -97,8 +103,9 @@ def media_problems(p: dict, network: str, rules: dict, kind: str = "video") -> t
             warnings.append("silent: no audio track")
         elif p["audio_codec"] not in rules["audio_codecs"]:
             errors.append(f"audio codec {p['audio_codec']} (want {', '.join(rules['audio_codecs'])})")
-    if p["bytes"] > rules["max_mb"] * 1024 * 1024:
-        errors.append(f"{p['bytes'] / 1048576:.1f} MB, over {rules['max_mb']} MB")
+    max_mb = YOUTUBE_MAX_MB if long_form else rules["max_mb"]
+    if p["bytes"] > max_mb * 1024 * 1024:
+        errors.append(f"{p['bytes'] / 1048576:.1f} MB, over {max_mb} MB")
     return errors, warnings
 
 
@@ -218,7 +225,8 @@ def check(root: Path, cfg: Config, fetch: Callable[[str], Path], now: datetime, 
                 else:
                     probe_info = probe(path)
                     kind = (it.data.get("media") or {}).get("kind", "video")
-                    e, w = media_problems(probe_info, it.network, rules, kind)
+                    long_form = bool((it.data.get("options") or {}).get("long_form"))
+                    e, w = media_problems(probe_info, it.network, rules, kind, long_form)
                     errors += e
                     warnings += w
                     errors += ai_mark_problems(path, it)
@@ -248,7 +256,7 @@ def runway(root: Path, cfg: Config, used: set[str], now: datetime) -> dict[str, 
     """Days of checked, unposted posts per enabled network, at its full cadence."""
     out = {}
     for net in cfg.enabled():
-        n = sum(1 for it in items(root, network=net.name) if it.checked and it.id not in used)
+        n = sum(1 for it in items(root, network=net.name) if it.checked and it.id not in used and not it.stale(now))
         per_day = max(1, len(net.slots))
         out[net.name] = {"posts": n, "per_day": per_day, "days": round(n / per_day, 1)}
     return out

@@ -1,6 +1,7 @@
 """The founder's one-time YouTube consent, in one command, on the founder's own PC.
 
     python engine/pc/authorize_youtube.py --repo everfields/<company>-social
+    python engine/pc/authorize_youtube.py --repo ... --client-json <downloaded.json> --url-file <path>   (an agent: no prompts)
 
 It asks for the OAuth client's id and secret without showing them, opens Google's consent page, catches the answer on
 this machine (a Desktop-app client allows any loopback port), and stores the three secrets in the social repo through
@@ -49,16 +50,27 @@ def store(repo: str, name: str, value: str) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", required=True)
-    repo = ap.parse_args().repo
-    cid = getpass.getpass("ID de cliente OAuth (no se ve al escribir): ").strip()
-    secret = getpass.getpass("Secreto de cliente OAuth (no se ve al escribir): ").strip()
+    ap.add_argument("--client-json", help="the Desktop client's downloaded JSON: read, then deleted (no prompts)")
+    ap.add_argument("--url-file", help="write the consent URL here instead of opening a browser (an agent opens it)")
+    args = ap.parse_args()
+    repo = args.repo
+    if args.client_json:
+        installed = json.loads(Path(args.client_json).read_text(encoding="utf-8"))["installed"]
+        cid, secret = installed["client_id"], installed["client_secret"]
+    else:
+        cid = getpass.getpass("ID de cliente OAuth (no se ve al escribir): ").strip()
+        secret = getpass.getpass("Secreto de cliente OAuth (no se ve al escribir): ").strip()
     server = http.server.HTTPServer(("127.0.0.1", 0), Catch)
     redirect = f"http://127.0.0.1:{server.server_address[1]}"
     state = secrets.token_urlsafe(16)
     url = f"{AUTH}?" + urllib.parse.urlencode({"client_id": cid, "redirect_uri": redirect, "response_type": "code", "scope": SCOPES,
                                                "access_type": "offline", "prompt": "consent", "state": state})
-    print("\nSe abre el navegador. Entra con la cuenta del canal y acepta.\n")
-    webbrowser.open(url)
+    if args.url_file:
+        Path(args.url_file).write_text(url, encoding="utf-8")
+        print("waiting for consent", flush=True)
+    else:
+        print("\nSe abre el navegador. Entra con la cuenta del canal y acepta.\n")
+        webbrowser.open(url)
     server.handle_request()
     q = Catch.query
     if q.get("state", [""])[0] != state or "code" not in q:
@@ -72,6 +84,8 @@ def main() -> None:
     store(repo, "YOUTUBE_CLIENT_ID", cid)
     store(repo, "YOUTUBE_CLIENT_SECRET", secret)
     store(repo, "YOUTUBE_REFRESH_TOKEN", body["refresh_token"])
+    if args.client_json:
+        Path(args.client_json).unlink(missing_ok=True)
     print(f"Hecho: tres secretos guardados en {repo}. Ningún valor se ha mostrado.")
 
 

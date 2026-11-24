@@ -62,6 +62,10 @@ class Network:
     slots: list[time]
     max_24h: int
     min_gap: timedelta
+    # Declare every post on this network as synthetic media (YouTube's containsSyntheticMedia), whatever the format says:
+    # for a company whose voice or imagery is AI-made though the format reports ai.generated false (Intelligence Pick,
+    # 2026-11-20: the `answer` format's Kokoro voice). Read at publish time, so it applies to what is already queued.
+    synthetic_media: bool = False
 
 
 @dataclass
@@ -147,7 +151,8 @@ def load(root: Path, env: Mapping[str, str]) -> Config:
             if b - a < gap:
                 raise ConfigError(f"{name}: slots {a // 60 % 24:02d}:{a % 60:02d} and {b // 60 % 24:02d}:{b % 60:02d} "
                                   f"are closer than {gap} minutes")
-        nets[name] = Network(name, bool(n.get("enabled", True)), route, slots, max_24h, timedelta(minutes=gap))
+        nets[name] = Network(name, bool(n.get("enabled", True)), route, slots, max_24h, timedelta(minutes=gap),
+                             synthetic_media=n.get("synthetic_media") is True)
     cron = (env.get("SOCIAL_CRON") or raw.get("cron") or "off").strip().lower()
     if cron not in CRON_MODES:
         raise ConfigError(f"SOCIAL_CRON={cron!r}: one of {', '.join(CRON_MODES)}")

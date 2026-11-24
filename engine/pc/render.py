@@ -85,6 +85,8 @@ def rows_for(post: dict, file: str, digest: str, ai: dict, week: str) -> list[di
             "caption": caption, "title": post.get("title", ""), "language": post.get("language", "en"),
             "tags": post.get("tags", []), "ai": ai, "trial": bool(post.get("trial")) and net == "instagram",
             **({"earliest": post["earliest"]} if post.get("earliest") else {}),
+            **({"latest": post["latest"]} if post.get("latest") else {}),
+            **({"options": dict(post["options"])} if post.get("options") else {}),  # publish.py reads them (long_form, category)
         })
     return out
 
@@ -130,7 +132,7 @@ def render(repo: Path, folder: Path, batch: dict, out: Path, *, only: str | None
     return made
 
 
-def publish(repo: Path, made: list[dict], folder: Path) -> None:
+def publish(repo: Path, made: list[dict], folder: Path, week: str = "") -> None:
     if made:
         have = subprocess.run(["gh", "release", "view", RELEASE], cwd=repo, capture_output=True, text=True)
         if have.returncode != 0:
@@ -143,8 +145,15 @@ def publish(repo: Path, made: list[dict], folder: Path) -> None:
                 p.write_text(json.dumps(row, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     hb = repo / "pc" / "heartbeat.json"
     hb.parent.mkdir(exist_ok=True)
-    hb.write_text(json.dumps({"at": now(), "host": socket.gethostname(), "rendered": len(made),
-                              "week": made[0]["week"] if made else ""}, indent=2) + "\n", encoding="utf-8")
+    try:
+        prev = str(json.loads(hb.read_text(encoding="utf-8")).get("week", ""))
+    except (OSError, ValueError):
+        prev = ""
+    # The week is the newest batch rendered whole, even when every post was already made: the watch alarms only for a
+    # batch in batches/ newer than it, so it never goes backwards and never blanks.
+    done = max(prev, week or (made[0]["week"] if made else ""))
+    hb.write_text(json.dumps({"at": now(), "host": socket.gethostname(), "rendered": len(made), "week": done},
+                             indent=2) + "\n", encoding="utf-8")
     sh("git", "add", "queue", "pc/heartbeat.json", cwd=repo)
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=repo).returncode != 0:
         sh("git", "commit", "-m", f"batch: {len(made)} post(s), heartbeat {now()}", cwd=repo)
@@ -175,7 +184,7 @@ def main() -> None:
     if not batch:
         print(f"no batch spec for {a.week or this_week()}: heartbeat only")
     if a.upload:
-        publish(repo, made, folder)
+        publish(repo, made, folder, week=str(batch.get("week", "")) if batch and not a.only else "")
     print(json.dumps({"made": [str(m["file"]) for m in made]}, indent=2))
 
 

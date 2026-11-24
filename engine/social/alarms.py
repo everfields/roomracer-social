@@ -136,6 +136,11 @@ class Alarms:
             prev["cleared"] = True
             prev["cleared_at"] = iso(self.now)
 
+    def clear_now(self, key: str, note: str) -> None:
+        """Clear without this repo's state: for a job that keeps none (the render). The engine ignores a clear for a key
+        with no open alarm, and in issues mode it finds the issue by its marker."""
+        self._dispatch({"type": "social-clear", "key": key, "note": note})
+
     def clear_others(self, prefix: str, note: str) -> None:
         """Clear every open alarm under `prefix` that this run did not raise again."""
         for key in [k for k, v in self.state.alarms.items() if k.startswith(prefix) and not v.get("cleared")]:

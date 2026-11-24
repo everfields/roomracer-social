@@ -74,12 +74,15 @@ def download(url: str, dest: Path) -> Path:
     return dest
 
 
-def spec_of(item: Item) -> PostSpec:
+def spec_of(item: Item, synthetic_media: bool = False) -> PostSpec:
     d = item.data
+    options = dict(d.get("options") or {})
+    if synthetic_media:
+        options["synthetic_media"] = True
     return PostSpec(caption=str(d.get("caption") or ""), title=str(d.get("title") or ""),
                     ai_generated=bool(item.ai.get("generated")), ai_realistic=bool(item.ai.get("realistic")),
                     trial=bool(d.get("trial")), language=str(d.get("language") or "en"),
-                    tags=tuple(d.get("tags") or ()), options=dict(d.get("options") or {}))
+                    tags=tuple(d.get("tags") or ()), options=options)
 
 
 def run(root: Path, state_dir: Path, cfg: Config, env: Mapping[str, str], *, now: datetime, live: bool,
@@ -157,7 +160,7 @@ def run(root: Path, state_dir: Path, cfg: Config, env: Mapping[str, str], *, now
             log.append(row)  # before the call: a crash leaves a pending row that blocks a double post
             if net_live and checkpoint:
                 checkpoint()  # and it is already on the state branch, so a lost runner cannot double-post either
-            result = adapter.post(media, spec_of(item))
+            result = adapter.post(media, spec_of(item, net.synthetic_media))
         except Retryable as e:
             log.append(PostRow(**{**row.__dict__, "status": RETRY, "at": iso(now), "detail": redact_text(str(e))}))
             if log.retries(item.id, net.name) >= MAX_RETRIES:
@@ -197,17 +200,25 @@ def run(root: Path, state_dir: Path, cfg: Config, env: Mapping[str, str], *, now
             plan = getattr(adapter.transport, "plan", None)
             if plan:
                 (out / f"plan-{net.name}.json").write_text(json.dumps(plan(), indent=2), encoding="utf-8")
-        log.append(PostRow(**{**row.__dict__, "status": result.state, "at": iso(now), "remote_id": result.remote_id,
-                              "url": result.url, "detail": result.note[:300]}))
         for w in adapter.warnings:
             alarms.raise_(f"warning-{net.name}", f"{net.name}: {w}", w)
-        if net_live:
-            st.first_post.setdefault(net.name, posting_day(cfg, now).isoformat())
-            st.failures[net.name] = 0
-            alarms.clear(f"failing-{net.name}", "a post went out")
-            alarms.clear(f"rejected-{net.name}", "a post went out")
-            st.seen[result.remote_id] = {"network": net.name, "item": item.id, "first_seen": iso(now)}
-        results.append(Outcome(net.name, "posted" if net_live else "dry-run", result.state, item.id, result.url))
+        if not net_live:
+            # A dry run must never read as a publish: Every Little Room's run.json said `published` with the rehearsal's
+            # made-up link while SOCIAL_CRON had stayed dry-run after approval (2026-11-17). The plan file has the calls.
+            log.append(PostRow(**{**row.__dict__, "status": "dry-run", "at": iso(now), "remote_id": "",
+                                  "url": "", "detail": f"nothing was sent (the rehearsal answered {result.state})"}))
+            results.append(Outcome(net.name, "dry-run", f"dry run: nothing was sent to {net.name} (SOCIAL_CRON={cfg.cron}"
+                                   f"{'' if cfg.cron != 'live' else f', {net.name} not in SOCIAL_LIVE_NETWORKS'}); "
+                                   f"see plan-{net.name}.json", item.id, ""))
+            continue
+        log.append(PostRow(**{**row.__dict__, "status": result.state, "at": iso(now), "remote_id": result.remote_id,
+                              "url": result.url, "detail": result.note[:300]}))
+        st.first_post.setdefault(net.name, posting_day(cfg, now).isoformat())
+        st.failures[net.name] = 0
+        alarms.clear(f"failing-{net.name}", "a post went out")
+        alarms.clear(f"rejected-{net.name}", "a post went out")
+        st.seen[result.remote_id] = {"network": net.name, "item": item.id, "first_seen": iso(now)}
+        results.append(Outcome(net.name, "posted", result.state, item.id, result.url))
     if any_live:
         st.save()
     (out / "alarms.json").write_text(json.dumps({"sent": alarms.sent, "errors": alarms.errors}, indent=2), encoding="utf-8")

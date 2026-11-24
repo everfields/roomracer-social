@@ -95,7 +95,8 @@ def make(post, out_dir, kit):
     cmd = ["node", str(HERE / "frames.mjs"), "--spec", str(out_dir / "spec.json"), "--font", str(font), "--out", str(frames)]
     if os.environ.get("CHROME"):
         cmd += ["--chrome", os.environ["CHROME"]]
-    r = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
+    # ~5 frames/s on GitHub's runner (W49: ~2 min per 20 s clip): 0.4 s a frame keeps a 5-min long cut (~9000 frames) safe
+    r = subprocess.run(cmd, capture_output=True, text=True, timeout=max(1800, int(total * 30 * 0.4)))
     if r.returncode != 0:
         raise RuntimeError(f"frames failed: {r.stderr[-600:]}")
     video = out_dir / "video.mp4"
