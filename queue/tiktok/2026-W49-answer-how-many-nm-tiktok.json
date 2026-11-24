@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-how-many-nm-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-how-many-nm.mp4",
+    "sha256": "75ae9eddd1d0b05e14e609ae5e0d2974ac8873e50e8d35ce3b00129150da7899",
+    "kind": "video"
+  },
+  "caption": "How much torque does a first wheel need? The Logitech G29 has about 2.2 Nm through gears, the T248R 3.1 Nm, the T598 and GT DD Pro 5 Nm of direct drive, where heavy cars can still feel light. The Moza R9 V3 has 9 Nm for about $329, still fine on a desk, but it doesn't work on PlayStation. Prices are our estimates. We earn from qualifying purchases. #simracing #racingwheel",
+  "title": "How many Nm does a first racing wheel need? 2.2 to 9 Nm, in plain numbers",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-26T06:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-42-or-55-tv-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-42-or-55-tv.mp4",
+    "sha256": "e3713834139ad931e914ba3d5515374e0a4e397d423937ccd31213ed896d5a3f",
+    "kind": "video"
+  },
+  "caption": "42 or 55 inches for a racing rig? The LG C6 42 is 932 mm wide and fills your view from 70 to 90 cm. The TCL QM7K 55 is 1227 mm wide and wants a meter or more, on a stand, so it suits a living room better than a small rig room. The TCL is about $599, the LG about $900. Prices are our estimates. We earn from qualifying purchases. #simracing #gamingsetup\n\nTCL QM7K 55 vs LG C6 42: https://roomracer.com/compare/tcl-qm7k-55-4k-mini-led-tv-vs-lg-c6-42-4k-oled-tv?src=yt-answer",
+  "title": "42-inch or 55-inch TV for a sim rig? It depends how far away it sits",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-12-04T06:00:00Z"
+}

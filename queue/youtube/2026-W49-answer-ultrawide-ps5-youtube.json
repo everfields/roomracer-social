@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-ultrawide-ps5-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-ultrawide-ps5.mp4",
+    "sha256": "d4d0937ebe2a43b9cda08a2b9d7297521dbe92edac11b4e2a456a7b0c2e28554",
+    "kind": "video"
+  },
+  "caption": "Will a super-ultrawide work on a PS5? It connects, but consoles can't output 32:9, so the Odyssey OLED G9 shows a 16:9 picture with black bars on each side. On PC it fills all 49 inches at up to 240Hz. For PS5 or Xbox, the LG C6 48 fills the screen at 4K120. Prices are our estimates. We earn from qualifying purchases. #ps5 #simracing\n\nOdyssey OLED G9 vs LG C6 48: https://roomracer.com/compare/samsung-odyssey-oled-g9-49-super-ultrawide-240hz-vs-lg-c6-48-4k-oled-tv?src=yt-answer",
+  "title": "Does a 49-inch ultrawide work on a PS5? Odyssey OLED G9 vs LG C6 48",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T06:00:00Z"
+}
