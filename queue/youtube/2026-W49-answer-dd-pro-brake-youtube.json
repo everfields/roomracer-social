@@ -17,5 +17,28 @@
     "realistic": false
   },
   "trial": false,
-  "earliest": "2026-12-03T06:00:00Z"
+  "earliest": "2026-12-03T06:00:00Z",
+  "intake": {
+    "ok": true,
+    "at": "2026-11-24T21:32:37Z",
+    "problems": [],
+    "warnings": [],
+    "probe": {
+      "width": 1080,
+      "height": 1920,
+      "duration_s": 32.8,
+      "video_codec": "h264",
+      "pix_fmt": "yuv420p",
+      "fps": 30.0,
+      "audio_codec": "aac",
+      "bytes": 2608779
+    },
+    "phash": [
+      "703079181a000000",
+      "7e5d117700000000",
+      "7979000000000000",
+      "7979516159380000",
+      "704e354676002700"
+    ]
+  }
 }
