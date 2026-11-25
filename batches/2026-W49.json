@@ -1211,6 +1211,104 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W49-answer-gta-6-wheel",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Can you play GTA 6 with a racing wheel? Not officially: SlashGear reported on launch day that it only supports controllers, and we found no word from Rockstar on a patch. Racing games do take one. Logitech lists Gran Turismo 7, F1 25, EA Sports WRC, ACC and Forza Horizon 5 for the G29 on PS5, and Forza Motorsport for the G920 on Xbox. Both about $200, our estimate. We earn from qualifying purchases. #gta6 #simracing",
+      "captions": {
+        "youtube": "Can you play GTA 6 with a racing wheel? Not officially: SlashGear reported on launch day that it only supports controllers, and we found no word from Rockstar on a patch. Racing games do take one. Logitech lists Gran Turismo 7, F1 25, EA Sports WRC, ACC and Forza Horizon 5 for the G29 on PS5, and Forza Motorsport for the G920 on Xbox. Both about $200, our estimate. We earn from qualifying purchases. #gta6 #simracing\n\nGTA 6 and racing wheels, plus a first wheel for each console: https://roomracer.com/launches/gta-6-racing-wheel?src=yt-event"
+      },
+      "title": "Can you play GTA 6 with a racing wheel on PS5 or Xbox?",
+      "earliest": "2026-11-14T05:00:00Z",
+      "latest": "2026-12-09T05:00:00Z",
+      "script": "Can you play GTA 6 with a racing wheel? / Not officially: controllers only (SlashGear, launch day); no word from Rockstar. Racing games do take one. / GTA 6: your controller. PS5: G29 about 200 for GT7, F1 25 and more. Xbox: G920 about 200 for Forza Motorsport and FH5. / GTA 6 drives on a controller; a wheel is for the racing games.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "GTA 6 · racing wheels",
+          "fine": "GTA 6 support as SlashGear reported it on Nov 19, 2026. Games from Logitech's compatibility list, which names neither wheel for GTA 6. Prices are our estimates of typical US prices (Nov 25, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "GTA 6 · out since November 19",
+              "title": "Can you play GTA 6 with a racing wheel?",
+              "sub": "On PS5 or Xbox, before you buy one.",
+              "say": "Can you play GTA 6 with a racing wheel?"
+            },
+            {
+              "type": "facts",
+              "title": "Not officially",
+              "items": [
+                {
+                  "k": "GTA 6",
+                  "v": "Controllers only, on PS5 and Xbox",
+                  "tone": "red",
+                  "say": "Not officially. SlashGear reported on launch day that it only supports controllers."
+                },
+                {
+                  "k": "Rockstar",
+                  "v": "No word on wheel support, now or in a patch",
+                  "tone": "yellow",
+                  "say": "We found no word from Rockstar on wheel support."
+                },
+                {
+                  "k": "Racing games",
+                  "v": "GT7, F1 25, EA Sports WRC, ACC, Forza Horizon 5",
+                  "tone": "green",
+                  "say": "But racing games do take a wheel."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "What to drive with",
+              "items": [
+                {
+                  "price": "You own it",
+                  "name": "Your controller",
+                  "line": "GTA 6: the only official way to drive",
+                  "sound": "PS5 and Xbox",
+                  "tone": "red",
+                  "say": "For GTA 6 itself, the controller you have."
+                },
+                {
+                  "price": "about $200",
+                  "name": "Logitech G29",
+                  "line": "PS5: GT7, F1 25, WRC, ACC, Forza Horizon 5",
+                  "sound": "Floor pedals in the box",
+                  "tone": "green",
+                  "say": "On PS5, the Logitech G29, about two hundred dollars, for Gran Turismo 7, F1 25 and more."
+                },
+                {
+                  "price": "about $200",
+                  "name": "Logitech G920",
+                  "line": "Xbox: Forza Motorsport, Forza Horizon 5, F1 25",
+                  "sound": "Floor pedals in the box",
+                  "tone": "purple",
+                  "say": "On Xbox, the G920, also about two hundred, for Forza Motorsport and Forza Horizon 5."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "GTA 6 drives on a controller.",
+              "sub": "A wheel is for the racing games: about $200 on either console.",
+              "cta": "PS5 and Xbox picks: link in bio",
+              "say": "GTA 6 stays on a controller. A wheel is for the racing games."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
