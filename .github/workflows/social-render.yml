@@ -2,7 +2,8 @@ name: social-render
 
 # Renders the formats that need no GPU (today `answer`) on GitHub's runner: free for a public repo, nothing on the PC.
 # A batch pushed to batches/ renders and uploads on its own; a manual run can render a file and keep the videos as an
-# artifact only (samples). The voice is Kokoro on CPU; type and layout are Chrome; the cut is ffmpeg. No secret is used.
+# artifact only (samples). The voice is Kokoro on CPU; type and layout are Chrome; the cut is ffmpeg. The only secret is
+# COS_EVENT_TOKEN, and only in the alarm steps, after the render (never in a step that runs the batch's formats).
 # Managed by the launch-company skill.
 on:
   push:
@@ -25,6 +26,7 @@ on:
 permissions:
   contents: write
   actions: write
+  issues: write  # the render alarm, when alarms go to issues without COS_EVENT_TOKEN
 
 concurrency:
   group: social-render
@@ -38,7 +40,9 @@ jobs:
   render:
     if: "!contains(github.event.head_commit.message, '[render]')"
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    # A long_form cut (~5 min, ~9000 frames) renders for up to ~60 min on its own, and an answer post for ~2.5 min on
+    # the CPU, so a 30-post week takes ~75 min plus setup. Under the runner's 360-min cap; each post ships as it is made.
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
         with:
@@ -86,8 +90,9 @@ jobs:
           done
       # A push made with the workflow's own token starts no other workflow, so the intake is called by name: without
       # this the rendered posts would sit unchecked and never publish (found before RoomRacer's first batch, 2026-11-14).
+      # always(): posts shipped before a failure or the time limit still go to the intake.
       - name: hand the posts to the intake
-        if: steps.pick.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.upload)
+        if: always() && steps.pick.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.upload)
         run: gh workflow run social-intake.yml --ref main
       - uses: actions/upload-artifact@v4
         if: steps.pick.outputs.files != ''
@@ -95,3 +100,27 @@ jobs:
           name: videos
           path: ${{ runner.temp }}/out/*/media/*.mp4
           retention-days: 30
+      # A failed render raises its own alarm, naming the run, instead of waiting for the heartbeat a day later (Every
+      # Little Room's W48 failed with no alarm, 2026-11-16). It goes out in a dry run too; a good render clears it. A sample
+# run (upload off) only goes red: whoever started it is watching.
+      - name: raise the render alarm
+        if: (failure() || cancelled()) && (github.event_name != 'workflow_dispatch' || inputs.upload)
+        env:
+          PYTHONPATH: engine
+          SOCIAL_CRON: ${{ vars.SOCIAL_CRON || 'off' }}
+          COS_EVENT_TOKEN: ${{ secrets.COS_EVENT_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          FILES: ${{ steps.pick.outputs.files || inputs.batch }}
+        run: |
+          python -m social alarm render --severity high --title "social-render failed" \
+            --body "The render run $RUN_URL failed for: $FILES. Its log names the step and, for the answer format, Chrome's own error or the scene that does not fit. Fix it and re-run that run; publishing carries on from the queue."
+      - name: clear the render alarm
+        if: success() && steps.pick.outputs.files != '' && (github.event_name != 'workflow_dispatch' || inputs.upload)
+        env:
+          PYTHONPATH: engine
+          SOCIAL_CRON: ${{ vars.SOCIAL_CRON || 'off' }}
+          COS_EVENT_TOKEN: ${{ secrets.COS_EVENT_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python -m social alarm render --clear --note "render $RUN_URL succeeded"

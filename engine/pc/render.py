@@ -91,7 +91,7 @@ def rows_for(post: dict, file: str, digest: str, ai: dict, week: str) -> list[di
     return out
 
 
-def render(repo: Path, folder: Path, batch: dict, out: Path, *, only: str | None = None) -> list[dict]:
+def render(repo: Path, folder: Path, batch: dict, out: Path, *, only: str | None = None, on_made=None) -> list[dict]:
     week = batch["week"]
     kit = Kit(folder, out / "work")
     made: list[dict] = []
@@ -110,6 +110,8 @@ def render(repo: Path, folder: Path, batch: dict, out: Path, *, only: str | None
                 ai = {"generated": bool(post["ai"]["generated"]), "realistic": bool(post["ai"].get("realistic"))}
                 made.append({"post": post, "file": ready, "ai": ai, "sha256": sha256(ready), "week": week})
                 print(f"= {post['id']}: reusing the render", flush=True)
+                if on_made:
+                    on_made(made[-1])
                 continue
             work = out / "work" / post["id"]
             work.mkdir(parents=True, exist_ok=True)
@@ -127,22 +129,36 @@ def render(repo: Path, folder: Path, batch: dict, out: Path, *, only: str | None
                 shutil.copy(src, final)
             made.append({"post": post, "file": final, "ai": ai, "sha256": sha256(final), "week": week})
             print(f"+ {post['id']}: {final} ({final.stat().st_size / 1048576:.1f} MB, ai={ai['generated']})", flush=True)
+            if on_made:
+                on_made(made[-1])
     finally:
         kit.done_with_models()
     return made
 
 
+def push(repo: Path, paths: list[str], message: str) -> None:
+    sh("git", "add", *paths, cwd=repo)
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=repo).returncode != 0:
+        sh("git", "commit", "-m", message, cwd=repo)
+        sh("git", "pull", "--rebase", "--autostash", "origin", "main", cwd=repo)
+        sh("git", "push", "origin", "HEAD:main", cwd=repo)
+
+
+def ship(repo: Path, m: dict) -> None:
+    # Each post goes out as soon as it is made, so a run that stops (a runner's time limit, the PC switched off) loses
+    # only the post it was on, and the next run skips what is already queued (W49 lost 26 renders at 60 min, 2026-11-25).
+    have = subprocess.run(["gh", "release", "view", RELEASE], cwd=repo, capture_output=True, text=True)
+    if have.returncode != 0:
+        sh("gh", "release", "create", RELEASE, "--title", "media", "--notes", "Rendered posts. The Pages runway serves them.", "--latest=false", cwd=repo)
+    sh("gh", "release", "upload", RELEASE, str(m["file"]), "--clobber", cwd=repo)
+    for row in rows_for(m["post"], m["file"].name, m["sha256"], m["ai"], m["week"]):
+        p = repo / "queue" / row["network"] / f"{row['id']}.json"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(row, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    push(repo, ["queue"], f"post: {m['post']['id']}")
+
+
 def publish(repo: Path, made: list[dict], folder: Path, week: str = "") -> None:
-    if made:
-        have = subprocess.run(["gh", "release", "view", RELEASE], cwd=repo, capture_output=True, text=True)
-        if have.returncode != 0:
-            sh("gh", "release", "create", RELEASE, "--title", "media", "--notes", "Rendered posts. The Pages runway serves them.", "--latest=false", cwd=repo)
-        for m in made:
-            sh("gh", "release", "upload", RELEASE, str(m["file"]), "--clobber", cwd=repo)
-            for row in rows_for(m["post"], m["file"].name, m["sha256"], m["ai"], m["week"]):
-                p = repo / "queue" / row["network"] / f"{row['id']}.json"
-                p.parent.mkdir(parents=True, exist_ok=True)
-                p.write_text(json.dumps(row, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     hb = repo / "pc" / "heartbeat.json"
     hb.parent.mkdir(exist_ok=True)
     try:
@@ -154,11 +170,7 @@ def publish(repo: Path, made: list[dict], folder: Path, week: str = "") -> None:
     done = max(prev, week or (made[0]["week"] if made else ""))
     hb.write_text(json.dumps({"at": now(), "host": socket.gethostname(), "rendered": len(made), "week": done},
                              indent=2) + "\n", encoding="utf-8")
-    sh("git", "add", "queue", "pc/heartbeat.json", cwd=repo)
-    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=repo).returncode != 0:
-        sh("git", "commit", "-m", f"batch: {len(made)} post(s), heartbeat {now()}", cwd=repo)
-        sh("git", "pull", "--rebase", "--autostash", "origin", "main", cwd=repo)
-        sh("git", "push", "origin", "HEAD:main", cwd=repo)
+    push(repo, ["queue", "pc/heartbeat.json"], f"batch: {len(made)} post(s), heartbeat {now()}")
 
 
 def main() -> None:
@@ -180,7 +192,7 @@ def main() -> None:
     else:
         cfg = json.loads((repo / "social.json").read_text(encoding="utf-8-sig"))
         batch = batch_from_company(cfg["company_repo"], a.week or this_week())
-    made = render(repo, folder, batch, out, only=a.only) if batch else []
+    made = render(repo, folder, batch, out, only=a.only, on_made=(lambda m: ship(repo, m)) if a.upload else None) if batch else []
     if not batch:
         print(f"no batch spec for {a.week or this_week()}: heartbeat only")
     if a.upload:

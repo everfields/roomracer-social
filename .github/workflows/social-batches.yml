@@ -44,6 +44,8 @@ jobs:
         run: python -m social batches
       - name: commit and render what is new
         run: |
+          # a fresh social repo has no batches/ until its first batch lands
+          [ -d batches ] || { echo "no batch yet"; exit 0; }
           git add batches
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           files=$(git diff --cached --name-only -- 'batches/*.json')
@@ -51,6 +53,7 @@ jobs:
           git pull -q --rebase origin main
           git push -q origin HEAD:main
           for f in $files; do gh workflow run social-render.yml --ref main -f batch="$f" -f upload=true; done
+      # A missing COS_EVENT_TOKEN fails the pull (red, never a quiet skip), and the publisher's clock still ticks.
       - name: one more clock for the publisher
-        if: github.event_name == 'schedule'
+        if: always() && github.event_name == 'schedule'
         run: gh workflow run social-publish.yml --ref main
