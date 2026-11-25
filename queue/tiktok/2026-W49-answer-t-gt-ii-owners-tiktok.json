@@ -1,0 +1,22 @@
+{
+  "id": "2026-W49-answer-t-gt-ii-owners-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-t-gt-ii-owners.mp4",
+    "sha256": "bc9b843660c82857706f51973cb7a3c58ee83ac745753586cf71f5630325dc75",
+    "kind": "video"
+  },
+  "caption": "Already race GT7 on a T-GT II? The T-GT III swaps its belt-driven base for 5 Nm direct drive with peaks to 10, adds a load-cell brake, and lists at $749.99 from December 3. Not confirmed yet: how many pedals it has (two would mean no clutch) and what carries over from a T-GT II. From Thrustmaster's announcement, not a test. #granturismo7 #thrustmaster",
+  "title": "Have a Thrustmaster T-GT II? What the T-GT III changes, and what isn't confirmed",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T05:30:00Z",
+  "latest": "2026-12-03T05:00:00Z"
+}
