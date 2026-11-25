@@ -1120,6 +1120,97 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W49-answer-t-gt-ii-owners",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Already race GT7 on a T-GT II? The T-GT III swaps its belt-driven base for 5 Nm direct drive with peaks to 10, adds a load-cell brake, and lists at $749.99 from December 3. Not confirmed yet: how many pedals it has (two would mean no clutch) and what carries over from a T-GT II. From Thrustmaster's announcement, not a test. #granturismo7 #thrustmaster",
+      "captions": {
+        "youtube": "Already race GT7 on a T-GT II? The T-GT III swaps its belt-driven base for 5 Nm direct drive with peaks to 10, adds a load-cell brake, and lists at $749.99 from December 3. Not confirmed yet: how many pedals it has (two would mean no clutch) and what carries over from a T-GT II. From Thrustmaster's announcement, not a test. #granturismo7 #thrustmaster\n\nWhat we know about the T-GT III, and what we don't: https://roomracer.com/parts/wheel-bases/thrustmaster-t-gt-iii?src=yt-event"
+      },
+      "title": "Have a Thrustmaster T-GT II? What the T-GT III changes, and what isn't confirmed",
+      "earliest": "2026-11-29T05:30:00Z",
+      "latest": "2026-12-03T05:00:00Z",
+      "script": "T-GT II owner? What the T-GT III changes. / T-GT II: belt base, GT rim, brake reads travel, clutch in the box. T-GT III: 749.99 list, 5 Nm direct drive, peaks to 10, load-cell brake. / Not said yet: pedal count (two means no clutch), what carries over, which base. / Use a clutch? Wait for the pedal count. Or T-GT III, or the T598 today.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "T-GT II owners",
+          "fine": "From Thrustmaster's announcement and our own part pages, as of Nov 25, 2026: no owner reports, no test. $749.99 is the announced US list price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Thrustmaster · on sale December 3",
+              "title": "T-GT II owner? Here is what the T-GT III changes",
+              "sub": "Base, brake, pedals: before you sell yours.",
+              "say": "Already racing on a T-GT two? Here's what the new T-GT three changes."
+            },
+            {
+              "type": "compare",
+              "title": "Old GT wheel, new GT wheel",
+              "items": [
+                {
+                  "price": "On sale",
+                  "name": "Thrustmaster T-GT II",
+                  "line": "Belt-driven base, GT rim, brake that reads travel",
+                  "sound": "Clutch pedal in the box",
+                  "tone": "yellow",
+                  "say": "The T-GT two you have: a belt-driven base, a GT rim, a brake that reads how far you press, and a clutch pedal in the box."
+                },
+                {
+                  "price": "$750",
+                  "name": "Thrustmaster T-GT III",
+                  "line": "5 Nm direct drive, peaks to 10; load-cell brake",
+                  "sound": "List $749.99 · from Dec 3",
+                  "tone": "purple",
+                  "say": "The T-GT three: direct drive at five newton-metres with peaks to ten, a load-cell brake that reads how hard you press, at seven forty-nine ninety-nine list."
+                }
+              ],
+              "note": "T-GT III: Thrustmaster's announced US list price. Not a store's price."
+            },
+            {
+              "type": "facts",
+              "title": "What Thrustmaster hasn't said yet",
+              "items": [
+                {
+                  "k": "Pedals",
+                  "v": "Pedal count: two would mean no clutch",
+                  "tone": "red",
+                  "say": "The pedal count isn't confirmed. If it's two, there's no clutch."
+                },
+                {
+                  "k": "Your T-GT II parts",
+                  "v": "What carries over: not published",
+                  "tone": "yellow",
+                  "say": "Thrustmaster hasn't said what carries over from a T-GT two."
+                },
+                {
+                  "k": "The base",
+                  "v": "Unnamed; it matches the T598",
+                  "tone": "yellow",
+                  "say": "And the base isn't named, though it matches the T five ninety-eight."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Drive with a clutch? Wait until the pedal count is out.",
+              "sub": "Want direct drive and a load-cell brake now? The T-GT III, or the T598 on sale today.",
+              "cta": "What we know, and don't: link in bio",
+              "say": "If you use the clutch, wait for the pedal count before you sell your T-GT two."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
