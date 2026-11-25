@@ -1,0 +1,22 @@
+{
+  "id": "2026-W49-answer-gta-6-wheel-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-gta-6-wheel.mp4",
+    "sha256": "a8913f087c2f834f47a48a029622aa6cf050ca5bb2858268a54605c38f5aa68c",
+    "kind": "video"
+  },
+  "caption": "Can you play GTA 6 with a racing wheel? Not officially: SlashGear reported on launch day that it only supports controllers, and we found no word from Rockstar on a patch. Racing games do take one. Logitech lists Gran Turismo 7, F1 25, EA Sports WRC, ACC and Forza Horizon 5 for the G29 on PS5, and Forza Motorsport for the G920 on Xbox. Both about $200, our estimate. We earn from qualifying purchases. #gta6 #simracing",
+  "title": "Can you play GTA 6 with a racing wheel on PS5 or Xbox?",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-14T05:00:00Z",
+  "latest": "2026-12-09T05:00:00Z"
+}
