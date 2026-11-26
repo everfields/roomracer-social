@@ -1,0 +1,22 @@
+{
+  "id": "2026-W49-answer-black-friday-drops-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-black-friday-drops.mp4",
+    "sha256": "c26a4bd09446d31faf9c0558da01c793742299e0aaf686a640de56aeea41c8d3",
+    "kind": "video"
+  },
+  "caption": "Is Black Friday the time to buy a racing wheel for a teen's PS5? On our PS5 page, one of three wheels came down: the Fanatec Gran Turismo DD Pro, $800 to $700 at Fanatec's own store, checked Nov 22. The Logitech G923 (about $230) and Thrustmaster T248R (about $300) show no checked drop. These aren't Amazon's prices: the one at checkout is the one that counts. We earn from qualifying purchases. #blackfriday #ps5 #simracing\n\nAll three PS5 setups, part by part: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer",
+  "title": "Black Friday: did PS5 racing wheels actually drop? We checked three",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-23T00:00:00Z",
+  "latest": "2026-11-29T09:00:00Z"
+}
