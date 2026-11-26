@@ -1309,6 +1309,112 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W49-answer-black-friday-drops",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Is Black Friday the time to buy a racing wheel for a teen's PS5? On our PS5 page, one of three wheels came down: the Fanatec Gran Turismo DD Pro, $800 to $700 at Fanatec's own store, checked Nov 22. The Logitech G923 (about $230) and Thrustmaster T248R (about $300) show no checked drop. These aren't Amazon's prices: the one at checkout is the one that counts. We earn from qualifying purchases. #blackfriday #ps5 #simracing",
+      "captions": {
+        "youtube": "Is Black Friday the time to buy a racing wheel for a teen's PS5? On our PS5 page, one of three wheels came down: the Fanatec Gran Turismo DD Pro, $800 to $700 at Fanatec's own store, checked Nov 22. The Logitech G923 (about $230) and Thrustmaster T248R (about $300) show no checked drop. These aren't Amazon's prices: the one at checkout is the one that counts. We earn from qualifying purchases. #blackfriday #ps5 #simracing\n\nAll three PS5 setups, part by part: https://roomracer.com/gifts/ps5-racing-wheel?src=yt-answer"
+      },
+      "title": "Black Friday: did PS5 racing wheels actually drop? We checked three",
+      "earliest": "2026-11-23T00:00:00Z",
+      "latest": "2026-11-29T09:00:00Z",
+      "script": "Black Friday: did PS5 racing wheels actually drop? / Rosso GT with your TV: cockpit 449, seat 379, GT DD Pro 700, pedals 220: 1,748. Its DD Pro came down 100 at Fanatec's store (Nov 22), not Amazon. / G923 about 230, no drop. T248R about 300, no drop. GT DD Pro 700, was 800. / One of three dropped; the checkout price is the one that counts.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Black Friday · PS5",
+          "fine": "Fanatec price checked at its own store, Nov 22, 2026; the rest are our estimates. Not Amazon's prices. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Black Friday · PS5",
+              "title": "Did PS5 racing wheels actually drop?",
+              "sub": "Three wheels on our PS5 page.",
+              "say": "Black Friday: did PS5 racing wheels actually drop?"
+            },
+            {
+              "type": "list",
+              "title": "Rosso GT, with your TV",
+              "items": [
+                {
+                  "label": "Cockpit",
+                  "name": "Sim-Lab GT1 Evo",
+                  "price": 449,
+                  "say": "Cockpit."
+                },
+                {
+                  "label": "Seat",
+                  "name": "Sparco R100",
+                  "price": 379,
+                  "say": "Seat."
+                },
+                {
+                  "label": "Wheel base",
+                  "name": "Fanatec GT DD Pro",
+                  "price": 700,
+                  "say": "DD Pro."
+                },
+                {
+                  "label": "Pedals",
+                  "name": "Fanatec CSL, load cell",
+                  "price": 220,
+                  "say": "Pedals."
+                }
+              ],
+              "totalLabel": "Rosso GT",
+              "outro": "Seventeen forty-eight. Its DD Pro came down a hundred at Fanatec's store, not Amazon."
+            },
+            {
+              "type": "compare",
+              "title": "Three PS5 wheels: one dropped",
+              "items": [
+                {
+                  "price": "$230",
+                  "name": "Logitech G923",
+                  "line": "Gear-driven. Pedals in the box.",
+                  "sound": "No checked drop",
+                  "tone": "yellow",
+                  "say": "Logitech G nine twenty-three, about two thirty. No drop."
+                },
+                {
+                  "price": "$300",
+                  "name": "Thrustmaster T248R",
+                  "line": "Belt-driven. Pedals in the box.",
+                  "sound": "No checked drop",
+                  "tone": "yellow",
+                  "say": "Thrustmaster T two forty-eight R, three hundred. No drop."
+                },
+                {
+                  "price": "$700",
+                  "name": "Fanatec GT DD Pro",
+                  "line": "Direct drive. Was $800.",
+                  "sound": "Down $100, Fanatec's store",
+                  "tone": "green",
+                  "say": "Fanatec's Gran Turismo DD Pro: seven hundred, down from eight hundred."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "One of three dropped.",
+              "sub": "The price at checkout is the one that counts.",
+              "cta": "All three PS5 setups: link in bio",
+              "say": "One of three dropped."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
