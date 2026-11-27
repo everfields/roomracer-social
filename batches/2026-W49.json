@@ -1540,6 +1540,108 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W49-answer-fh6-ps5-wheel",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Can you use a racing wheel with Forza Horizon 6 on PS5? Not confirmed yet. It comes to PS5 on January 26, 2027 (Premium Edition from January 21), and Playground's FH6 wheel list covers only Xbox and PC so far. Its Forza Horizon 5 list named the Logitech G29 for every platform, but that is FH5's list. Wheels made for PS5 today: the G29, about $200, and the G923, about $210, our estimates. We earn from qualifying purchases. #forzahorizon6 #ps5 #simracing",
+      "captions": {
+        "youtube": "Can you use a racing wheel with Forza Horizon 6 on PS5? Not confirmed yet. It comes to PS5 on January 26, 2027 (Premium Edition from January 21), and Playground's FH6 wheel list covers only Xbox and PC so far. Its Forza Horizon 5 list named the Logitech G29 for every platform, but that is FH5's list. Wheels made for PS5 today: the G29, about $200, and the G923, about $210, our estimates. We earn from qualifying purchases. #forzahorizon6 #ps5 #simracing\n\nForza Horizon 6 on PS5: the dates, both wheel lists, and wheels made for PS5: https://roomracer.com/launches/forza-horizon-6-ps5-wheel?src=yt-event"
+      },
+      "title": "Can you use a racing wheel with Forza Horizon 6 on PS5?",
+      "earliest": "2026-11-29T05:45:00Z",
+      "latest": "2027-01-21T05:00:00Z",
+      "script": "Can you use a racing wheel with Forza Horizon 6 on PS5? / Not confirmed yet. Made for PS5 today: the Logitech G29, about 200, pedals in the box, with your PS5. / Why: PS5 on January 26 (Premium early access January 21); Playground's FH6 wheel list is Xbox and PC only; its FH5 list named the G29 on every platform. / PS5 wheel support: not confirmed yet; we read Playground's list again on launch week.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Forza Horizon 6 · PS5",
+          "fine": "Dates from Forza.net. Wheel lists from Playground's support pages, read Nov 27, 2026; Forza Horizon 5's list is not Forza Horizon 6's. Prices are our estimates of typical US prices (Nov 27, 2026), not a store's price. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Forza Horizon 6 · PS5 on January 26",
+              "title": "Can you use a racing wheel with Forza Horizon 6 on PS5?",
+              "sub": "Before you buy a wheel for it: what Playground has said so far.",
+              "say": "A racing wheel for Forza Horizon 6 on PS5?"
+            },
+            {
+              "type": "list",
+              "title": "A wheel made for PS5, today",
+              "items": [
+                {
+                  "label": "Wheel",
+                  "name": "Logitech G29",
+                  "price": 200,
+                  "say": "Not confirmed yet. Made for PS5: the G29, about two hundred."
+                },
+                {
+                  "label": "Pedals",
+                  "name": "Floor pedals",
+                  "price": 0,
+                  "free": "In the box",
+                  "say": "Pedals in the box."
+                },
+                {
+                  "label": "Console",
+                  "name": "Your PS5",
+                  "price": 0,
+                  "free": "You have it",
+                  "say": "Your PS5."
+                }
+              ],
+              "totalLabel": "With your PS5",
+              "note": "Not confirmed for Forza Horizon 6 on PS5 yet."
+            },
+            {
+              "type": "facts",
+              "title": "Why it's not confirmed",
+              "items": [
+                {
+                  "k": "PS5 release",
+                  "v": "January 26, 2027",
+                  "tone": "yellow",
+                  "say": "PS5: January twenty-sixth."
+                },
+                {
+                  "k": "Premium Edition",
+                  "v": "Early access from January 21",
+                  "tone": "yellow",
+                  "say": "Premium, the twenty-first."
+                },
+                {
+                  "k": "FH6 wheel list",
+                  "v": "Xbox and PC. No PS5 yet",
+                  "tone": "red",
+                  "say": "Playground's wheel list: Xbox and PC only."
+                },
+                {
+                  "k": "FH5 wheel list",
+                  "v": "Named the Logitech G29 for every platform",
+                  "tone": "yellow",
+                  "say": "Its Forza Horizon 5 list named the G29 on every platform."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "PS5 wheel support: not confirmed yet.",
+              "sub": "We read Playground's list again on January 21 and 26.",
+              "cta": "FH6 on PS5: link in bio",
+              "say": "We read Playground's list again on launch week."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
