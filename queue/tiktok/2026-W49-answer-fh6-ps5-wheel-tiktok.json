@@ -1,0 +1,22 @@
+{
+  "id": "2026-W49-answer-fh6-ps5-wheel-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-fh6-ps5-wheel.mp4",
+    "sha256": "8a7627c9507e82a7b4424a0aba5a38ed85f8345f2bf52344349365a8c380c673",
+    "kind": "video"
+  },
+  "caption": "Can you use a racing wheel with Forza Horizon 6 on PS5? Not confirmed yet. It comes to PS5 on January 26, 2027 (Premium Edition from January 21), and Playground's FH6 wheel list covers only Xbox and PC so far. Its Forza Horizon 5 list named the Logitech G29 for every platform, but that is FH5's list. Wheels made for PS5 today: the G29, about $200, and the G923, about $210, our estimates. We earn from qualifying purchases. #forzahorizon6 #ps5 #simracing",
+  "title": "Can you use a racing wheel with Forza Horizon 6 on PS5?",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T05:45:00Z",
+  "latest": "2027-01-21T05:00:00Z"
+}
