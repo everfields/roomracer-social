@@ -1,0 +1,22 @@
+{
+  "id": "2026-W49-answer-g923-at-210-tiktok",
+  "network": "tiktok",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-g923-at-210.mp4",
+    "sha256": "d5d17fe2ed8eb943936d5f6d8b98112db37464f5373fef33c4cdf72a6b94b403",
+    "kind": "video"
+  },
+  "caption": "Is the Logitech G923 worth it at $210 for a PS5? Logitech's own US store had it at $209.99 on Nov 27, down from $229.99. It's gear-driven at 2.2 Nm, with the wheel and three pedals in the box, and TRUEFORCE adds engine and tire detail in Gran Turismo 7. About $90 more buys the Thrustmaster T248R: 3.1 Nm, smoother, Hall-effect pedals. That's the brand store's price on that date, not Amazon's: the one at checkout is the one that counts. We earn from qualifying purchases. #ps5 #granturismo7 #logitech",
+  "title": "Is the Logitech G923 worth $210 for a PS5? Checked Nov 27",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-22T00:00:00Z",
+  "latest": "2026-12-01T05:00:00Z"
+}
