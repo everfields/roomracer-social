@@ -1,4 +1,4 @@
-# Social numbers (2026-11-26T17:08:28Z)
+# Social numbers (2026-11-27T01:50:14Z)
 
 A blank is a number the network did not give, never a zero.
 
@@ -9,4 +9,4 @@ A blank is a number the network did not give, never a zero.
 
 | Format | Posts | Median views | Best | Best ÷ floor | State |
 |---|---|---|---|---|---|
-| answer | 10 | 107.0 | 145 | 1.36 | kill |
+| answer | 10 | 107.0 | 152 | 1.42 | kill |
