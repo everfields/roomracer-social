@@ -1415,6 +1415,131 @@
         "generated": false,
         "realistic": false
       }
+    },
+    {
+      "id": "2026-W49-answer-g923-at-210",
+      "format": "answer",
+      "networks": [
+        "tiktok",
+        "youtube"
+      ],
+      "caption": "Is the Logitech G923 worth it at $210 for a PS5? Logitech's own US store had it at $209.99 on Nov 27, down from $229.99. It's gear-driven at 2.2 Nm, with the wheel and three pedals in the box, and TRUEFORCE adds engine and tire detail in Gran Turismo 7. About $90 more buys the Thrustmaster T248R: 3.1 Nm, smoother, Hall-effect pedals. That's the brand store's price on that date, not Amazon's: the one at checkout is the one that counts. We earn from qualifying purchases. #ps5 #granturismo7 #logitech",
+      "captions": {
+        "youtube": "Is the Logitech G923 worth it at $210 for a PS5? Logitech's own US store had it at $209.99 on Nov 27, down from $229.99. It's gear-driven at 2.2 Nm, with the wheel and three pedals in the box, and TRUEFORCE adds engine and tire detail in Gran Turismo 7. About $90 more buys the Thrustmaster T248R: 3.1 Nm, smoother, Hall-effect pedals. That's the brand store's price on that date, not Amazon's: the one at checkout is the one that counts. We earn from qualifying purchases. #ps5 #granturismo7 #logitech\n\nG923 or T248R, side by side: https://roomracer.com/compare/logitech-g923-trueforce-playstation-pc-vs-thrustmaster-t248r-playstation-pc?src=yt-answer"
+      },
+      "title": "Is the Logitech G923 worth $210 for a PS5? Checked Nov 27",
+      "earliest": "2026-11-22T00:00:00Z",
+      "latest": "2026-12-01T05:00:00Z",
+      "script": "Is the G923 worth 210 for a PS5? / Logitech's store, Nov 27: 209.99, was 229.99. Gear drive, 2.2 Nm, pedals in the box, TRUEFORCE road feel in GT7. / Or 90 more: T248R, 3.1 Nm, smoother, Hall pedals; neither is strong in fast cars. / Midnight Rookie with your TV: cockpit 289 + G923 210 = 499. / Tight budget or mostly GT7: the G923.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "PS5 · Logitech G923",
+          "fine": "G923 price checked at Logitech's US store, Nov 27, 2026; the rest are our estimates. Not Amazon's prices. Synthetic voice. We earn from qualifying purchases.",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "PS5 · checked Nov 27",
+              "title": "Is the G923 worth $210 for a PS5?",
+              "sub": "Logitech's own store, not Amazon.",
+              "say": "Is the G nine twenty-three worth two ten for a PS5?"
+            },
+            {
+              "type": "facts",
+              "title": "Logitech G923, PlayStation",
+              "items": [
+                {
+                  "k": "Logitech US store, Nov 27",
+                  "v": "$209.99, was $229.99",
+                  "tone": "green",
+                  "say": "Logitech's own store, November twenty-seventh: two oh nine ninety-nine, down from two twenty-nine."
+                },
+                {
+                  "k": "Drive",
+                  "v": "Gears, 2.2 Nm",
+                  "tone": "yellow",
+                  "say": "Gear-driven, two point two newton-metres."
+                },
+                {
+                  "k": "In the box",
+                  "v": "Wheel and three pedals",
+                  "tone": "yellow",
+                  "say": "Pedals in the box."
+                },
+                {
+                  "k": "TRUEFORCE",
+                  "v": "More road feel in GT7",
+                  "tone": "purple",
+                  "say": "And TRUEFORCE adds road feel in Gran Turismo 7."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "Or about $90 more",
+              "items": [
+                {
+                  "price": "$210",
+                  "name": "Logitech G923",
+                  "line": "Gear drive, 2.2 Nm",
+                  "sound": "TRUEFORCE in GT7",
+                  "tone": "green",
+                  "say": "G nine twenty-three, two ten."
+                },
+                {
+                  "price": "$300",
+                  "name": "Thrustmaster T248R",
+                  "line": "Belt and gear, 3.1 Nm",
+                  "sound": "Smoother, Hall pedals",
+                  "tone": "purple",
+                  "say": "T two forty-eight R, three hundred: smoother, three point one newton-metres."
+                }
+              ],
+              "note": "Neither is strong: both feel light in fast cars.",
+              "outro": "Neither is strong in fast cars."
+            },
+            {
+              "type": "list",
+              "title": "Midnight Rookie, with your TV",
+              "totalLabel": "Midnight Rookie",
+              "items": [
+                {
+                  "label": "Cockpit",
+                  "name": "Playseat Challenge X, Logitech G Edition",
+                  "price": 289,
+                  "say": "Folding cockpit, two eighty-nine."
+                },
+                {
+                  "label": "Wheel and pedals",
+                  "name": "Logitech G923 (PlayStation)",
+                  "price": 210,
+                  "say": "G nine twenty-three, two ten."
+                },
+                {
+                  "label": "Screen",
+                  "name": "The TV you already have",
+                  "price": 0,
+                  "free": "$0",
+                  "say": "Your TV."
+                }
+              ],
+              "outro": "Four ninety-nine."
+            },
+            {
+              "type": "end",
+              "title": "Tight budget or mostly GT7? The G923.",
+              "sub": "The price at checkout is the one that counts.",
+              "cta": "G923 or T248R: link in bio",
+              "say": "Tight budget, or mostly Gran Turismo? The G nine twenty-three."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
     }
   ]
 }
